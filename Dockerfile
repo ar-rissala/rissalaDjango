@@ -24,5 +24,5 @@ COPY . /app/
 # Expose port
 EXPOSE 8000
 
-# Run gunicorn
-CMD ["gunicorn", "config.wsgi:application", "--bind", "0.0.0.0:8000"]
+# Run collectstatic and gunicorn
+CMD python manage.py collectstatic --noinput && gunicorn config.wsgi:application --bind 0.0.0.0:8000
