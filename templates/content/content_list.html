@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% load i18n static %}
+
+{% block title %}{{ page_title }} | Rissala{% endblock %}
+
+{% block meta %}
+    <meta name="description" content="{{ page_description }}">
+{% endblock %}
+
+{% block content %}
+<section class="relative py-16 sm:py-20 lg:py-28 min-h-[380px] flex items-center border-b border-white/10 overflow-hidden">
+    {% if request.resolver_match.url_name == 'science_list' %}
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image:url('{% static 'img/islamic-pattern-bg.jpg' %}')" aria-hidden="true"></div>
+    {% elif request.resolver_match.url_name == 'finance_list' %}
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image:url('{% static 'img/default-finance.jpg' %}')" aria-hidden="true"></div>
+    {% else %}
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image:url('{% static 'img/arabe-bg.jpg' %}')" aria-hidden="true"></div>
+    {% endif %}
+    <div class="absolute inset-0 bg-background/[0.65] dark:bg-background/[0.70]" aria-hidden="true"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent pointer-events-none" aria-hidden="true"></div>
+    
+    <div class="relative z-10 w-full reveal-up">
+        <div class="container mx-auto px-4 lg:px-8 max-w-4xl text-center">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight mb-4 sm:mb-6 font-heading text-white">
+                {% if request.resolver_match.url_name == 'arabic_list' %}
+                    {% if request.LANGUAGE_CODE == 'en' %}Arabic <span class="text-primary">Language</span>{% else %}Langue <span class="text-primary">Arabe</span>{% endif %}
+                {% elif request.resolver_match.url_name == 'finance_list' %}
+                    {% if request.LANGUAGE_CODE == 'ar' %}المالية <span class="text-primary">الإسلامية</span>{% elif request.LANGUAGE_CODE == 'en' %}Islamic <span class="text-primary">Finance</span>{% else %}Finance <span class="text-primary">Islamique</span>{% endif %}
+                {% elif request.resolver_match.url_name == 'science_list' %}
+                    {% if request.LANGUAGE_CODE == 'ar' %}العلوم <span class="text-primary">الإسلامية</span>{% elif request.LANGUAGE_CODE == 'en' %}Islamic <span class="text-primary">Sciences</span>{% else %}Sciences <span class="text-primary">Islamiques</span>{% endif %}
+                {% else %}
+                    <span class="text-primary">{{ page_title }}</span>
+                {% endif %}
+            </h1>
+            <p class="text-lg sm:text-xl text-muted leading-relaxed max-w-2xl mx-auto mb-6">
+                {% if request.resolver_match.url_name == 'finance_list' %}
+                    {% if request.LANGUAGE_CODE == 'ar' %}مقالات وتحليلات حول مبادئ المالية الإسلامية.{% elif request.LANGUAGE_CODE == 'en' %}Articles and analyses on the principles of Islamic finance.{% else %}{{ page_description }}{% endif %}
+                {% elif request.resolver_match.url_name == 'science_list' %}
+                    {% if request.LANGUAGE_CODE == 'ar' %}موارد تعليمية حول أصول الدين والروحانية.{% elif request.LANGUAGE_CODE == 'en' %}Educational resources on the foundations of religion and spirituality.{% else %}{{ page_description }}{% endif %}
+                {% else %}
+                    {{ page_description }}
+                {% endif %}
+            </p>
+        </div>
+    </div>
+</section>
+
+<div class="container mx-auto px-4 lg:px-8 py-16 sm:py-24">
+    {% if contents %}
+    <section class="mb-24 reveal-up">
+        <div class="flex items-center gap-4 mb-10">
+            <h2 class="text-2xl sm:text-3xl font-black uppercase tracking-tight font-heading border-b-2 border-primary pb-2 pr-8 inline-block text-white">
+                {% trans "Articles" %}
+            </h2>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 stagger-container">
+            {% for item in contents %}
+            <a class="stagger-item group flex flex-col h-full cursor-pointer p-6 rounded-xl border border-white/10 bg-background-alt/50 hover:border-primary/50 hover:bg-primary/5 hover:-translate-y-1 hover:shadow-lg transition-all duration-300" href="{% url 'content:detail' item.slug %}">
+                <div class="flex flex-col flex-1">
+                    <div class="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-primary mb-3">
+                        <span>{{ item.get_language_display }}</span>
+                    </div>
+                    <h3 class="text-xl font-bold font-heading leading-snug mb-3 group-hover:text-primary transition-colors text-white line-clamp-2">
+                        {{ item.title }}
+                    </h3>
+                    <p class="text-sm text-muted line-clamp-3 leading-relaxed mb-6">
+                        {{ item.excerpt|default:item.content|striptags|truncatewords:20 }}
+                    </p>
+                    <div class="mt-auto pt-4 flex items-center justify-between text-xs font-medium text-muted border-t border-white/10">
+                        <span>{{ item.published_at|date:"d M Y" }}</span>
+                    </div>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </section>
+    {% else %}
+    <div class="text-center py-24 bg-background-alt/50 border border-white/10 border-dashed rounded-3xl reveal-up">
+        <div class="w-20 h-20 mx-auto bg-white/5 rounded-full flex items-center justify-center mb-6">
+            <svg class="w-10 h-10 text-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 002-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+        </div>
+        <h3 class="text-2xl font-medium text-white mb-2">{% trans "Aucun contenu" %}</h3>
+        <p class="text-muted text-lg max-w-md mx-auto">{% trans "Il n'y a pas encore de contenu disponible dans cette rubrique. Revenez bientôt !" %}</p>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

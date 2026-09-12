@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block title %}{% trans "Livres" %} | Rissala{% endblock %}
+
+{% block content %}
+<div class="bg-background pt-16 pb-24">
+    <div class="container mx-auto px-4 lg:px-8">
+        
+        <div class="mb-12 text-center max-w-3xl mx-auto reveal-up">
+            <h1 class="text-4xl md:text-5xl font-bold font-heading mb-4 text-foreground">{% trans "Bibliothèque Numérique" %}</h1>
+            <p class="text-lg text-muted mb-8">{% trans "Parcourez notre collection d'ouvrages, de traductions et de livrets traitant des sciences islamiques." %}</p>
+            
+            <form method="GET" action="{% url 'books:list' %}" class="relative max-w-lg mx-auto">
+                <input type="text" name="q" value="{{ request.GET.q|default_if_none:'' }}" placeholder="{% trans 'Rechercher un titre, un auteur...' %}" class="w-full h-14 pl-12 pr-4 bg-background-alt border border-white/10 rounded-2xl text-foreground focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all shadow-lg placeholder:text-white/30">
+                <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                    <svg class="w-6 h-6 text-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                </div>
+                <button type="submit" class="absolute inset-y-2 right-2 px-4 bg-primary hover:bg-primary-light text-background font-medium rounded-xl transition-all duration-200 hover:-translate-y-[1px] active:scale-[0.98]">
+                    {% trans "Chercher" %}
+                </button>
+            </form>
+        </div>
+        
+        {% if books %}
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 stagger-container">
+            {% for book in books %}
+            <div class="stagger-item group flex flex-col bg-background-alt rounded-2xl overflow-hidden border border-white/10 hover:border-primary/50 hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
+                <a href="{% url 'books:detail' book.slug %}" class="block aspect-[2/3] relative overflow-hidden bg-white/5">
+                    {% if book.cover_image %}
+                        <img src="{{ book.cover_image.url }}" alt="{{ book.title }}" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    {% else %}
+                        <div class="absolute inset-0 flex items-center justify-center text-muted">
+                            <span class="font-heading font-medium text-lg px-4 text-center">{{ book.title }}</span>
+                        </div>
+                    {% endif %}
+                </a>
+                <div class="p-6 flex flex-col flex-1">
+                    <div class="text-xs font-semibold text-primary mb-2 uppercase tracking-wider">{{ book.get_language_display }}</div>
+                    <h3 class="text-xl font-bold font-heading mb-2 text-foreground line-clamp-2">
+                        <a href="{% url 'books:detail' book.slug %}" class="hover:text-primary transition-colors">{{ book.title }}</a>
+                    </h3>
+                    <p class="text-sm text-muted mb-4 line-clamp-3 flex-1">{{ book.short_description }}</p>
+                    <a href="{% url 'books:detail' book.slug %}" class="inline-flex items-center text-sm font-medium text-foreground hover:text-primary transition-colors mt-auto">
+                        {% trans "Voir les détails" %} &rarr;
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <div class="text-center py-20 bg-background-alt border border-white/10 border-dashed rounded-2xl">
+            <h3 class="text-xl font-medium text-muted">{% trans "Aucun livre n'est disponible pour le moment." %}</h3>
+        </div>
+        {% endif %}
+        
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block title %}{{ course.title }} | Rissala{% endblock %}
+
+{% block content %}
+<div class="bg-background pt-10 pb-20">
+    <div class="container mx-auto px-4 lg:px-8 max-w-6xl">
+        
+        <!-- Header -->
+        <div class="flex flex-col lg:flex-row gap-8 lg:gap-12 mb-16">
+            <div class="flex-1">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="px-3 py-1 bg-primary/10 text-primary text-xs font-semibold uppercase tracking-wider rounded-lg">{{ course.get_language_display }}</span>
+                    {% if course.difficulty %}
+                    <span class="px-3 py-1 bg-white/5 text-muted text-xs font-semibold uppercase tracking-wider rounded-lg border border-white/10">{{ course.difficulty }}</span>
+                    {% endif %}
+                </div>
+                
+                <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold font-heading text-foreground mb-4 leading-tight">{{ course.title }}</h1>
+                
+                <p class="text-lg text-muted mb-6 leading-relaxed">{{ course.description }}</p>
+                
+                <div class="flex flex-wrap items-center gap-6 text-sm text-muted font-medium mb-8">
+                    <div class="flex items-center gap-2">
+                        <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                        {% trans "Par" %} {{ course.instructor }}
+                    </div>
+                    {% if course.estimated_duration %}
+                    <div class="flex items-center gap-2">
+                        <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        {{ course.estimated_duration }}
+                    </div>
+                    {% endif %}
+                </div>
+                
+                <div class="flex items-center gap-4">
+                    <button class="h-14 px-8 rounded-xl bg-primary text-background font-bold text-lg flex items-center justify-center hover:bg-primary-light transition-colors shadow-lg">
+                        {% if course.price == 0 %}
+                            {% trans "S'inscrire gratuitement" %}
+                        {% else %}
+                            {% trans "S'inscrire pour" %} {{ course.price }} €
+                        {% endif %}
+                    </button>
+                </div>
+            </div>
+            
+            <div class="w-full lg:w-5/12 shrink-0">
+                <div class="aspect-video relative rounded-2xl overflow-hidden bg-white/5 border border-white/10 shadow-2xl">
+                    {% if course.thumbnail %}
+                        <img src="{{ course.thumbnail.url }}" alt="{{ course.title }}" class="absolute inset-0 w-full h-full object-cover">
+                    {% else %}
+                        <div class="absolute inset-0 flex items-center justify-center text-muted">
+                            <span class="font-heading text-xl px-4 text-center">{{ course.title }}</span>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        
+        <!-- Syllabus -->
+        <div class="max-w-4xl">
+            <h2 class="text-2xl font-bold font-heading text-foreground mb-6">{% trans "Programme de la formation" %}</h2>
+            
+            {% if course.modules.all %}
+                <div class="space-y-4">
+                    {% for module in course.modules.all %}
+                    <div class="bg-background-alt border border-white/10 rounded-xl overflow-hidden" x-data="{ open: true }">
+                        <button @click="open = !open" class="w-full px-6 py-4 flex items-center justify-between text-left hover:bg-white/5 transition-colors focus:outline-none">
+                            <h3 class="font-bold text-lg text-foreground">Module {{ module.order }} : {{ module.title }}</h3>
+                            <svg class="w-5 h-5 text-muted transition-transform duration-200" :class="{'rotate-180': open}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        
+                        <div x-show="open" class="border-t border-white/10 px-6 py-2">
+                            {% if module.lessons.all %}
+                                <ul class="divide-y divide-white/5">
+                                    {% for lesson in module.lessons.all %}
+                                    <li class="py-3 flex items-center justify-between group">
+                                        <div class="flex items-center gap-3">
+                                            <div class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-muted group-hover:text-primary transition-colors">
+                                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                            </div>
+                                            <span class="text-muted group-hover:text-foreground transition-colors">{{ lesson.title }}</span>
+                                        </div>
+                                        <div class="flex items-center gap-3">
+                                            {% if lesson.free_preview %}
+                                            <span class="text-xs font-semibold text-primary bg-primary/10 px-2 py-1 rounded">{% trans "Extrait libre" %}</span>
+                                            {% endif %}
+                                            <span class="text-xs text-muted">{{ lesson.duration }} min</span>
+                                        </div>
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                            {% else %}
+                                <p class="text-sm text-muted py-3">{% trans "Aucune leçon dans ce module pour le moment." %}</p>
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <div class="text-center py-10 bg-background-alt border border-white/10 border-dashed rounded-xl">
+                    <p class="text-muted">{% trans "Le programme n'a pas encore été publié." %}</p>
+                </div>
+            {% endif %}
+        </div>
+        
+    </div>
+</div>
+{% endblock %}

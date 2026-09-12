@@ -1,0 +1,32 @@
+{% load i18n %}
+
+<!-- Global Organization JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Rissala",
+  "url": "{{ request.scheme }}://{{ request.get_host }}/",
+  "logo": "{{ request.scheme }}://{{ request.get_host }}/static/img/hero-bg.jpg",
+  "description": "{% trans 'Plateforme d\'étude et de transmission du savoir islamique.' %}"
+}
+</script>
+
+<!-- Global WebSite JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Rissala",
+  "url": "{{ request.scheme }}://{{ request.get_host }}/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "{{ request.scheme }}://{{ request.get_host }}/recherche/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+<!-- Specific Page JSON-LD Block -->
+{% block structured_data %}
+{% endblock %}

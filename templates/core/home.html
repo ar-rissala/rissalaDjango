@@ -1,0 +1,96 @@
+
+
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+
+{% block content %}
+<section class="relative overflow-hidden min-h-screen flex items-center pt-16 pb-20 sm:pt-20 sm:pb-28 lg:pt-36 lg:pb-40 border-b border-white/10 bg-background">
+    <!-- Background Image -->
+    <div class="absolute inset-0 z-0 bg-cover bg-center bg-fixed bg-no-repeat grayscale-[20%]" style="background-image: url('{% static 'img/hero-bg.jpg' %}');"></div>
+    <!-- Color Filter Overlay -->
+    <div class="absolute inset-0 z-[1] bg-primary/40 mix-blend-overlay pointer-events-none"></div>
+    <!-- Gradient Overlay -->
+    <div class="absolute inset-0 z-[2] bg-gradient-to-b from-black/50 via-transparent to-background pointer-events-none"></div>
+    <div class="container relative z-10 mx-auto px-4 lg:px-8 flex flex-col items-center text-center">
+        <div class="max-w-4xl stagger-container">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight mb-6 sm:mb-8 text-white font-heading leading-tight drop-shadow-lg stagger-item">
+                {% trans "Étudiez selon vos" %} <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-light to-primary-dark">{% trans "convictions" %}</span>
+            </h1>
+            <p class="text-base sm:text-lg md:text-xl text-white mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed drop-shadow-md stagger-item">
+                {% trans "Rissala vous accompagne dans l'étude et la transmission du savoir islamique. Des parcours structurés, des sources rigoureuses et une progression pensée pour comprendre, approfondir et transmettre." %}
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 w-full stagger-item">
+                <a href="{% url 'courses:list' %}" class="bg-primary text-background font-medium hover:bg-primary-light transition-all duration-300 h-12 px-8 rounded-xl shadow-lg flex items-center justify-center text-base hover:-translate-y-[1px] active:scale-[0.98]">
+                    {% trans "Découvrez nos parcours" %}
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sections placeholder based on Rissala logic -->
+<section class="py-16 sm:py-20 lg:py-24 bg-background relative">
+    <div class="container mx-auto px-4 lg:px-8">
+        <div class="text-center mb-10 sm:mb-16 max-w-2xl mx-auto">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold font-heading mb-3 sm:mb-4">
+                {% trans "Étudier. Comprendre. Approfondir." %}
+            </h2>
+            <p class="text-muted text-base sm:text-lg">
+                {% trans "Des parcours structurés pour construire progressivement des bases solides et développer une compréhension claire du savoir." %}
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 stagger-container">
+            <!-- Card 1 -->
+            <div class="stagger-item group overflow-hidden rounded-xl py-6 px-5 border border-white/10 bg-background-alt hover:border-primary/50 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 flex flex-col">
+                <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 text-primary">
+                    <!-- Icon placeholder -->
+                    <span class="font-bold text-xl">A</span>
+                </div>
+                <h3 class="font-heading font-medium text-xl text-foreground mb-2">{% trans "Langue arabe" %}</h3>
+                <p class="text-muted text-sm leading-relaxed mb-6">{% trans "Maîtriser progressivement la langue arabe, de l'alphabet à la lecture et à la compréhension des textes classiques." %}</p>
+                <a href="{% url 'content:arabic_list' %}" class="text-primary font-medium flex items-center mt-auto group-hover:text-primary-light transition-colors text-sm">
+                    {% trans "Découvrir" %} &rarr;
+                </a>
+            </div>
+            
+            <!-- Card 2 -->
+            <div class="stagger-item group overflow-hidden rounded-xl py-6 px-5 border border-white/10 bg-background-alt hover:border-primary/50 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 flex flex-col">
+                <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 text-primary">
+                    <span class="font-bold text-xl">S</span>
+                </div>
+                <h3 class="font-heading font-medium text-xl text-foreground mb-2">{% trans "Sciences islamiques" %}</h3>
+                <p class="text-muted text-sm leading-relaxed mb-6">{% trans "Étudier les fondements de la tradition sunnite à travers la croyance, le hadith, le fiqh et l'histoire." %}</p>
+                <a href="{% url 'content:science_list' %}" class="text-primary font-medium flex items-center mt-auto group-hover:text-primary-light transition-colors text-sm">
+                    {% trans "Découvrir" %} &rarr;
+                </a>
+            </div>
+            
+            <!-- Card 3 -->
+            <div class="stagger-item group overflow-hidden rounded-xl py-6 px-5 border border-white/10 bg-background-alt hover:border-primary/50 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 flex flex-col">
+                <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 text-primary">
+                    <span class="font-bold text-xl">F</span>
+                </div>
+                <h3 class="font-heading font-medium text-xl text-foreground mb-2">{% trans "Finance islamique" %}</h3>
+                <p class="text-muted text-sm leading-relaxed mb-6">{% trans "Comprendre les principes de la finance islamique, ses fondements et ses mécanismes." %}</p>
+                <a href="{% url 'content:finance_list' %}" class="text-primary font-medium flex items-center mt-auto group-hover:text-primary-light transition-colors text-sm">
+                    {% trans "Découvrir" %} &rarr;
+                </a>
+            </div>
+            
+            <!-- Card 4 -->
+            <div class="stagger-item group overflow-hidden rounded-xl py-6 px-5 border border-white/10 bg-background-alt hover:border-primary/50 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 flex flex-col">
+                <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 text-primary">
+                    <span class="font-bold text-xl">L</span>
+                </div>
+                <h3 class="font-heading font-medium text-xl text-foreground mb-2">{% trans "Articles & actualités" %}</h3>
+                <p class="text-muted text-sm leading-relaxed mb-6">{% trans "Approfondir ses connaissances à travers des articles, analyses, guides et ressources." %}</p>
+                <a href="{% url 'content:news_list' %}" class="text-primary font-medium flex items-center mt-auto group-hover:text-primary-light transition-colors text-sm">
+                    {% trans "Lire les articles" %} &rarr;
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

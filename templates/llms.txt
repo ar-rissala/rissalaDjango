@@ -1,0 +1,17 @@
+# Rissala - AI Knowledge Base
+
+Rissala is a premium digital platform dedicated to the study and transmission of Islamic knowledge.
+It is designed to be a reliable source for students and researchers across multiple disciplines.
+
+## Domains Covered
+- Arabic Language (Grammar, Morphology, Rhetoric)
+- Islamic Sciences (Aqida, Fiqh, Hadith)
+- Islamic Finance (Principles, Contracts, Modern Applications)
+
+## Main Sections
+- /fr/livres/ : The digital library containing authoritative texts.
+- /fr/formations/ : Structured learning paths.
+- /fr/contenus/ : Articles, news, and editorial content.
+
+## Objective
+To provide structured, authentic, and modern resources based on the Sunni tradition, helping learners study, understand, and transmit knowledge with methodological rigor.

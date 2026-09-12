@@ -1,0 +1,327 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block title %}{{ book.title }} | Rissala{% endblock %}
+
+{% block extra_head %}
+<!-- PDF.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script>
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+</script>
+{% endblock %}
+
+{% block content %}
+<div class="bg-background pt-10 pb-20" x-data="pdfReader('{% if book.pdf_file %}{{ book.pdf_file.url }}{% elif book.external_pdf_url %}{{ book.external_pdf_url }}{% endif %}', '{{ book.language }}')">
+    <div class="container mx-auto px-4 lg:px-8 max-w-6xl">
+        
+        <div class="flex flex-col lg:flex-row gap-12 items-start">
+            <!-- Cover -->
+            <div class="w-full lg:w-1/3 shrink-0">
+                <button @click="openReader()" class="w-full aspect-[2/3] relative rounded-2xl overflow-hidden bg-white/5 border border-white/10 shadow-2xl group cursor-pointer">
+                    {% if book.cover_image %}
+                        <img src="{{ book.cover_image.url }}" alt="{{ book.title }}" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    {% else %}
+                        <div class="absolute inset-0 flex items-center justify-center text-muted group-hover:scale-105 transition-transform duration-500">
+                            <span class="font-heading text-xl px-4 text-center">{{ book.title }}</span>
+                        </div>
+                    {% endif %}
+                    
+                    <!-- Overlay Play/Read -->
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-[2px]">
+                        <div class="w-16 h-16 rounded-full bg-primary flex items-center justify-center text-background shadow-lg shadow-primary/30">
+                            <svg class="w-8 h-8 ml-1" fill="currentColor" viewBox="0 0 20 20"><path d="M4 4l12 6-12 6z"></path></svg>
+                        </div>
+                    </div>
+                </button>
+            </div>
+            
+            <!-- Details -->
+            <div class="flex-1">
+                <div class="inline-block px-3 py-1 bg-primary/10 text-primary text-xs font-semibold uppercase tracking-wider rounded-lg mb-4">
+                    {{ book.get_language_display }}
+                </div>
+                
+                <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold font-heading text-foreground mb-2">{{ book.title }}</h1>
+                <p class="text-lg text-muted mb-6">{% trans "Par" %} <span class="text-foreground">{{ book.author }}</span></p>
+                
+                <div class="prose prose-invert prose-p:text-muted max-w-none mb-8">
+                    {{ book.long_description|default:book.short_description|linebreaks }}
+                </div>
+                
+                <div class="flex flex-wrap gap-4 pt-6 border-t border-white/10">
+                    {% if book.pdf_file or book.external_pdf_url %}
+                        <button @click="openReader()" class="h-14 px-8 rounded-xl bg-primary text-background font-bold text-lg flex items-center justify-center hover:bg-primary-light transition-colors shadow-lg shadow-primary/20 gap-3">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                            {% trans "Ouvrir et lire le livre" %}
+                        </button>
+                    {% else %}
+                        <div class="h-14 px-8 rounded-xl bg-background-alt border border-white/10 text-muted font-medium flex items-center justify-center cursor-not-allowed">
+                            {% trans "Fichier non disponible" %}
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- PDF Reader Modal Overlay -->
+    <template x-teleport="body">
+        <div x-show="isOpen" 
+             style="display: none;"
+             x-transition:enter="transition ease-out duration-300"
+             x-transition:enter-start="opacity-0 transform scale-95"
+             x-transition:enter-end="opacity-100 transform scale-100"
+             x-transition:leave="transition ease-in duration-200"
+             x-transition:leave-start="opacity-100 transform scale-100"
+             x-transition:leave-end="opacity-0 transform scale-95"
+             class="fixed inset-0 z-50 bg-black flex flex-col w-full h-full overflow-hidden"
+             @keydown.escape.window="closeReader()"
+             @keydown.arrow-left.window="language === 'ar' ? nextPage() : prevPage()"
+             @keydown.arrow-right.window="language === 'ar' ? prevPage() : nextPage()">
+            
+            <!-- Topbar -->
+            <div class="h-16 bg-background-alt border-b border-white/10 flex items-center justify-between px-4 sm:px-6 shrink-0 z-10">
+                <div class="flex items-center gap-4">
+                    <button @click="closeReader()" class="w-10 h-10 rounded-full bg-white/5 hover:bg-white/10 flex items-center justify-center text-foreground transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                    </button>
+                    <div class="font-heading font-medium text-foreground hidden sm:block truncate max-w-sm">{{ book.title }}</div>
+                </div>
+                
+                <div class="flex items-center gap-4">
+                    <span class="text-sm text-muted font-medium" x-text="`Page ${pageNum} / ${numPages || '-'}`"></span>
+                </div>
+            </div>
+
+            <!-- Loader -->
+            <div x-show="loading" class="absolute inset-0 flex items-center justify-center bg-black/80 z-20">
+                <div class="w-12 h-12 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
+            </div>
+
+            <!-- Reader Area -->
+            <div class="flex-1 relative flex items-center justify-center bg-[#1a1a1a] overflow-hidden touch-none select-none"
+                 x-ref="readerContainer"
+                 @touchstart="touchStart($event)"
+                 @touchend="touchEnd($event)"
+                 @mousedown="mouseDown($event)"
+                 @mouseup="mouseUp($event)"
+                 @mouseleave="mouseUp($event)">
+                
+                <!-- Left Nav Area -->
+                <div class="absolute left-0 top-0 bottom-0 w-1/5 md:w-32 z-10 cursor-pointer flex items-center justify-start px-2 md:px-4 opacity-50 hover:opacity-100 transition-opacity"
+                     @click="language === 'ar' ? nextPage() : prevPage()">
+                    <div class="w-12 h-12 rounded-full bg-black/50 text-white flex items-center justify-center backdrop-blur-sm">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                    </div>
+                </div>
+
+                <!-- Canvas Wrapper -->
+                <div class="max-w-full max-h-full flex items-center justify-center p-2 sm:p-4 shadow-2xl">
+                    <canvas x-ref="pdfCanvas" class="max-w-full max-h-full object-contain bg-white rounded"></canvas>
+                </div>
+
+                <!-- Right Nav Area -->
+                <div class="absolute right-0 top-0 bottom-0 w-1/5 md:w-32 z-10 cursor-pointer flex items-center justify-end px-2 md:px-4 opacity-50 hover:opacity-100 transition-opacity"
+                     @click="language === 'ar' ? prevPage() : nextPage()">
+                    <div class="w-12 h-12 rounded-full bg-black/50 text-white flex items-center justify-center backdrop-blur-sm">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </template>
+</div>
+
+<script>
+const PDFManager = {
+    doc: null,
+    async load(url) {
+        const loadingTask = pdfjsLib.getDocument(url);
+        this.doc = await loadingTask.promise;
+        return this.doc.numPages;
+    },
+    async render(num, containerElement, canvasElement) {
+        if (!this.doc) return;
+        const page = await this.doc.getPage(num);
+        const ctx = canvasElement.getContext('2d');
+        
+        let containerWidth = containerElement.clientWidth - 32; 
+        let containerHeight = containerElement.clientHeight - 32;
+        
+        if (containerWidth <= 0 || containerHeight <= 0) {
+            containerWidth = window.innerWidth - 32;
+            containerHeight = window.innerHeight - 100;
+        }
+        
+        const unscaledViewport = page.getViewport({ scale: 1.0 });
+        const scaleX = containerWidth / unscaledViewport.width;
+        const scaleY = containerHeight / unscaledViewport.height;
+        const scale = Math.min(scaleX, scaleY, 2.5);
+        
+        const viewport = page.getViewport({ scale: scale });
+        
+        canvasElement.height = viewport.height;
+        canvasElement.width = viewport.width;
+        
+        const renderContext = {
+            canvasContext: ctx,
+            viewport: viewport
+        };
+        
+        await page.render(renderContext).promise;
+    }
+};
+
+function pdfReader(pdfUrl, language) {
+    return {
+        pdfUrl: pdfUrl,
+        language: language,
+        isOpen: false,
+        loading: false,
+        pageNum: 1,
+        numPages: 0,
+        pageRendering: false,
+        pageNumPending: null,
+        touchStartX: 0,
+        touchEndX: 0,
+        touchStartY: 0,
+        touchEndY: 0,
+        isDragging: false,
+
+        init() {
+            window.addEventListener('resize', () => {
+                if(this.isOpen && PDFManager.doc) {
+                    this.renderPage(this.pageNum);
+                }
+            });
+        },
+
+        openReader() {
+            if(!this.pdfUrl) return;
+            this.isOpen = true;
+            document.body.style.overflow = 'hidden'; 
+            
+            if (!PDFManager.doc) {
+                this.loadPDF();
+            }
+        },
+
+        closeReader() {
+            this.isOpen = false;
+            document.body.style.overflow = '';
+        },
+
+        async loadPDF() {
+            this.loading = true;
+            try {
+                await new Promise(r => setTimeout(r, 150));
+                this.numPages = await PDFManager.load(this.pdfUrl);
+                this.renderPage(this.pageNum);
+            } catch (error) {
+                console.error('Error loading PDF:', error);
+                alert("{% trans 'Erreur lors du chargement du livre.' %}");
+                this.closeReader();
+            } finally {
+                this.loading = false;
+            }
+        },
+
+        async renderPage(num) {
+            this.pageRendering = true;
+            
+            try {
+                const canvas = this.$refs.pdfCanvas;
+                const container = this.$refs.readerContainer;
+                await PDFManager.render(num, container, canvas);
+            } catch (error) {
+                console.error("Error rendering page:", error);
+                alert("Erreur d'affichage du PDF: " + error.message);
+            }
+            
+            this.pageRendering = false;
+            
+            if (this.pageNumPending !== null) {
+                this.renderPage(this.pageNumPending);
+                this.pageNumPending = null;
+            }
+        },
+
+        queueRenderPage(num) {
+            if (this.pageRendering) {
+                this.pageNumPending = num;
+            } else {
+                this.renderPage(num);
+            }
+        },
+
+        prevPage() {
+            if (this.pageNum <= 1) return;
+            this.pageNum--;
+            this.queueRenderPage(this.pageNum);
+        },
+
+        nextPage() {
+            if (this.pageNum >= this.numPages) return;
+            this.pageNum++;
+            this.queueRenderPage(this.pageNum);
+        },
+
+        touchStart(e) {
+            this.touchStartX = e.changedTouches[0].screenX;
+            this.touchStartY = e.changedTouches[0].screenY;
+        },
+
+        touchEnd(e) {
+            this.touchEndX = e.changedTouches[0].screenX;
+            this.touchEndY = e.changedTouches[0].screenY;
+            this.handleSwipe();
+        },
+        
+        mouseDown(e) {
+            this.isDragging = true;
+            this.touchStartX = e.screenX;
+            this.touchStartY = e.screenY;
+        },
+        
+        mouseUp(e) {
+            if (!this.isDragging) return;
+            this.isDragging = false;
+            this.touchEndX = e.screenX;
+            this.touchEndY = e.screenY;
+            this.handleSwipe();
+        },
+
+        handleSwipe() {
+            const distanceX = this.touchEndX - this.touchStartX;
+            const distanceY = this.touchEndY - this.touchStartY;
+            
+            // Ignore if it's a vertical swipe or just a simple click (<40px)
+            if (Math.abs(distanceY) > Math.abs(distanceX)) return;
+            if (Math.abs(distanceX) < 40) return;
+            
+            // distanceX < 0 means swiped Left (finger moved right to left)
+            // distanceX > 0 means swiped Right (finger moved left to right)
+            
+            if (this.language === 'ar') {
+                // RTL Arabic
+                if (distanceX < 0) {
+                    this.nextPage(); // Swiped left -> Next page
+                } else {
+                    this.prevPage(); // Swiped right -> Prev page
+                }
+            } else {
+                // LTR (French)
+                if (distanceX < 0) {
+                    this.nextPage(); // Swiped left -> Next page
+                } else {
+                    this.prevPage(); // Swiped right -> Prev page
+                }
+            }
+        }
+    }
+}
+</script>
+{% endblock %}

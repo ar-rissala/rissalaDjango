@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /auth/
+Disallow: /admin/
+Disallow: /accounts/
+
+Sitemap: https://rissala.net/sitemap.xml

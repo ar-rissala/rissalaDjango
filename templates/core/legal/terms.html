@@ -1,0 +1,185 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block title %}{% trans "Conditions Générales de Vente | Rissala" %}{% endblock %}
+
+{% block meta %}
+    <meta name="description" content="{% trans 'Consultez les Conditions Générales de Vente applicables aux contenus pédagogiques et ressources numériques proposés sur Rissala.' %}">
+{% endblock %}
+
+{% block content %}
+<section class="py-16 sm:py-20 lg:py-24 bg-background">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+
+        <header class="mb-12 reveal-up">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold font-heading mb-4">{% trans "Conditions Générales de Vente" %}</h1>
+            <p class="text-muted text-base sm:text-lg leading-relaxed max-w-3xl">
+                {% trans "Les présentes Conditions Générales de Vente ont pour objet de définir les conditions applicables à l'achat de contenus pédagogiques et ressources numériques proposés sur la plateforme Rissala." %}
+            </p>
+        </header>
+
+        <div class="space-y-12">
+
+            <!-- 1. Objet -->
+            <article class="reveal-up">
+                <h2 class="text-xl sm:text-2xl font-bold font-heading mb-4 flex items-center gap-3">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-primary/10 text-primary text-sm font-bold shrink-0">1</span>
+                    {% trans "Objet" %}
+                </h2>
+                <div class="rounded-xl border border-white/10 bg-background-alt p-6 sm:p-8 space-y-4 text-muted text-sm sm:text-base leading-relaxed">
+                    <p>{% trans "Les présentes Conditions Générales de Vente ont pour objet de définir les conditions applicables à l'achat de contenus pédagogiques et ressources numériques proposés sur la plateforme Rissala." %}</p>
+                    <p>{% trans "Toute commande effectuée sur le site implique l'acceptation des présentes Conditions Générales de Vente." %}</p>
+                </div>
+            </article>
+
+            <!-- 2. Produits et contenus -->
+            <article class="reveal-up">
+                <h2 class="text-xl sm:text-2xl font-bold font-heading mb-4 flex items-center gap-3">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-primary/10 text-primary text-sm font-bold shrink-0">2</span>
+                    {% trans "Produits et contenus" %}
+                </h2>
+                <div class="rounded-xl border border-white/10 bg-background-alt p-6 sm:p-8 space-y-4 text-muted text-sm sm:text-base leading-relaxed">
+                    <p>{% trans "Rissala propose différents contenus et ressources pédagogiques accessibles en ligne." %}</p>
+                    <p>{% trans "Les caractéristiques et le prix des contenus proposés sont indiqués sur les pages correspondantes avant la validation de la commande." %}</p>
+                    <p>{% trans "Les contenus sont fournis sous format numérique, sauf indication contraire." %}</p>
+                </div>
+            </article>
+
+            <!-- 3. Prix -->
+            <article class="reveal-up">
+                <h2 class="text-xl sm:text-2xl font-bold font-heading mb-4 flex items-center gap-3">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-primary/10 text-primary text-sm font-bold shrink-0">3</span>
+                    {% trans "Prix" %}
+                </h2>
+                <div class="rounded-xl border border-white/10 bg-background-alt p-6 sm:p-8 space-y-4 text-muted text-sm sm:text-base leading-relaxed">
+                    <p>{% trans "Les prix sont indiqués en euros." %}</p>
+                    <p>{% trans "Le prix applicable est celui affiché au moment de la validation de la commande." %}</p>
+                    <p>{% trans "Rissala se réserve le droit de modifier ses prix à tout moment, sans effet sur les commandes déjà validées." %}</p>
+                </div>
+            </article>
+
+            <!-- 4. Commande et paiement -->
+            <article class="reveal-up">
+                <h2 class="text-xl sm:text-2xl font-bold font-heading mb-4 flex items-center gap-3">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-primary/10 text-primary text-sm font-bold shrink-0">4</span>
+                    {% trans "Commande et paiement" %}
+                </h2>
+                <div class="rounded-xl border border-white/10 bg-background-alt p-6 sm:p-8 space-y-4 text-muted text-sm sm:text-base leading-relaxed">
+                    <p>{% trans "L'utilisateur sélectionne le contenu qu'il souhaite acheter et valide sa commande après avoir vérifié son récapitulatif." %}</p>
+                    <p>{% trans "Le paiement est effectué en ligne via les moyens de paiement sécurisés proposés sur la plateforme." %}</p>
+                    <p>{% trans "La commande est considérée comme définitive après confirmation du paiement." %}</p>
+                    <p>{% trans "Une confirmation peut être envoyée par courrier électronique à l'adresse renseignée par l'utilisateur." %}</p>
+                </div>
+            </article>
+
+            <!-- 5. Accès aux contenus -->
+            <article class="reveal-up">
+                <h2 class="text-xl sm:text-2xl font-bold font-heading mb-4 flex items-center gap-3">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-primary/10 text-primary text-sm font-bold shrink-0">5</span>
+                    {% trans "Accès aux contenus" %}
+                </h2>
+                <div class="rounded-xl border border-white/10 bg-background-alt p-6 sm:p-8 space-y-4 text-muted text-sm sm:text-base leading-relaxed">
+                    <p>{% trans "Après confirmation du paiement, l'utilisateur obtient l'accès au contenu acheté selon les modalités indiquées sur la plateforme." %}</p>
+                    <p>{% trans "L'accès aux contenus est strictement personnel et ne peut être partagé avec des tiers." %}</p>
+                </div>
+            </article>
+
+            <!-- 6. Droit de rétractation -->
+            <article class="reveal-up">
+                <h2 class="text-xl sm:text-2xl font-bold font-heading mb-4 flex items-center gap-3">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-primary/10 text-primary text-sm font-bold shrink-0">6</span>
+                    {% trans "Droit de rétractation" %}
+                </h2>
+                <div class="rounded-xl border border-white/10 bg-background-alt p-6 sm:p-8 space-y-4 text-muted text-sm sm:text-base leading-relaxed">
+                    <p>{% trans "Conformément à la réglementation applicable, l'utilisateur consommateur dispose en principe d'un délai de quatorze jours pour exercer son droit de rétractation." %}</p>
+                    <p>{% trans "Toutefois, pour les contenus numériques fournis immédiatement après l'achat, le droit de rétractation peut être perdu lorsque l'utilisateur demande expressément l'accès immédiat au contenu et reconnaît les conséquences de cette demande, conformément aux dispositions légales applicables." %}</p>
+                    <p>{% trans "Lorsque les conditions légales sont réunies, aucun remboursement ne pourra être demandé après l'accès au contenu numérique." %}</p>
+                </div>
+            </article>
+
+            <!-- 7. Remboursement -->
+            <article class="reveal-up">
+                <h2 class="text-xl sm:text-2xl font-bold font-heading mb-4 flex items-center gap-3">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-primary/10 text-primary text-sm font-bold shrink-0">7</span>
+                    {% trans "Remboursement" %}
+                </h2>
+                <div class="rounded-xl border border-white/10 bg-background-alt p-6 sm:p-8 space-y-4 text-muted text-sm sm:text-base leading-relaxed">
+                    <p>{% trans "En raison de la nature numérique des contenus proposés, les contenus accessibles immédiatement après achat ne sont généralement pas remboursables lorsque le droit de rétractation a été valablement perdu conformément à la réglementation applicable." %}</p>
+                    <p>{% trans "Toutefois, en cas de problème technique empêchant l'accès au contenu acheté, l'utilisateur peut contacter Rissala afin qu'une solution soit apportée." %}</p>
+                </div>
+            </article>
+
+            <!-- 8. Utilisation des contenus -->
+            <article class="reveal-up">
+                <h2 class="text-xl sm:text-2xl font-bold font-heading mb-4 flex items-center gap-3">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-primary/10 text-primary text-sm font-bold shrink-0">8</span>
+                    {% trans "Utilisation des contenus" %}
+                </h2>
+                <div class="rounded-xl border border-white/10 bg-background-alt p-6 sm:p-8 space-y-4 text-muted text-sm sm:text-base leading-relaxed">
+                    <p>{% trans "Les contenus achetés sont destinés à un usage personnel." %}</p>
+                    <p>{% trans "Il est interdit de copier, reproduire, diffuser, partager, revendre ou mettre à disposition d'autres personnes les contenus proposés sur Rissala sans autorisation préalable." %}</p>
+                    <p>{% trans "L'achat d'un contenu ne constitue pas un transfert des droits de propriété intellectuelle." %}</p>
+                </div>
+            </article>
+
+            <!-- 9. Responsabilité -->
+            <article class="reveal-up">
+                <h2 class="text-xl sm:text-2xl font-bold font-heading mb-4 flex items-center gap-3">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-primary/10 text-primary text-sm font-bold shrink-0">9</span>
+                    {% trans "Responsabilité" %}
+                </h2>
+                <div class="rounded-xl border border-white/10 bg-background-alt p-6 sm:p-8 space-y-4 text-muted text-sm sm:text-base leading-relaxed">
+                    <p>{% trans "Rissala s'efforce de garantir l'accès et la qualité de ses contenus." %}</p>
+                    <p>{% trans "Toutefois, la plateforme ne peut garantir une disponibilité permanente et sans interruption de ses services." %}</p>
+                    <p>{% trans "Les contenus proposés ont une vocation pédagogique et informative." %}</p>
+                </div>
+            </article>
+
+            <!-- 10. Modification des conditions -->
+            <article class="reveal-up">
+                <h2 class="text-xl sm:text-2xl font-bold font-heading mb-4 flex items-center gap-3">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-primary/10 text-primary text-sm font-bold shrink-0">10</span>
+                    {% trans "Modification des conditions" %}
+                </h2>
+                <div class="rounded-xl border border-white/10 bg-background-alt p-6 sm:p-8 space-y-4 text-muted text-sm sm:text-base leading-relaxed">
+                    <p>{% trans "Rissala peut modifier les présentes Conditions Générales de Vente à tout moment." %}</p>
+                    <p>{% trans "Les conditions applicables sont celles en vigueur au moment de la validation de la commande." %}</p>
+                </div>
+            </article>
+
+            <!-- 11. Droit applicable -->
+            <article class="reveal-up">
+                <h2 class="text-xl sm:text-2xl font-bold font-heading mb-4 flex items-center gap-3">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-primary/10 text-primary text-sm font-bold shrink-0">11</span>
+                    {% trans "Droit applicable" %}
+                </h2>
+                <div class="rounded-xl border border-white/10 bg-background-alt p-6 sm:p-8 space-y-4 text-muted text-sm sm:text-base leading-relaxed">
+                    <p>{% trans "Les présentes Conditions Générales de Vente sont soumises au droit français." %}</p>
+                    <p>{% trans "En cas de litige, une solution amiable sera recherchée en priorité." %}</p>
+                </div>
+            </article>
+
+            <!-- 12. Contact -->
+            <article class="reveal-up">
+                <h2 class="text-xl sm:text-2xl font-bold font-heading mb-4 flex items-center gap-3">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-primary/10 text-primary text-sm font-bold shrink-0">12</span>
+                    {% trans "Contact" %}
+                </h2>
+                <div class="rounded-xl border border-white/10 bg-background-alt p-6 sm:p-8 space-y-4 text-muted text-sm sm:text-base leading-relaxed">
+                    <p>{% trans "Pour toute question concernant une commande, un paiement ou un remboursement, l'utilisateur peut contacter Rissala via les coordonnées indiquées sur le site." %}</p>
+                    <div class="mt-4">
+                        <a href="mailto:rissala@tutamail.com" class="text-primary hover:text-primary-light transition-colors">rissala@tutamail.com</a>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+
+        <!-- Footer info -->
+        <div class="mt-16 pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-muted">
+            <p>{% trans "Dernière mise à jour" %} : {% now "d/m/Y" %}</p>
+        </div>
+
+    </div>
+</section>
+{% endblock %}

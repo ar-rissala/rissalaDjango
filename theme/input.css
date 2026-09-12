@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+/* Source paths to scan for Tailwind classes */
+@source "../templates/**/*.html";
+@source "../apps/**/*.html";
+@source "../apps/**/*.py";
+
+/* Theme Configuration for Rissala Clone */
+@theme {
+  --color-primary: #35A88B;
+  --color-primary-dark: #177E66;
+  --color-primary-light: #50C5A4;
+  
+  --color-background: #030d0a; /* Almost black with subtle emerald tint */
+  --color-background-alt: #071913; /* Slightly lighter for contrast */
+  
+  --color-foreground: #FFFFFF;
+  --color-foreground-alt: #F5F5F5;
+  
+  --color-muted: #A1A1AA;
+  
+  /* Typography */
+  --font-sans: "Inter", "Manrope", "Geist", "Noto Sans Arabic", "IBM Plex Sans Arabic", "Cairo", sans-serif;
+  --font-heading: "Inter", "Manrope", "Geist", "Noto Sans Arabic", "IBM Plex Sans Arabic", "Cairo", sans-serif;
+  --font-arabic: "Noto Sans Arabic", "IBM Plex Sans Arabic", "Cairo", sans-serif;
+}
+
+/* Custom utilities */
+@layer utilities {
+  .rtl-reverse {
+    /* Placeholder for RTL specific utilities if needed */
+  }
+
+  /* --- Animation System --- */
+  
+  /* Base reveal class */
+  .reveal, .reveal-up, .reveal-left, .reveal-right, .reveal-scale, .image-reveal, .stagger-item {
+    opacity: 0;
+    transition-duration: 700ms;
+    transition-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
+    transition-property: opacity, transform;
+    will-change: opacity, transform;
+  }
+
+  /* Specific transforms */
+  .reveal {
+    transform: translateY(24px);
+  }
+  .reveal-up, .stagger-item {
+    transform: translateY(20px);
+  }
+  .reveal-left {
+    transform: translateX(-24px);
+  }
+  .reveal-right {
+    transform: translateX(24px);
+  }
+  .reveal-scale {
+    transform: scale(0.97);
+  }
+  .image-reveal {
+    transform: scale(1.02);
+  }
+
+  /* Revealed state */
+  .is-revealed {
+    opacity: 1;
+    transform: translate(0) scale(1);
+  }
+
+  /* Prefers Reduced Motion */
+  @media (prefers-reduced-motion: reduce) {
+    .reveal, .reveal-up, .reveal-left, .reveal-right, .reveal-scale, .image-reveal, .stagger-item {
+      transition: none !important;
+      opacity: 1 !important;
+      transform: translate(0) scale(1) !important;
+    }
+  }
+}

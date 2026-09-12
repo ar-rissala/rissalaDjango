@@ -1,0 +1,3961 @@
+# Rissala Arabic translations
+# Copyright (C) 2026 Rissala
+# This file is distributed under the same license as the Rissala package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Rissala 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-05 20:43+0200\n"
+"PO-Revision-Date: 2026-09-05 17:43+0200\n"
+"Last-Translator: Rissala Team\n"
+"Language-Team: Arabic\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
+# ===== MODEL FIELDS =====
+#: .\apps\accounts\models.py:6
+msgid "email address"
+msgstr "عنوان البريد الإلكتروني"
+
+#: .\apps\books\models.py:6 .\apps\content\models.py:14
+#: .\apps\courses\models.py:7 .\apps\courses\models.py:40
+#: .\apps\courses\models.py:53
+#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:14
+#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:94
+#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:102
+#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:112
+#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:122
+#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:126
+#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:158
+#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:177
+#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:406
+#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:411
+#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:421
+#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:441
+#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:458
+#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:477
+#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:483
+#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:500
+#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:512
+#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:520
+#: .\venv_python310_backup\Lib\site-packages\modeltranslation\tests\models.py:14
+#: .\venv_python310_backup\Lib\site-packages\modeltranslation\tests\models.py:94
+#: .\venv_python310_backup\Lib\site-packages\modeltranslation\tests\models.py:102
+#: .\venv_python310_backup\Lib\site-packages\modeltranslation\tests\models.py:112
+#: .\venv_python310_backup\Lib\site-packages\modeltranslation\tests\models.py:122
+#: .\venv_python310_backup\Lib\site-packages\modeltranslation\tests\models.py:126
+#: .\venv_python310_backup\Lib\site-packages\modeltranslation\tests\models.py:158
+#: .\venv_python310_backup\Lib\site-packages\modeltranslation\tests\models.py:177
+#: .\venv_python310_backup\Lib\site-packages\modeltranslation\tests\models.py:406
+#: .\venv_python310_backup\Lib\site-packages\modeltranslation\tests\models.py:411
+#: .\venv_python310_backup\Lib\site-packages\modeltranslation\tests\models.py:421
+#: .\venv_python310_backup\Lib\site-packages\modeltranslation\tests\models.py:441
+#: .\venv_python310_backup\Lib\site-packages\modeltranslation\tests\models.py:458
+#: .\venv_python310_backup\Lib\site-packages\modeltranslation\tests\models.py:477
+#: .\venv_python310_backup\Lib\site-packages\modeltranslation\tests\models.py:483
+#: .\venv_python310_backup\Lib\site-packages\modeltranslation\tests\models.py:500
+#: .\venv_python310_backup\Lib\site-packages\modeltranslation\tests\models.py:512
+#: .\venv_python310_backup\Lib\site-packages\modeltranslation\tests\models.py:520
+msgid "title"
+msgstr "العنوان"
+
+#: .\apps\books\models.py:9 .\apps\content\models.py:21
+msgid "author"
+msgstr "المؤلف"
+
+#: .\apps\books\models.py:10
+msgid "short description"
+msgstr "وصف مختصر"
+
+#: .\apps\books\models.py:11
+msgid "long description"
+msgstr "وصف مفصل"
+
+#: .\apps\books\models.py:12 .\apps\content\models.py:20
+msgid "cover image"
+msgstr "صورة الغلاف"
+
+#: .\apps\books\models.py:13
+msgid "PDF file"
+msgstr "ملف PDF"
+
+#: .\apps\books\models.py:14
+msgid "external PDF URL"
+msgstr "رابط PDF خارجي"
+
+#: .\apps\books\models.py:14
+msgid "If stored on R2 directly"
+msgstr "إذا كان مخزنًا مباشرة على R2"
+
+#: .\apps\books\models.py:15 .\apps\content\models.py:24
+#: .\apps\courses\models.py:16
+msgid "language"
+msgstr "اللغة"
+
+#: .\apps\books\models.py:16
+msgid "category"
+msgstr "التصنيف"
+
+#: .\apps\books\models.py:17
+msgid "subcategory"
+msgstr "التصنيف الفرعي"
+
+#: .\apps\books\models.py:18 .\apps\content\models.py:22
+msgid "tags"
+msgstr "الوسوم"
+
+#: .\apps\books\models.py:19
+msgid "publication date"
+msgstr "تاريخ النشر"
+
+#: .\apps\books\models.py:20 .\apps\content\models.py:23
+#: .\apps\courses\models.py:14 .\apps\courses\models.py:72
+msgid "status"
+msgstr "الحالة"
+
+#: .\apps\books\models.py:21 .\apps\courses\models.py:15
+msgid "featured"
+msgstr "مميز"
+
+#: .\apps\books\models.py:22 .\apps\courses\models.py:41
+#: .\apps\courses\models.py:57
+msgid "order"
+msgstr "الترتيب"
+
+#: .\apps\books\models.py:23 .\apps\content\models.py:26
+#: .\apps\courses\models.py:19
+msgid "SEO title"
+msgstr "عنوان SEO"
+
+#: .\apps\books\models.py:24 .\apps\content\models.py:27
+#: .\apps\courses\models.py:20
+msgid "SEO description"
+msgstr "وصف SEO"
+
+#: .\apps\books\models.py:27
+msgid "book"
+msgstr "كتاب"
+
+#: .\apps\books\models.py:28
+msgid "books"
+msgstr "كتب"
+
+#: .\apps\content\models.py:17
+msgid "content type"
+msgstr "نوع المحتوى"
+
+#: .\apps\content\models.py:18
+msgid "excerpt"
+msgstr "مقتطف"
+
+#: .\apps\content\models.py:19 .\apps\content\models.py:30
+msgid "content"
+msgstr "محتوى"
+
+#: .\apps\content\models.py:25
+msgid "published at"
+msgstr "نُشر في"
+
+#: .\apps\content\models.py:31
+msgid "contents"
+msgstr "محتويات"
+
+#: .\apps\content\urls.py:8
+#, fuzzy
+#| msgid "Actualités"
+msgid "actualites/"
+msgstr "الأخبار"
+
+#: .\apps\content\urls.py:10 .\templates\components\navbar.html:37
+#: .\templates\components\navbar.html:92
+msgid "Actualités"
+msgstr "الأخبار"
+
+#: .\apps\content\urls.py:11
+msgid "Suivez les dernières actualités et articles de la plateforme."
+msgstr "تابع آخر الأخبار والمقالات من المنصة."
+
+#: .\apps\content\urls.py:14
+#, fuzzy
+#| msgid "Langue arabe"
+msgid "langue-arabe/"
+msgstr "اللغة العربية"
+
+#: .\apps\content\urls.py:16
+msgid "Langue Arabe"
+msgstr "اللغة العربية"
+
+#: .\apps\content\urls.py:17
+msgid "Ressources et articles dédiés à l'étude de la langue arabe."
+msgstr "موارد ومقالات مخصصة لدراسة اللغة العربية."
+
+#: .\apps\content\urls.py:20
+#, fuzzy
+#| msgid "Finance islamique"
+msgid "finance-islamique/"
+msgstr "المالية الإسلامية"
+
+#: .\apps\content\urls.py:22
+msgid "Finance Islamique"
+msgstr "المالية الإسلامية"
+
+#: .\apps\content\urls.py:23
+msgid "Articles et analyses sur les principes de la finance islamique."
+msgstr "مقالات وتحليلات حول مبادئ المالية الإسلامية."
+
+#: .\apps\content\urls.py:26 .\apps\courses\urls.py:9
+#, fuzzy
+#| msgid "Sciences islamiques"
+msgid "sciences-islamiques/"
+msgstr "العلوم الشرعية"
+
+#: .\apps\content\urls.py:28
+#, fuzzy
+#| msgid "Sciences islamiques"
+msgid "Sciences Islamiques"
+msgstr "العلوم الشرعية"
+
+#: .\apps\content\urls.py:29
+msgid ""
+"Ressources éducatives sur les fondements de la religion et la spiritualité."
+msgstr ""
+
+#: .\apps\courses\models.py:10 .\apps\courses\models.py:54
+msgid "description"
+msgstr "الوصف"
+
+#: .\apps\courses\models.py:11
+msgid "thumbnail"
+msgstr "الصورة المصغرة"
+
+#: .\apps\courses\models.py:12
+msgid "instructor"
+msgstr "المدرّس"
+
+#: .\apps\courses\models.py:13
+msgid "price"
+msgstr "السعر"
+
+#: .\apps\courses\models.py:17
+msgid "difficulty"
+msgstr "المستوى"
+
+#: .\apps\courses\models.py:18
+msgid "estimated duration"
+msgstr "المدة المقدرة"
+
+#: .\apps\courses\models.py:23
+msgid "course"
+msgstr "تكوين"
+
+#: .\apps\courses\models.py:24
+msgid "courses"
+msgstr "تكوينات"
+
+#: .\apps\courses\models.py:44
+msgid "module"
+msgstr "وحدة"
+
+#: .\apps\courses\models.py:45
+msgid "modules"
+msgstr "وحدات"
+
+#: .\apps\courses\models.py:55
+msgid "video ID"
+msgstr "معرّف الفيديو"
+
+#: .\apps\courses\models.py:55
+msgid "ID from Bunny Stream or Mux"
+msgstr "المعرّف من Bunny Stream أو Mux"
+
+#: .\apps\courses\models.py:56
+msgid "duration"
+msgstr "المدة"
+
+#: .\apps\courses\models.py:56
+msgid "Duration in seconds"
+msgstr "المدة بالثواني"
+
+#: .\apps\courses\models.py:58
+msgid "free preview"
+msgstr "معاينة مجانية"
+
+#: .\apps\courses\models.py:61
+msgid "lesson"
+msgstr "درس"
+
+#: .\apps\courses\models.py:62
+msgid "lessons"
+msgstr "دروس"
+
+#: .\apps\courses\models.py:73
+msgid "progress"
+msgstr "التقدّم"
+
+#: .\apps\courses\urls.py:8
+#, fuzzy
+#| msgid "Parcours"
+msgid "parcours/"
+msgstr "المسارات"
+
+#: .\config\urls.py:29
+#, fuzzy
+#| msgid "author"
+msgid "auth/"
+msgstr "المؤلف"
+
+#: .\config\urls.py:30
+#, fuzzy
+#| msgid "Livres"
+msgid "livres/"
+msgstr "الكتب"
+
+#: .\config\urls.py:31
+#, fuzzy
+#| msgid "contents"
+msgid "contenus/"
+msgstr "محتويات"
+
+#: .\config\urls.py:32
+#, fuzzy
+#| msgid "Mes formations"
+msgid "formations/"
+msgstr "تكويناتي"
+
+# ===== AUTH / DASHBOARD =====
+#: .\templates\accounts\dashboard.html:11
+msgid "Tableau de bord"
+msgstr "لوحة التحكم"
+
+#: .\templates\accounts\dashboard.html:12
+msgid "Mes formations"
+msgstr "تكويناتي"
+
+#: .\templates\accounts\dashboard.html:13
+msgid "Progression"
+msgstr "التقدّم"
+
+#: .\templates\accounts\dashboard.html:14
+msgid "Paramètres"
+msgstr "الإعدادات"
+
+#: .\templates\accounts\dashboard.html:20
+msgid "Déconnexion"
+msgstr "تسجيل الخروج"
+
+#: .\templates\accounts\dashboard.html:27
+msgid "Bonjour,"
+msgstr "مرحبًا،"
+
+#: .\templates\accounts\dashboard.html:31
+msgid "Formations actives"
+msgstr "التكوينات النشطة"
+
+#: .\templates\accounts\dashboard.html:35
+msgid "Leçons terminées"
+msgstr "الدروس المكتملة"
+
+#: .\templates\accounts\dashboard.html:40
+msgid "Continuer l'apprentissage"
+msgstr "متابعة التعلّم"
+
+#: .\templates\accounts\dashboard.html:47
+msgid "Aucune formation en cours"
+msgstr "لا توجد تكوينات جارية"
+
+#: .\templates\accounts\dashboard.html:48
+msgid ""
+"Découvrez nos parcours d'apprentissage et commencez à étudier dès "
+"aujourd'hui."
+msgstr "اكتشف مساراتنا التعليمية وابدأ الدراسة اليوم."
+
+#: .\templates\accounts\dashboard.html:50
+msgid "Explorer les parcours"
+msgstr "استكشاف المسارات"
+
+#: .\templates\accounts\login.html:9 .\templates\components\navbar.html:72
+#: .\templates\components\navbar.html:118
+msgid "Connexion"
+msgstr "تسجيل الدخول"
+
+#: .\templates\accounts\login.html:12
+msgid "Accédez à votre espace"
+msgstr "الوصول إلى حسابك"
+
+#: .\templates\accounts\login.html:19
+msgid "Email"
+msgstr "البريد الإلكتروني"
+
+#: .\templates\accounts\login.html:20
+msgid "Adresse email"
+msgstr "عنوان البريد الإلكتروني"
+
+#: .\templates\accounts\login.html:23 .\templates\accounts\login.html:24
+msgid "Mot de passe"
+msgstr "كلمة المرور"
+
+#: .\templates\accounts\login.html:31
+msgid "Mot de passe oublié ?"
+msgstr "نسيت كلمة المرور؟"
+
+#: .\templates\accounts\login.html:38 .\templates\accounts\register.html:29
+msgid "Se connecter"
+msgstr "تسجيل الدخول"
+
+#: .\templates\accounts\login.html:44
+msgid "Pas encore de compte ?"
+msgstr "ليس لديك حساب بعد؟"
+
+#: .\templates\accounts\login.html:46 .\templates\accounts\register.html:9
+msgid "Créer un compte"
+msgstr "إنشاء حساب"
+
+#: .\templates\accounts\register.html:12
+msgid "Rejoignez la plateforme Rissala"
+msgstr "انضم إلى منصة رسالة"
+
+#: .\templates\accounts\register.html:21
+msgid "S'inscrire"
+msgstr "التسجيل"
+
+#: .\templates\accounts\register.html:27
+msgid "Déjà un compte ?"
+msgstr "لديك حساب بالفعل؟"
+
+#: .\templates\books\book_detail.html:46
+#: .\templates\courses\course_detail.html:27
+msgid "Par"
+msgstr "بقلم"
+
+#: .\templates\books\book_detail.html:56
+msgid "Ouvrir et lire le livre"
+msgstr "فتح وقراءة الكتاب"
+
+#: .\templates\books\book_detail.html:60
+msgid "Fichier non disponible"
+msgstr "الملف غير متوفر"
+
+#: .\templates\books\book_detail.html:225
+msgid "Erreur lors du chargement du livre."
+msgstr "خطأ أثناء تحميل الكتاب."
+
+#: .\templates\books\book_list.html:4 .\templates\components\navbar.html:17
+#: .\templates\components\navbar.html:87
+msgid "Livres"
+msgstr "الكتب"
+
+# ===== BOOKS =====
+#: .\templates\books\book_list.html:11
+msgid "Bibliothèque Numérique"
+msgstr "المكتبة الرقمية"
+
+#: .\templates\books\book_list.html:12
+msgid ""
+"Parcourez notre collection d'ouvrages, de traductions et de livrets traitant "
+"des sciences islamiques."
+msgstr "تصفّح مجموعتنا من الكتب والترجمات والكتيبات في العلوم الشرعية."
+
+#: .\templates\books\book_list.html:15
+msgid "Rechercher un titre, un auteur..."
+msgstr "ابحث عن عنوان أو مؤلف..."
+
+#: .\templates\books\book_list.html:20
+msgid "Chercher"
+msgstr "بحث"
+
+#: .\templates\books\book_list.html:45
+msgid "Voir les détails"
+msgstr "عرض التفاصيل"
+
+#: .\templates\books\book_list.html:53
+msgid "Aucun livre n'est disponible pour le moment."
+msgstr "لا تتوفر كتب حاليًا."
+
+# ===== FOOTER =====
+#: .\templates\components\footer.html:10
+msgid ""
+"Une plateforme dédiée à l'étude et à la transmission du savoir islamique."
+msgstr "منصة مخصصة لدراسة ونقل العلوم الإسلامية."
+
+#: .\templates\components\footer.html:11
+msgid "Étudier. Comprendre. Transmettre."
+msgstr "ادرس. افهم. بلّغ."
+
+#: .\templates\components\footer.html:16
+msgid "Apprendre"
+msgstr "تعلّم"
+
+#: .\templates\components\footer.html:18 .\templates\components\navbar.html:25
+#: .\templates\components\navbar.html:89 .\templates\core\home.html:51
+#: .\templates\core\legal\about.html:84
+msgid "Langue arabe"
+msgstr "اللغة العربية"
+
+#: .\templates\components\footer.html:19 .\templates\components\navbar.html:21
+#: .\templates\components\navbar.html:88 .\templates\core\home.html:63
+msgid "Sciences islamiques"
+msgstr "العلوم الشرعية"
+
+#: .\templates\components\footer.html:20 .\templates\components\navbar.html:29
+#: .\templates\components\navbar.html:90 .\templates\core\home.html:75
+#: .\templates\core\legal\about.html:94
+msgid "Finance islamique"
+msgstr "المالية الإسلامية"
+
+#: .\templates\components\footer.html:25
+msgid "Ressources"
+msgstr "موارد"
+
+#: .\templates\components\footer.html:27
+msgid "Actualités & Articles"
+msgstr "أخبار ومقالات"
+
+#: .\templates\components\footer.html:28 .\templates\core\legal\about.html:4
+#: .\templates\core\legal\about.html:15
+msgid "À propos de Rissala"
+msgstr "حول رسالة"
+
+#: .\templates\components\footer.html:33
+msgid "Légal"
+msgstr "قانوني"
+
+#: .\templates\components\footer.html:35 .\templates\core\legal\legal.html:4
+#: .\templates\core\legal\legal.html:11
+#: .\templates\core\legal\privacy.html:192
+#: .\templates\core\legal\privacy.html:201
+msgid "Mentions légales"
+msgstr "الإشعارات القانونية"
+
+#: .\templates\components\footer.html:36 .\templates\core\legal\legal.html:127
+#: .\templates\core\legal\privacy.html:4
+#: .\templates\core\legal\privacy.html:11
+msgid "Politique de confidentialité"
+msgstr "سياسة الخصوصية"
+
+#: .\templates\components\footer.html:37
+msgid "Conditions générales"
+msgstr "الشروط العامة"
+
+#: .\templates\components\footer.html:43
+msgid "Tous droits réservés."
+msgstr "جميع الحقوق محفوظة."
+
+# ===== NAVBAR =====
+#: .\templates\components\navbar.html:13 .\templates\components\navbar.html:86
+msgid "Accueil"
+msgstr "الرئيسية"
+
+#: .\templates\components\navbar.html:33 .\templates\components\navbar.html:91
+msgid "Parcours"
+msgstr "المسارات"
+
+#: .\templates\components\navbar.html:68
+#: .\templates\components\navbar.html:114
+msgid "Mon Espace"
+msgstr "حسابي"
+
+#: .\templates\components\navbar.html:96
+msgid "Langue"
+msgstr "اللغة"
+
+#: .\templates\content\content_list.html:47
+msgid "Articles"
+msgstr ""
+
+#: .\templates\content\content_list.html:77
+msgid "Aucun contenu"
+msgstr "لا يوجد محتوى"
+
+#: .\templates\content\content_list.html:78
+msgid ""
+"Il n'y a pas encore de contenu disponible dans cette rubrique. Revenez "
+"bientôt !"
+msgstr "لا يتوفر محتوى في هذا القسم حتى الآن. عد قريبا!"
+
+# ===== HOME PAGE =====
+#: .\templates\core\home.html:18
+msgid "Étudiez selon vos"
+msgstr "ادرس وفق"
+
+#: .\templates\core\home.html:18
+msgid "convictions"
+msgstr "قناعاتك"
+
+#: .\templates\core\home.html:21
+msgid ""
+"Rissala vous accompagne dans l'étude et la transmission du savoir islamique. "
+"Des parcours structurés, des sources rigoureuses et une progression pensée "
+"pour comprendre, approfondir et transmettre."
+msgstr ""
+"رسالة ترافقك في دراسة ونقل العلوم الشرعية. مسارات منظمة، مصادر موثوقة، وتقدّم "
+"مدروس للفهم والتعمّق والتبليغ."
+
+#: .\templates\core\home.html:25
+msgid "Découvrez nos parcours"
+msgstr "اكتشف مساراتنا"
+
+#: .\templates\core\home.html:37
+msgid "Étudier. Comprendre. Approfondir."
+msgstr "ادرس. افهم. تعمّق."
+
+#: .\templates\core\home.html:40
+msgid ""
+"Des parcours structurés pour construire progressivement des bases solides et "
+"développer une compréhension claire du savoir."
+msgstr "مسارات منظمة لبناء أسس متينة تدريجيًا وتطوير فهم واضح للعلم."
+
+#: .\templates\core\home.html:52
+msgid ""
+"Maîtriser progressivement la langue arabe, de l'alphabet à la lecture et à "
+"la compréhension des textes classiques."
+msgstr ""
+"إتقان اللغة العربية تدريجيًا، من الحروف إلى قراءة وفهم النصوص الكلاسيكية."
+
+#: .\templates\core\home.html:54 .\templates\core\home.html:66
+#: .\templates\core\home.html:78
+msgid "Découvrir"
+msgstr "اكتشف"
+
+#: .\templates\core\home.html:64
+msgid ""
+"Étudier les fondements de la tradition sunnite à travers la croyance, le "
+"hadith, le fiqh et l'histoire."
+msgstr "دراسة أصول التقليد السني من خلال العقيدة والحديث والفقه والتاريخ."
+
+#: .\templates\core\home.html:76
+msgid ""
+"Comprendre les principes de la finance islamique, ses fondements et ses "
+"mécanismes."
+msgstr "فهم مبادئ المالية الإسلامية وأسسها وآلياتها."
+
+#: .\templates\core\home.html:87
+msgid "Articles & actualités"
+msgstr "مقالات وأخبار"
+
+#: .\templates\core\home.html:88
+msgid ""
+"Approfondir ses connaissances à travers des articles, analyses, guides et "
+"ressources."
+msgstr "تعميق المعرفة من خلال المقالات والتحليلات والأدلة والموارد."
+
+#: .\templates\core\home.html:90
+msgid "Lire les articles"
+msgstr "اقرأ المقالات"
+
+# ===== SEO INCLUDES =====
+#: .\templates\core\legal\about.html:7
+#, fuzzy
+#| msgid "Rissala est une plateforme dédiée à l\\'"
+msgid "Rissala est une plateforme éducative dédiée à l\\"
+msgstr "رسالة منصة مخصصة لـ"
+
+# ===== ABOUT PAGE =====
+#: .\templates\core\legal\about.html:16
+msgid ""
+"Rissala : la plateforme de référence en sciences islamiques, langue arabe et "
+"finance islamique"
+msgstr ""
+"رسالة: المنصة المرجعية في العلوم الإسلامية واللغة العربية والتمويل الإسلامي"
+
+#: .\templates\core\legal\about.html:18
+msgid ""
+"Rissala est une plateforme éducative dédiée à l'étude rigoureuse des "
+"sciences islamiques, à l'apprentissage de la langue arabe et à la "
+"compréhension de la finance islamique. Disponible en français, en anglais et "
+"en arabe, elle rend accessibles des connaissances authentiques, vérifiées et "
+"structurées, fondées sur le Coran, la Sunna et les avis des savants "
+"classiques et contemporains."
+msgstr ""
+"رسالة هي منصة تعليمية مكرسة للدراسة الدقيقة للعلوم الإسلامية، وتعلم اللغة "
+"العربية، وفهم التمويل الإسلامي. وهي متاحة باللغات الفرنسية والإنجليزية "
+"والعربية، وتوفر إمكانية الوصول إلى معرفة أصيلة تم التحقق منها ومنظمة، وتستند "
+"إلى القرآن والسنة وآراء العلماء الكلاسيكيين والمعاصرين."
+
+#: .\templates\core\legal\about.html:27
+msgid "Ce que nous enseignons"
+msgstr "ما نعلمه"
+
+#: .\templates\core\legal\about.html:34
+msgid "Fiqh (jurisprudence islamique)"
+msgstr "الفقه (الفقه الإسلامي)"
+
+#: .\templates\core\legal\about.html:37
+msgid ""
+"Comparaison des quatre écoles juridiques (madhabs) : hanafite, malikite, "
+"chaféite, hanbalite."
+msgstr "مقارنة المذاهب الفقهية الأربعة: الحنفي، المالكي، الشافعي، الحنبلي."
+
+#: .\templates\core\legal\about.html:44
+msgid "Hadith et sciences du hadith"
+msgstr "الحديث وعلوم الحديث"
+
+#: .\templates\core\legal\about.html:47
+msgid "Authentification, chaînes de transmission (isnad), classification."
+msgstr "التوثيق، سلاسل النقل (الإسناد)، التصنيف."
+
+#: .\templates\core\legal\about.html:54
+msgid "Tafsir (exégèse coranique)"
+msgstr "التفسير (تفسير القرآن)"
+
+#: .\templates\core\legal\about.html:57
+msgid "Interprétation classique et contemporaine du Coran."
+msgstr "التفسير الكلاسيكي والمعاصر للقرآن."
+
+#: .\templates\core\legal\about.html:64
+msgid "Aqida (croyance islamique)"
+msgstr "العقيدة (العقيدة الإسلامية)"
+
+#: .\templates\core\legal\about.html:67
+msgid "Fondements de la foi selon Ahl al-Sunna."
+msgstr "أسس الإيمان عند أهل السنة."
+
+#: .\templates\core\legal\about.html:74
+msgid "Sîra (biographie du Prophète ﷺ)"
+msgstr "السيرة (سيرة النبي ﷺ)"
+
+#: .\templates\core\legal\about.html:77
+msgid "Vie, contexte historique et enseignements."
+msgstr "الحياة والسياق التاريخي والتعاليم."
+
+#: .\templates\core\legal\about.html:87
+msgid ""
+"Grammaire (nahw), conjugaison (sarf), vocabulaire coranique, arabe classique "
+"et moderne."
+msgstr "النحو والصرف والمفردات القرآنية والعربية الفصحى والحديثة."
+
+#: .\templates\core\legal\about.html:97
+msgid ""
+"Principes de la charia économique, contrats halal, alternatives à la banque "
+"conventionnelle, zakat, investissement conforme."
+msgstr ""
+"مبادئ الشريعة الاقتصادية، والعقود الحلال، وبدائل الخدمات المصرفية التقليدية، "
+"والزكاة، والاستثمار المتوافق."
+
+#: .\templates\core\legal\about.html:106
+msgid "Notre approche"
+msgstr "نهجنا"
+
+#: .\templates\core\legal\about.html:109
+msgid ""
+"Chaque contenu publié sur Rissala repose sur des sources primaires — Coran, "
+"Sunna authentifiée — et sur les positions établies des écoles juridiques "
+"reconnues, avec citation systématique des références. Notre méthodologie "
+"privilégie la traçabilité des sources à l'opinion non sourcée."
+msgstr ""
+"يستند كل محتوى يُنشر على رسالة إلى المصادر الأولية - القرآن والسنة الصحيحة - "
+"والمواقف الثابتة للمذاهب الفقهية المعترف بها، مع الاقتباس المنهجي للمراجع. "
+"تعطي منهجيتنا الأولوية لتتبع المصادر على الرأي غير الموثق."
+
+#: .\templates\core\legal\about.html:116
+msgid "À qui s'adresse Rissala"
+msgstr "لمن موجهة رسالة"
+
+#: .\templates\core\legal\about.html:119
+msgid ""
+"Rissala s'adresse aux nouveaux musulmans, aux étudiants en sciences "
+"islamiques, aux personnes en apprentissage de la langue arabe, et à toute "
+"personne souhaitant structurer sa compréhension de l'islam ou des principes "
+"de la finance islamique — en français, en anglais ou en arabe."
+msgstr ""
+"رسالة موجهة للمسلمين الجدد، وطلاب العلوم الإسلامية، ومتعلمي اللغة العربية، "
+"وأي شخص يرغب في بناء فهمه للإسلام أو مبادئ التمويل الإسلامي - باللغات "
+"الفرنسية أو الإنجليزية أو العربية."
+
+#: .\templates\core\legal\about.html:120
+msgid ""
+"Rissala est pensée pour une audience internationale : chaque version "
+"linguistique offre un accès complet et natif au même niveau d'exigence et de "
+"rigueur."
+msgstr ""
+"تم تصميم رسالة لجمهور دولي: توفر كل نسخة لغوية وصولاً كاملاً وأصليًا إلى نفس "
+"المستوى من المتطلبات والدقة."
+
+# ===== LEGAL PAGE (MENTIONS LÉGALES) =====
+#: .\templates\core\legal\legal.html:13
+msgid ""
+"Les présentes mentions légales ont pour objectif d'informer les utilisateurs "
+"du site Rissala sur l'identité de l'éditeur, les conditions d'utilisation du "
+"site ainsi que les responsabilités associées à son utilisation."
+msgstr ""
+"تهدف هذه الإشعارات القانونية إلى إعلام مستخدمي موقع رسالة بهوية الناشر وشروط "
+"استخدام الموقع والمسؤوليات المرتبطة باستخدامه."
+
+#: .\templates\core\legal\legal.html:23
+msgid "Éditeur du site"
+msgstr "ناشر الموقع"
+
+#: .\templates\core\legal\legal.html:26
+msgid "Le site Rissala.net est édité par :"
+msgstr "موقع Rissala.net تحت إدارة:"
+
+#: .\templates\core\legal\legal.html:29
+msgid "Forme juridique"
+msgstr "الشكل القانوني"
+
+#: .\templates\core\legal\legal.html:30
+msgid "Siège social"
+msgstr "المقر الرئيسي"
+
+#: .\templates\core\legal\legal.html:31
+msgid "Numéro SIRET"
+msgstr "رقم SIRET"
+
+#: .\templates\core\legal\legal.html:32
+msgid "Numéro de TVA intracommunautaire"
+msgstr "رقم ضريبة القيمة المضافة الأوروبي"
+
+#: .\templates\core\legal\legal.html:33
+msgid "Adresse e-mail de contact"
+msgstr "البريد الإلكتروني للتواصل"
+
+#: .\templates\core\legal\legal.html:34
+msgid "Directeur de la publication et développeur du site"
+msgstr "مدير النشر ومطوّر الموقع"
+
+#: .\templates\core\legal\legal.html:43
+msgid "Hébergement du site"
+msgstr "استضافة الموقع"
+
+#: .\templates\core\legal\legal.html:46
+msgid "Le site Rissala est hébergé par :"
+msgstr "يُستضاف موقع رسالة لدى:"
+
+#: .\templates\core\legal\legal.html:49
+msgid "Adresse"
+msgstr "العنوان"
+
+#: .\templates\core\legal\legal.html:49
+msgid "États-Unis"
+msgstr "الولايات المتحدة"
+
+#: .\templates\core\legal\legal.html:50
+msgid "Site internet"
+msgstr "الموقع الإلكتروني"
+
+#: .\templates\core\legal\legal.html:52
+msgid ""
+"L'hébergement des services applicatifs peut également reposer sur différents "
+"prestataires techniques nécessaires au fonctionnement de la plateforme."
+msgstr ""
+"قد تعتمد استضافة الخدمات التطبيقية أيضًا على مزوّدين تقنيين مختلفين ضروريين "
+"لتشغيل المنصة."
+
+#: .\templates\core\legal\legal.html:60
+msgid "Objet du site"
+msgstr "الغرض من الموقع"
+
+#: .\templates\core\legal\legal.html:63
+msgid ""
+"Rissala est une plateforme dédiée au partage de connaissances, à la "
+"diffusion de contenus éducatifs et au développement de services numériques "
+"autour de ses thématiques principales."
+msgstr ""
+"رسالة منصة مخصصة لمشاركة المعرفة ونشر المحتوى التعليمي وتطوير الخدمات "
+"الرقمية حول محاورها الرئيسية."
+
+#: .\templates\core\legal\legal.html:64
+msgid "Le site peut proposer notamment :"
+msgstr "يمكن للموقع أن يقدم على وجه الخصوص:"
+
+#: .\templates\core\legal\legal.html:68
+msgid "des contenus éducatifs"
+msgstr "محتوى تعليمي"
+
+#: .\templates\core\legal\legal.html:72
+msgid "des ressources numériques"
+msgstr "موارد رقمية"
+
+#: .\templates\core\legal\legal.html:76
+msgid "des services communautaires"
+msgstr "خدمات مجتمعية"
+
+#: .\templates\core\legal\legal.html:80
+msgid "des fonctionnalités nécessitant la création d'un compte utilisateur"
+msgstr "ميزات تتطلب إنشاء حساب مستخدم"
+
+#: .\templates\core\legal\legal.html:84
+msgid "des services commerciaux liés aux offres proposées par Rissala"
+msgstr "خدمات تجارية مرتبطة بالعروض المقدمة من رسالة"
+
+#: .\templates\core\legal\legal.html:94
+msgid "Propriété intellectuelle"
+msgstr "الملكية الفكرية"
+
+#: .\templates\core\legal\legal.html:97
+msgid ""
+"L'ensemble des éléments présents sur le site Rissala, notamment les textes, "
+"images, illustrations, logos, éléments graphiques, vidéos, interfaces et "
+"contenus numériques, sont protégés par les dispositions relatives à la "
+"propriété intellectuelle."
+msgstr ""
+"جميع العناصر الموجودة على موقع رسالة، بما في ذلك النصوص والصور والرسوم "
+"التوضيحية والشعارات والعناصر الرسومية والفيديوهات والواجهات والمحتوى الرقمي، "
+"محمية بموجب أحكام الملكية الفكرية."
+
+#: .\templates\core\legal\legal.html:98
+msgid ""
+"Sauf autorisation préalable écrite de Rissala, toute reproduction, "
+"représentation, modification, diffusion ou exploitation totale ou partielle "
+"des contenus du site est interdite."
+msgstr ""
+"بدون إذن كتابي مسبق من رسالة، يُحظر أي نسخ أو تمثيل أو تعديل أو نشر أو "
+"استغلال كلي أو جزئي لمحتويات الموقع."
+
+#: .\templates\core\legal\legal.html:99
+msgid ""
+"Toute utilisation non autorisée des contenus du site pourra constituer une "
+"violation des droits de propriété intellectuelle applicables."
+msgstr ""
+"أي استخدام غير مصرح به لمحتويات الموقع قد يشكل انتهاكًا لحقوق الملكية الفكرية "
+"المعمول بها."
+
+#: .\templates\core\legal\legal.html:107 .\templates\core\legal\terms.html:129
+msgid "Responsabilité"
+msgstr "المسؤولية"
+
+#: .\templates\core\legal\legal.html:110
+msgid ""
+"Rissala s'efforce de fournir des informations fiables et régulièrement mises "
+"à jour."
+msgstr "تسعى رسالة لتقديم معلومات موثوقة ومحدّثة بانتظام."
+
+#: .\templates\core\legal\legal.html:111
+msgid ""
+"Toutefois, l'éditeur ne peut garantir l'exactitude, l'exhaustivité ou "
+"l'absence d'erreur dans l'ensemble des contenus proposés."
+msgstr ""
+"ومع ذلك، لا يمكن للناشر ضمان دقة أو شمولية أو خلو جميع المحتويات المقدمة من "
+"الأخطاء."
+
+#: .\templates\core\legal\legal.html:112
+msgid ""
+"L'utilisation des informations disponibles sur le site relève de la "
+"responsabilité exclusive de l'utilisateur."
+msgstr "يتحمل المستخدم وحده مسؤولية استخدام المعلومات المتاحة على الموقع."
+
+#: .\templates\core\legal\legal.html:113
+msgid ""
+"Rissala ne pourra être tenu responsable des dommages directs ou indirects "
+"pouvant résulter de l'accès ou de l'utilisation du site."
+msgstr ""
+"لا يمكن تحميل رسالة مسؤولية الأضرار المباشرة أو غير المباشرة التي قد تنتج عن "
+"الوصول إلى الموقع أو استخدامه."
+
+#: .\templates\core\legal\legal.html:121
+msgid "Données personnelles"
+msgstr "البيانات الشخصية"
+
+#: .\templates\core\legal\legal.html:124
+msgid ""
+"Rissala accorde une importance particulière à la protection des données "
+"personnelles de ses utilisateurs."
+msgstr "تولي رسالة أهمية خاصة لحماية البيانات الشخصية لمستخدميها."
+
+#: .\templates\core\legal\legal.html:125
+msgid ""
+"La collecte et le traitement des données personnelles sont réalisés "
+"conformément au Règlement général sur la protection des données (RGPD) et à "
+"la réglementation européenne applicable."
+msgstr ""
+"يتم جمع البيانات الشخصية ومعالجتها وفقًا للائحة العامة لحماية البيانات (GDPR) "
+"والتنظيمات الأوروبية المعمول بها."
+
+#: .\templates\core\legal\legal.html:126
+msgid ""
+"Pour toute question relative à vos données personnelles ou pour exercer vos "
+"droits, vous pouvez contacter :"
+msgstr ""
+"لأي استفسار يتعلق ببياناتك الشخصية أو لممارسة حقوقك، يمكنك التواصل عبر:"
+
+#: .\templates\core\legal\legal.html:127
+msgid "Pour plus d'informations, veuillez consulter notre"
+msgstr "لمزيد من المعلومات، يرجى الاطلاع على"
+
+#: .\templates\core\legal\legal.html:135
+msgid "Cookies"
+msgstr "ملفات تعريف الارتباط"
+
+#: .\templates\core\legal\legal.html:138
+msgid ""
+"Le site Rissala peut utiliser des cookies et technologies similaires afin "
+"d'assurer son fonctionnement, mesurer son audience et améliorer l'expérience "
+"utilisateur."
+msgstr ""
+"قد يستخدم موقع رسالة ملفات تعريف الارتباط وتقنيات مشابهة لضمان عمله وقياس "
+"جمهوره وتحسين تجربة المستخدم."
+
+#: .\templates\core\legal\legal.html:139
+msgid ""
+"Les cookies non essentiels nécessitant un consentement préalable ne sont "
+"activés qu'après acceptation de l'utilisateur."
+msgstr ""
+"لا يتم تفعيل ملفات تعريف الارتباط غير الأساسية التي تتطلب موافقة مسبقة إلا "
+"بعد قبول المستخدم."
+
+#: .\templates\core\legal\legal.html:147
+msgid "Liens externes"
+msgstr "الروابط الخارجية"
+
+#: .\templates\core\legal\legal.html:150
+msgid ""
+"Le site Rissala peut contenir des liens vers des sites ou services tiers."
+msgstr "قد يحتوي موقع رسالة على روابط لمواقع أو خدمات تابعة لأطراف ثالثة."
+
+#: .\templates\core\legal\legal.html:151
+msgid ""
+"Rissala ne peut être tenu responsable du contenu, des pratiques ou de la "
+"politique de confidentialité de ces sites externes."
+msgstr ""
+"لا يمكن تحميل رسالة مسؤولية محتوى أو ممارسات أو سياسة خصوصية هذه المواقع "
+"الخارجية."
+
+#: .\templates\core\legal\legal.html:159 .\templates\core\legal\terms.html:154
+msgid "Droit applicable"
+msgstr "القانون المعمول به"
+
+#: .\templates\core\legal\legal.html:162
+msgid "Les présentes mentions légales sont régies par le droit européen."
+msgstr "تخضع هذه الإشعارات القانونية للقانون الأوروبي."
+
+#: .\templates\core\legal\legal.html:163
+msgid ""
+"Tout litige relatif à l'utilisation du site Rissala sera soumis aux "
+"juridictions compétentes conformément aux règles applicables du droit "
+"français."
+msgstr ""
+"يخضع أي نزاع يتعلق باستخدام موقع رسالة للمحاكم المختصة وفقًا للقواعد المعمول "
+"بها في القانون الفرنسي."
+
+# ===== PRIVACY POLICY PAGE =====
+#: .\templates\core\legal\privacy.html:13
+msgid ""
+"Votre vie privée est notre priorité. Découvrez comment Rissala protège et "
+"utilise vos données personnelles."
+msgstr "خصوصيتك هي أولويتنا. اكتشف كيف تحمي رسالة بياناتك الشخصية وتستخدمها."
+
+#: .\templates\core\legal\privacy.html:23
+msgid "Responsable du traitement"
+msgstr "المسؤول عن المعالجة"
+
+#: .\templates\core\legal\privacy.html:26
+msgid ""
+"Le responsable du traitement des données collectées sur le site Rissala est "
+"l'éditeur du site."
+msgstr "المسؤول عن معالجة البيانات المجمعة على موقع رسالة هو ناشر الموقع."
+
+#: .\templates\core\legal\privacy.html:27
+msgid "Pour toute question relative à vos données personnelles :"
+msgstr "لأي استفسار يتعلق ببياناتك الشخصية:"
+
+#: .\templates\core\legal\privacy.html:38
+msgid "Données collectées"
+msgstr "البيانات المجمعة"
+
+#: .\templates\core\legal\privacy.html:41
+msgid "Rissala limite la collecte au strict nécessaire."
+msgstr "تقتصر رسالة على جمع الحد الأدنى الضروري من البيانات."
+
+#: .\templates\core\legal\privacy.html:44
+msgid "Données d'identification"
+msgstr "بيانات التعريف"
+
+#: .\templates\core\legal\privacy.html:45
+msgid ""
+"(collectées lors de la création de compte, de l'inscription à la newsletter, "
+"du téléchargement d'un contenu gratuit ou de l'utilisation de certaines "
+"fonctionnalités)"
+msgstr ""
+"(تُجمع عند إنشاء الحساب أو الاشتراك في النشرة الإخبارية أو تحميل محتوى مجاني "
+"أو استخدام بعض الميزات)"
+
+#: .\templates\core\legal\privacy.html:47
+msgid "Nom et prénom"
+msgstr "الاسم واللقب"
+
+#: .\templates\core\legal\privacy.html:48
+msgid "Pseudonyme"
+msgstr "الاسم المستعار"
+
+#: .\templates\core\legal\privacy.html:49
+msgid "Adresse électronique"
+msgstr "البريد الإلكتروني"
+
+#: .\templates\core\legal\privacy.html:54
+msgid "Données techniques"
+msgstr "البيانات التقنية"
+
+#: .\templates\core\legal\privacy.html:55
+msgid ""
+"(enregistrées automatiquement pour la sécurité et le bon fonctionnement du "
+"site)"
+msgstr "(تُسجّل تلقائيًا لأغراض الأمان وحسن عمل الموقع)"
+
+#: .\templates\core\legal\privacy.html:57
+msgid "Adresse IP"
+msgstr "عنوان IP"
+
+#: .\templates\core\legal\privacy.html:58
+msgid "Date et heure de connexion"
+msgstr "تاريخ ووقت الاتصال"
+
+#: .\templates\core\legal\privacy.html:59
+msgid "Journaux techniques de sécurité"
+msgstr "سجلات الأمان التقنية"
+
+#: .\templates\core\legal\privacy.html:64
+msgid "Aucune donnée bancaire ni aucun numéro de téléphone n'est collecté."
+msgstr "لا يتم جمع أي بيانات بنكية أو أرقام هاتف."
+
+#: .\templates\core\legal\privacy.html:73
+msgid "Finalités du traitement"
+msgstr "أغراض المعالجة"
+
+#: .\templates\core\legal\privacy.html:76
+msgid "Les données sont utilisées uniquement pour :"
+msgstr "تُستخدم البيانات فقط من أجل:"
+
+#: .\templates\core\legal\privacy.html:78
+msgid "Créer et gérer votre compte utilisateur"
+msgstr "إنشاء وإدارة حساب المستخدم الخاص بك"
+
+#: .\templates\core\legal\privacy.html:79
+msgid "Vous donner accès aux services de la plateforme"
+msgstr "منحك الوصول إلى خدمات المنصة"
+
+#: .\templates\core\legal\privacy.html:80
+msgid ""
+"Envoyer des newsletters et contenus gratuits (sous réserve de votre "
+"consentement)"
+msgstr "إرسال النشرات الإخبارية والمحتويات المجانية (بموافقتك)"
+
+#: .\templates\core\legal\privacy.html:81
+msgid "Permettre le téléchargement de ressources gratuites (lead magnets)"
+msgstr "تمكين تحميل الموارد المجانية"
+
+#: .\templates\core\legal\privacy.html:82
+msgid "Assurer la sécurité et améliorer le fonctionnement du site"
+msgstr "ضمان الأمان وتحسين عمل الموقع"
+
+#: .\templates\core\legal\privacy.html:83
+msgid "Mesurer l'audience et réaliser des analyses statistiques"
+msgstr "قياس الجمهور وإجراء تحليلات إحصائية"
+
+#: .\templates\core\legal\privacy.html:84
+msgid "Respecter les obligations légales"
+msgstr "الامتثال للالتزامات القانونية"
+
+#: .\templates\core\legal\privacy.html:93
+msgid "Bases juridiques"
+msgstr "الأسس القانونية"
+
+#: .\templates\core\legal\privacy.html:96
+msgid "Les traitements reposent sur :"
+msgstr "تستند المعالجات إلى:"
+
+#: .\templates\core\legal\privacy.html:98
+msgid "Votre consentement"
+msgstr "موافقتك"
+
+#: .\templates\core\legal\privacy.html:99
+msgid "L'exécution d'un contrat"
+msgstr "تنفيذ عقد"
+
+#: .\templates\core\legal\privacy.html:100
+msgid "Le respect d'obligations légales"
+msgstr "الامتثال للالتزامات القانونية"
+
+#: .\templates\core\legal\privacy.html:101
+msgid "L'intérêt légitime de Rissala (sécurité et amélioration des services)"
+msgstr "المصلحة المشروعة لرسالة (الأمان وتحسين الخدمات)"
+
+#: .\templates\core\legal\privacy.html:110
+msgid "Cookies et mesure d'audience"
+msgstr "ملفات تعريف الارتباط وقياس الجمهور"
+
+#: .\templates\core\legal\privacy.html:113
+msgid "Rissala utilise des cookies pour :"
+msgstr "تستخدم رسالة ملفات تعريف الارتباط من أجل:"
+
+#: .\templates\core\legal\privacy.html:115
+msgid "Assurer le bon fonctionnement du site"
+msgstr "ضمان حسن عمل الموقع"
+
+#: .\templates\core\legal\privacy.html:116
+msgid "Mesurer l'audience"
+msgstr "قياس الجمهور"
+
+#: .\templates\core\legal\privacy.html:117
+msgid "Améliorer l'expérience utilisateur"
+msgstr "تحسين تجربة المستخدم"
+
+#: .\templates\core\legal\privacy.html:119
+msgid ""
+"Le site utilise notamment Google Analytics afin d'obtenir des statistiques "
+"anonymes (nombre de visiteurs, pages consultées, durée des visites, "
+"appareils et navigateurs utilisés)."
+msgstr ""
+"يستخدم الموقع بشكل خاص Google Analytics للحصول على إحصائيات مجهولة الهوية "
+"(عدد الزوار، الصفحات المعروضة، مدة الزيارات، الأجهزة والمتصفحات المستخدمة)."
+
+#: .\templates\core\legal\privacy.html:120
+msgid ""
+"Ces cookies analytiques ne sont déposés qu'après votre consentement "
+"explicite. Lors de votre première visite, un bandeau vous permet d'accepter, "
+"de refuser ou de personnaliser les cookies. Vous pouvez modifier votre choix "
+"à tout moment."
+msgstr ""
+"لا يتم وضع ملفات تعريف الارتباط التحليلية إلا بعد موافقتك الصريحة. عند "
+"زيارتك الأولى، يتيح لك شريط قبول ملفات تعريف الارتباط أو رفضها أو تخصيصها. "
+"يمكنك تغيير اختيارك في أي وقت."
+
+#: .\templates\core\legal\privacy.html:128
+msgid "Durée de conservation"
+msgstr "مدة الاحتفاظ"
+
+#: .\templates\core\legal\privacy.html:131
+msgid ""
+"Les données sont conservées uniquement le temps nécessaire aux finalités "
+"pour lesquelles elles ont été collectées :"
+msgstr "تُحتفظ بالبيانات فقط للمدة اللازمة للأغراض التي جُمعت من أجلها:"
+
+#: .\templates\core\legal\privacy.html:133
+msgid "Données de compte"
+msgstr "بيانات الحساب"
+
+#: .\templates\core\legal\privacy.html:133
+msgid "pendant toute la durée de votre inscription"
+msgstr "طوال مدة تسجيلك"
+
+#: .\templates\core\legal\privacy.html:134
+msgid "Données liées aux newsletters et lead magnets"
+msgstr "البيانات المرتبطة بالنشرات الإخبارية والموارد المجانية"
+
+#: .\templates\core\legal\privacy.html:134
+msgid "maximum 3 ans après votre dernière interaction avec Rissala"
+msgstr "3 سنوات كحد أقصى بعد آخر تفاعل لك مع رسالة"
+
+#: .\templates\core\legal\privacy.html:143
+msgid "Partage des données"
+msgstr "مشاركة البيانات"
+
+#: .\templates\core\legal\privacy.html:146
+msgid ""
+"Les données personnelles ne sont ni vendues ni cédées à des tiers à des fins "
+"commerciales."
+msgstr "لا تُباع البيانات الشخصية ولا تُنقل إلى أطراف ثالثة لأغراض تجارية."
+
+#: .\templates\core\legal\privacy.html:147
+msgid ""
+"Elles peuvent uniquement être transmises aux prestataires techniques "
+"indispensables au fonctionnement du site ou aux autorités compétentes "
+"lorsque la loi l'exige."
+msgstr ""
+"لا يمكن نقلها إلا إلى مقدمي الخدمات التقنية الضروريين لتشغيل الموقع أو إلى "
+"السلطات المختصة عندما يتطلب القانون ذلك."
+
+#: .\templates\core\legal\privacy.html:155
+msgid "Vos droits"
+msgstr "حقوقك"
+
+#: .\templates\core\legal\privacy.html:158
+msgid "Conformément au RGPD, vous disposez des droits suivants :"
+msgstr "وفقًا للائحة العامة لحماية البيانات (GDPR)، لديك الحقوق التالية:"
+
+#: .\templates\core\legal\privacy.html:160
+msgid "Droit d'accès"
+msgstr "حق الوصول"
+
+#: .\templates\core\legal\privacy.html:161
+msgid "Droit de rectification"
+msgstr "حق التصحيح"
+
+#: .\templates\core\legal\privacy.html:162
+msgid "Droit à l'effacement"
+msgstr "حق المحو"
+
+#: .\templates\core\legal\privacy.html:163
+msgid "Droit d'opposition"
+msgstr "حق الاعتراض"
+
+#: .\templates\core\legal\privacy.html:164
+msgid "Droit à la limitation du traitement"
+msgstr "حق تقييد المعالجة"
+
+#: .\templates\core\legal\privacy.html:165
+msgid "Droit à la portabilité"
+msgstr "حق نقل البيانات"
+
+#: .\templates\core\legal\privacy.html:166
+msgid "Droit de retirer votre consentement à tout moment"
+msgstr "حق سحب موافقتك في أي وقت"
+
+#: .\templates\core\legal\privacy.html:168
+msgid "Pour exercer ces droits :"
+msgstr "لممارسة هذه الحقوق:"
+
+#: .\templates\core\legal\privacy.html:169
+msgid ""
+"Vous disposez également du droit d'introduire une réclamation auprès de "
+"l'autorité compétente en matière de protection des données (CNIL en France)."
+msgstr ""
+"لديك أيضًا الحق في تقديم شكوى لدى الهيئة المختصة بحماية البيانات (CNIL في "
+"فرنسا)."
+
+#: .\templates\core\legal\privacy.html:177
+msgid "Sécurité des données"
+msgstr "أمن البيانات"
+
+#: .\templates\core\legal\privacy.html:180
+msgid ""
+"Rissala met en œuvre les mesures techniques et organisationnelles "
+"appropriées pour protéger vos données contre tout accès non autorisé, perte, "
+"modification ou divulgation."
+msgstr ""
+"تنفذ رسالة التدابير التقنية والتنظيمية المناسبة لحماية بياناتك من أي وصول "
+"غير مصرح به أو فقدان أو تعديل أو إفشاء."
+
+#: .\templates\core\legal\privacy.html:188
+msgid "Modification de la politique"
+msgstr "تعديل السياسة"
+
+#: .\templates\core\legal\privacy.html:191
+msgid ""
+"Cette politique peut être modifiée à tout moment pour tenir compte des "
+"évolutions légales, réglementaires ou techniques. Nous vous invitons à la "
+"consulter régulièrement."
+msgstr ""
+"يمكن تعديل هذه السياسة في أي وقت لمراعاة التطورات القانونية أو التنظيمية أو "
+"التقنية. ندعوك للاطلاع عليها بانتظام."
+
+#: .\templates\core\legal\privacy.html:192
+msgid ""
+"Pour plus d'informations, veuillez consulter les mentions légales du site."
+msgstr "لمزيد من المعلومات، يرجى الاطلاع على الإشعارات القانونية للموقع."
+
+#: .\templates\core\legal\privacy.html:200
+#: .\templates\core\legal\terms.html:180
+msgid "Dernière mise à jour"
+msgstr "آخر تحديث"
+
+# ===== TERMS AND CONDITIONS PAGE (CGV) =====
+#: .\templates\core\legal\terms.html:4
+msgid "Conditions Générales de Vente | Rissala"
+msgstr "الشروط العامة للبيع | رسالة"
+
+#: .\templates\core\legal\terms.html:7
+msgid ""
+"Consultez les Conditions Générales de Vente applicables aux contenus "
+"pédagogiques et ressources numériques proposés sur Rissala."
+msgstr ""
+"اطلع على الشروط العامة للبيع المطبقة على المحتوى التعليمي والموارد الرقمية "
+"المقدمة على رسالة."
+
+#: .\templates\core\legal\terms.html:15
+msgid "Conditions Générales de Vente"
+msgstr "الشروط العامة للبيع"
+
+#: .\templates\core\legal\terms.html:17 .\templates\core\legal\terms.html:30
+msgid ""
+"Les présentes Conditions Générales de Vente ont pour objet de définir les "
+"conditions applicables à l'achat de contenus pédagogiques et ressources "
+"numériques proposés sur la plateforme Rissala."
+msgstr ""
+"تهدف هذه الشروط العامة للبيع إلى تحديد الشروط المطبقة على شراء المحتوى "
+"التعليمي والموارد الرقمية المقدمة على منصة رسالة."
+
+#: .\templates\core\legal\terms.html:27
+msgid "Objet"
+msgstr "الغرض"
+
+#: .\templates\core\legal\terms.html:31
+msgid ""
+"Toute commande effectuée sur le site implique l'acceptation des présentes "
+"Conditions Générales de Vente."
+msgstr "أي طلب يتم إجراؤه على الموقع يعني قبول هذه الشروط العامة للبيع."
+
+#: .\templates\core\legal\terms.html:39
+msgid "Produits et contenus"
+msgstr "المنتجات والمحتوى"
+
+#: .\templates\core\legal\terms.html:42
+msgid ""
+"Rissala propose différents contenus et ressources pédagogiques accessibles "
+"en ligne."
+msgstr "تقدم رسالة مختلف المحتويات والموارد التعليمية المتاحة عبر الإنترنت."
+
+#: .\templates\core\legal\terms.html:43
+msgid ""
+"Les caractéristiques et le prix des contenus proposés sont indiqués sur les "
+"pages correspondantes avant la validation de la commande."
+msgstr ""
+"يتم الإشارة إلى خصائص وأسعار المحتويات المقدمة على الصفحات المعنية قبل "
+"التحقق من صحة الطلب."
+
+#: .\templates\core\legal\terms.html:44
+msgid ""
+"Les contenus sont fournis sous format numérique, sauf indication contraire."
+msgstr "يتم توفير المحتويات بصيغة رقمية، ما لم يُنص على خلاف ذلك."
+
+#: .\templates\core\legal\terms.html:52
+msgid "Prix"
+msgstr "الأسعار"
+
+#: .\templates\core\legal\terms.html:55
+msgid "Les prix sont indiqués en euros."
+msgstr "الأسعار مبينة باليورو."
+
+#: .\templates\core\legal\terms.html:56
+msgid ""
+"Le prix applicable est celui affiché au moment de la validation de la "
+"commande."
+msgstr "السعر المطبق هو السعر المعروض في وقت التحقق من صحة الطلب."
+
+#: .\templates\core\legal\terms.html:57
+msgid ""
+"Rissala se réserve le droit de modifier ses prix à tout moment, sans effet "
+"sur les commandes déjà validées."
+msgstr ""
+"تحتفظ رسالة بالحق في تعديل أسعارها في أي وقت، دون أن يؤثر ذلك على الطلبات "
+"التي تم التحقق من صحتها بالفعل."
+
+#: .\templates\core\legal\terms.html:65
+msgid "Commande et paiement"
+msgstr "الطلب والدفع"
+
+#: .\templates\core\legal\terms.html:68
+msgid ""
+"L'utilisateur sélectionne le contenu qu'il souhaite acheter et valide sa "
+"commande après avoir vérifié son récapitulatif."
+msgstr ""
+"يحدد المستخدم المحتوى الذي يرغب في شرائه ويتحقق من صحة طلبه بعد التحقق من "
+"ملخصه."
+
+#: .\templates\core\legal\terms.html:69
+msgid ""
+"Le paiement est effectué en ligne via les moyens de paiement sécurisés "
+"proposés sur la plateforme."
+msgstr "يتم الدفع عبر الإنترنت من خلال وسائل الدفع الآمنة المقدمة على المنصة."
+
+#: .\templates\core\legal\terms.html:70
+msgid ""
+"La commande est considérée comme définitive après confirmation du paiement."
+msgstr "يعتبر الطلب نهائيًا بعد تأكيد الدفع."
+
+#: .\templates\core\legal\terms.html:71
+msgid ""
+"Une confirmation peut être envoyée par courrier électronique à l'adresse "
+"renseignée par l'utilisateur."
+msgstr "يمكن إرسال تأكيد عبر البريد الإلكتروني إلى العنوان الذي قدمه المستخدم."
+
+#: .\templates\core\legal\terms.html:79
+msgid "Accès aux contenus"
+msgstr "الوصول إلى المحتويات"
+
+#: .\templates\core\legal\terms.html:82
+msgid ""
+"Après confirmation du paiement, l'utilisateur obtient l'accès au contenu "
+"acheté selon les modalités indiquées sur la plateforme."
+msgstr ""
+"بعد تأكيد الدفع، يحصل المستخدم على حق الوصول إلى المحتوى الذي تم شراؤه وفقًا "
+"للشروط الموضحة على المنصة."
+
+#: .\templates\core\legal\terms.html:83
+msgid ""
+"L'accès aux contenus est strictement personnel et ne peut être partagé avec "
+"des tiers."
+msgstr "الوصول إلى المحتوى شخصي بحت ولا يمكن مشاركته مع أطراف ثالثة."
+
+#: .\templates\core\legal\terms.html:91
+msgid "Droit de rétractation"
+msgstr "حق التراجع"
+
+#: .\templates\core\legal\terms.html:94
+msgid ""
+"Conformément à la réglementation applicable, l'utilisateur consommateur "
+"dispose en principe d'un délai de quatorze jours pour exercer son droit de "
+"rétractation."
+msgstr ""
+"وفقًا للوائح المعمول بها، يحق للمستخدم المستهلك مبدئيًا مهلة قدرها أربعة عشر "
+"يومًا لممارسة حقه في التراجع."
+
+#: .\templates\core\legal\terms.html:95
+msgid ""
+"Toutefois, pour les contenus numériques fournis immédiatement après l'achat, "
+"le droit de rétractation peut être perdu lorsque l'utilisateur demande "
+"expressément l'accès immédiat au contenu et reconnaît les conséquences de "
+"cette demande, conformément aux dispositions légales applicables."
+msgstr ""
+"ومع ذلك، بالنسبة للمحتوى الرقمي المقدم فور الشراء، قد يُفقد حق التراجع عندما "
+"يطلب المستخدم صراحة الوصول الفوري إلى المحتوى ويقر بعواقب هذا الطلب، وفقًا "
+"للأحكام القانونية المعمول بها."
+
+#: .\templates\core\legal\terms.html:96
+msgid ""
+"Lorsque les conditions légales sont réunies, aucun remboursement ne pourra "
+"être demandé après l'accès au contenu numérique."
+msgstr ""
+"عند استيفاء الشروط القانونية، لا يمكن طلب أي استرداد بعد الوصول إلى المحتوى "
+"الرقمي."
+
+#: .\templates\core\legal\terms.html:104
+msgid "Remboursement"
+msgstr "الاسترداد"
+
+#: .\templates\core\legal\terms.html:107
+msgid ""
+"En raison de la nature numérique des contenus proposés, les contenus "
+"accessibles immédiatement après achat ne sont généralement pas remboursables "
+"lorsque le droit de rétractation a été valablement perdu conformément à la "
+"réglementation applicable."
+msgstr ""
+"نظرًا للطبيعة الرقمية للمحتويات المقدمة، فإن المحتويات المتاحة فور الشراء "
+"بشكل عام غير قابلة للاسترداد عندما يتم فقدان حق التراجع بشكل صحيح وفقًا "
+"للوائح المعمول بها."
+
+#: .\templates\core\legal\terms.html:108
+msgid ""
+"Toutefois, en cas de problème technique empêchant l'accès au contenu acheté, "
+"l'utilisateur peut contacter Rissala afin qu'une solution soit apportée."
+msgstr ""
+"ومع ذلك، في حالة وجود مشكلة فنية تمنع الوصول إلى المحتوى الذي تم شراؤه، يمكن "
+"للمستخدم الاتصال برسالة لإيجاد حل."
+
+#: .\templates\core\legal\terms.html:116
+msgid "Utilisation des contenus"
+msgstr "استخدام المحتويات"
+
+#: .\templates\core\legal\terms.html:119
+msgid "Les contenus achetés sont destinés à un usage personnel."
+msgstr "المحتويات التي تم شراؤها مخصصة للاستخدام الشخصي."
+
+#: .\templates\core\legal\terms.html:120
+msgid ""
+"Il est interdit de copier, reproduire, diffuser, partager, revendre ou "
+"mettre à disposition d'autres personnes les contenus proposés sur Rissala "
+"sans autorisation préalable."
+msgstr ""
+"يُحظر نسخ أو إعادة إنتاج أو توزيع أو مشاركة أو إعادة بيع أو إتاحة المحتويات "
+"المقدمة على رسالة لأشخاص آخرين دون إذن مسبق."
+
+#: .\templates\core\legal\terms.html:121
+msgid ""
+"L'achat d'un contenu ne constitue pas un transfert des droits de propriété "
+"intellectuelle."
+msgstr "لا يشكل شراء المحتوى نقلًا لحقوق الملكية الفكرية."
+
+#: .\templates\core\legal\terms.html:132
+msgid "Rissala s'efforce de garantir l'accès et la qualité de ses contenus."
+msgstr ""
+
+#: .\templates\core\legal\terms.html:133
+#, fuzzy
+#| msgid ""
+#| "La plateforme ne peut garantir une disponibilité permanente et sans "
+#| "interruption de ses services."
+msgid ""
+"Toutefois, la plateforme ne peut garantir une disponibilité permanente et "
+"sans interruption de ses services."
+msgstr "لا يمكن للمنصة ضمان التوافر الدائم وغير المنقطع لخدماتها."
+
+#: .\templates\core\legal\terms.html:134
+msgid "Les contenus proposés ont une vocation pédagogique et informative."
+msgstr "المحتويات المقدمة لها غرض تعليمي وإعلامي."
+
+#: .\templates\core\legal\terms.html:142
+msgid "Modification des conditions"
+msgstr "تعديل الشروط"
+
+#: .\templates\core\legal\terms.html:145
+msgid ""
+"Rissala peut modifier les présentes Conditions Générales de Vente à tout "
+"moment."
+msgstr "يمكن لرسالة تعديل هذه الشروط العامة للبيع في أي وقت."
+
+#: .\templates\core\legal\terms.html:146
+msgid ""
+"Les conditions applicables sont celles en vigueur au moment de la validation "
+"de la commande."
+msgstr "الشروط المطبقة هي تلك السارية في وقت التحقق من صحة الطلب."
+
+#: .\templates\core\legal\terms.html:157
+#, fuzzy
+#| msgid ""
+#| "Rissala peut modifier les présentes Conditions Générales de Vente à tout "
+#| "moment."
+msgid ""
+"Les présentes Conditions Générales de Vente sont soumises au droit français."
+msgstr "يمكن لرسالة تعديل هذه الشروط العامة للبيع في أي وقت."
+
+#: .\templates\core\legal\terms.html:158
+msgid "En cas de litige, une solution amiable sera recherchée en priorité."
+msgstr "في حالة وجود نزاع، سيتم السعي للتوصل إلى حل ودي كأولوية."
+
+#: .\templates\core\legal\terms.html:166
+msgid "Contact"
+msgstr "جهة الاتصال"
+
+#: .\templates\core\legal\terms.html:169
+msgid ""
+"Pour toute question concernant une commande, un paiement ou un "
+"remboursement, l'utilisateur peut contacter Rissala via les coordonnées "
+"indiquées sur le site."
+msgstr ""
+"لأي سؤال يتعلق بطلب أو دفع أو استرداد، يمكن للمستخدم الاتصال برسالة عبر "
+"تفاصيل الاتصال الموضحة على الموقع."
+
+#: .\templates\courses\course_detail.html:40
+msgid "S'inscrire gratuitement"
+msgstr "التسجيل مجانًا"
+
+#: .\templates\courses\course_detail.html:42
+msgid "S'inscrire pour"
+msgstr "التسجيل بمبلغ"
+
+#: .\templates\courses\course_detail.html:63
+msgid "Programme de la formation"
+msgstr "برنامج التكوين"
+
+#: .\templates\courses\course_detail.html:87
+msgid "Extrait libre"
+msgstr "مقطع مجاني"
+
+#: .\templates\courses\course_detail.html:95
+msgid "Aucune leçon dans ce module pour le moment."
+msgstr "لا توجد دروس في هذه الوحدة حاليًا."
+
+#: .\templates\courses\course_detail.html:103
+msgid "Le programme n'a pas encore été publié."
+msgstr "لم يُنشر البرنامج بعد."
+
+# ===== COURSES =====
+#: .\templates\courses\course_list.html:4
+msgid "Formations et Parcours"
+msgstr "التكوينات والمسارات"
+
+#: .\templates\courses\course_list.html:11
+msgid "Parcours d'Apprentissage"
+msgstr "مسارات التعلّم"
+
+#: .\templates\courses\course_list.html:12
+msgid ""
+"Des programmes structurés, de l'initiation à l'approfondissement, pour "
+"cheminer dans le savoir islamique."
+msgstr "برامج منظمة، من المبتدئ إلى المتقدم، للتقدم في العلوم الشرعية."
+
+#: .\templates\courses\course_list.html:29
+msgid "GRATUIT"
+msgstr "مجاني"
+
+#: .\templates\courses\course_list.html:59
+msgid "Voir le programme"
+msgstr "عرض البرنامج"
+
+#: .\templates\courses\course_list.html:68
+msgid "Aucune formation n'est disponible pour le moment."
+msgstr "لا تتوفر تكوينات حاليًا."
+
+# ===== SEO INCLUDES =====
+#: .\templates\includes\seo.html:18 .\templates\includes\seo.html:25
+#: .\templates\includes\seo.html:34
+#, fuzzy
+#| msgid "Rissala est une plateforme dédiée à l\\'"
+msgid "Rissala est une plateforme dédiée à l\\"
+msgstr "رسالة منصة مخصصة لـ"
+
+#: .\templates\includes\structured_data.html:11
+#, fuzzy
+#| msgid "Plateforme d\\'"
+msgid "Plateforme d\\"
+msgstr "منصة لـ"
+
+#: .\venv\Lib\site-packages\click\_termui_impl.py:186
+#: .\venv_python310_backup\Lib\site-packages\click\_termui_impl.py:186
+msgid "d"
+msgstr ""
+
+#: .\venv\Lib\site-packages\click\_termui_impl.py:736
+#: .\venv_python310_backup\Lib\site-packages\click\_termui_impl.py:736
+#, python-brace-format
+msgid "{editor}: Editing failed"
+msgstr ""
+
+#: .\venv\Lib\site-packages\click\_termui_impl.py:740
+#: .\venv_python310_backup\Lib\site-packages\click\_termui_impl.py:740
+#, python-brace-format
+msgid "{editor}: Editing failed: {e}"
+msgstr ""
+
+#: .\venv\Lib\site-packages\click\_winconsole.py:156
+#: .\venv\Lib\site-packages\click\_winconsole.py:173
+#: .\venv_python310_backup\Lib\site-packages\click\_winconsole.py:156
+#: .\venv_python310_backup\Lib\site-packages\click\_winconsole.py:173
+#, python-brace-format
+msgid "Windows error: {error}"
+msgstr ""
+
+#: .\venv\Lib\site-packages\click\core.py:104
+#: .\venv_python310_backup\Lib\site-packages\click\core.py:104
+msgid "deprecated"
+msgstr ""
+
+#: .\venv\Lib\site-packages\click\core.py:1304
+#: .\venv_python310_backup\Lib\site-packages\click\core.py:1304
+msgid "Options"
+msgstr ""
+
+#: .\venv\Lib\site-packages\click\core.py:1316
+#: .\venv_python310_backup\Lib\site-packages\click\core.py:1316
+msgid "Positional arguments"
+msgstr ""
+
+#: .\venv\Lib\site-packages\click\core.py:1391
+#: .\venv_python310_backup\Lib\site-packages\click\core.py:1391
+#, python-brace-format
+msgid "Got unexpected extra argument ({args})"
+msgid_plural "Got unexpected extra arguments ({args})"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
+msgstr[5] ""
+
+#: .\venv\Lib\site-packages\click\core.py:1407
+#: .\venv_python310_backup\Lib\site-packages\click\core.py:1407
+msgid "DeprecationWarning: The command {name!r} is deprecated.{extra_message}"
+msgstr ""
+
+#: .\venv\Lib\site-packages\click\core.py:1594
+#: .\venv_python310_backup\Lib\site-packages\click\core.py:1594
+msgid "Aborted!"
+msgstr ""
+
+#: .\venv\Lib\site-packages\click\core.py:1981
+#: .\venv_python310_backup\Lib\site-packages\click\core.py:1981
+msgid "Commands"
+msgstr ""
+
+#: .\venv\Lib\site-packages\click\core.py:2012
+#: .\venv_python310_backup\Lib\site-packages\click\core.py:2012
+msgid "Missing command."
+msgstr ""
+
+#: .\venv\Lib\site-packages\click\core.py:2547
+#: .\venv_python310_backup\Lib\site-packages\click\core.py:2547
+msgid "Value must be an iterable."
+msgstr ""
+
+#: .\venv\Lib\site-packages\click\core.py:2570
+#: .\venv_python310_backup\Lib\site-packages\click\core.py:2570
+#, python-brace-format
+msgid "Takes {nargs} values but 1 was given."
+msgid_plural "Takes {nargs} values but {len} were given."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
+msgstr[5] ""
+
+#: .\venv\Lib\site-packages\click\core.py:2767
+#: .\venv_python310_backup\Lib\site-packages\click\core.py:2767
+msgid ""
+"DeprecationWarning: The {param_type} {name!r} is deprecated.{extra_message}"
+msgstr ""
+
+#: .\venv\Lib\site-packages\click\core.py:3246
+#: .\venv_python310_backup\Lib\site-packages\click\core.py:3246
+#, python-brace-format
+msgid "Name '{name}' defined twice"
+msgstr ""
+
+#: .\venv\Lib\site-packages\click\core.py:3262
+#: .\venv_python310_backup\Lib\site-packages\click\core.py:3262
+msgid "Boolean option {decl!r} cannot use the same flag for true/false."
+msgstr ""
+
+#: .\venv\Lib\site-packages\click\core.py:3281
+#: .\venv_python310_backup\Lib\site-packages\click\core.py:3281
+msgid "Could not determine name for option with declarations {decls!r}"
+msgstr ""
+
+#: .\venv\Lib\site-packages\click\core.py:3288
+#: .\venv_python310_backup\Lib\site-packages\click\core.py:3288
+#, python-brace-format
+msgid ""
+"No options defined but a name was passed ({name}). Did you mean to declare "
+"an argument instead? Did you mean to pass '--{name}'?"
+msgstr ""
+
+#: .\venv\Lib\site-packages\click\core.py:3368
+#: .\venv_python310_backup\Lib\site-packages\click\core.py:3368
+#, python-brace-format
+msgid "env var: {var}"
+msgstr ""
+
+#: .\venv\Lib\site-packages\click\core.py:3371
+#: .\venv_python310_backup\Lib\site-packages\click\core.py:3371
+#, python-brace-format
+msgid "default: {default}"
+msgstr ""
+
+#: .\venv\Lib\site-packages\click\core.py:3435
+#: .\venv_python310_backup\Lib\site-packages\click\core.py:3435
+msgid "(dynamic)"
+msgstr ""
+
+#: .\venv\Lib\site-packages\click\core.py:3754
+#: .\venv_python310_backup\Lib\site-packages\click\core.py:3754
+#, python-brace-format
+msgid ""
+"Arguments take exactly one parameter declaration, got {length}: {decls}."
+msgstr ""
+
+#: .\venv\Lib\site-packages\click\decorators.py:399
+#: .\venv_python310_backup\Lib\site-packages\click\decorators.py:399
+msgid "Do you want to continue?"
+msgstr ""
+
+#: .\venv\Lib\site-packages\click\decorators.py:400
+#: .\venv_python310_backup\Lib\site-packages\click\decorators.py:400
+msgid "Confirm the action without prompting."
+msgstr ""
+
+#: .\venv\Lib\site-packages\click\decorators.py:482
+#: .\venv_python310_backup\Lib\site-packages\click\decorators.py:482
+#, python-format
+msgid "%(prog)s, version %(version)s"
+msgstr ""
+
+#: .\venv\Lib\site-packages\click\decorators.py:556
+#: .\venv\Lib\site-packages\click\decorators.py:598
+#: .\venv_python310_backup\Lib\site-packages\click\decorators.py:556
+#: .\venv_python310_backup\Lib\site-packages\click\decorators.py:598
+msgid "Show the version and exit."
+msgstr ""
+
+#: .\venv\Lib\site-packages\click\decorators.py:624
+#: .\venv_python310_backup\Lib\site-packages\click\decorators.py:624
+msgid "Show this message and exit."
+msgstr ""
+
+#: .\venv\Lib\site-packages\click\exceptions.py:29
+#: .\venv_python310_backup\Lib\site-packages\click\exceptions.py:29
+#, python-brace-format
+msgid "Did you mean {possibility}?"
+msgid_plural "(Did you mean one of: {possibilities}?)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
+msgstr[5] ""
+
+#: .\venv\Lib\site-packages\click\exceptions.py:62
+#: .\venv\Lib\site-packages\click\exceptions.py:108
+#: .\venv\Lib\site-packages\click\termui.py:275
+#: .\venv_python310_backup\Lib\site-packages\click\exceptions.py:62
+#: .\venv_python310_backup\Lib\site-packages\click\exceptions.py:108
+#: .\venv_python310_backup\Lib\site-packages\click\termui.py:275
+#, python-brace-format
+msgid "Error: {message}"
+msgstr ""
+
+#: .\venv\Lib\site-packages\click\exceptions.py:99
+#: .\venv_python310_backup\Lib\site-packages\click\exceptions.py:99
+#, python-brace-format
+msgid "Try '{command} {option}' for help."
+msgstr ""
+
+#: .\venv\Lib\site-packages\click\exceptions.py:152
+#: .\venv_python310_backup\Lib\site-packages\click\exceptions.py:152
+#, python-brace-format
+msgid "Invalid value: {message}"
+msgstr ""
+
+#: .\venv\Lib\site-packages\click\exceptions.py:154
+#: .\venv_python310_backup\Lib\site-packages\click\exceptions.py:154
+#, python-brace-format
+msgid "Invalid value for {param_hint}: {message}"
+msgstr ""
+
+#: .\venv\Lib\site-packages\click\exceptions.py:214
+#: .\venv_python310_backup\Lib\site-packages\click\exceptions.py:214
+msgid "Missing argument"
+msgstr ""
+
+#: .\venv\Lib\site-packages\click\exceptions.py:216
+#: .\venv_python310_backup\Lib\site-packages\click\exceptions.py:216
+msgid "Missing option"
+msgstr ""
+
+#: .\venv\Lib\site-packages\click\exceptions.py:218
+#: .\venv_python310_backup\Lib\site-packages\click\exceptions.py:218
+msgid "Missing parameter"
+msgstr ""
+
+#: .\venv\Lib\site-packages\click\exceptions.py:220
+#: .\venv_python310_backup\Lib\site-packages\click\exceptions.py:220
+#, python-brace-format
+msgid "Missing {param_type}"
+msgstr ""
+
+#: .\venv\Lib\site-packages\click\exceptions.py:227
+#: .\venv_python310_backup\Lib\site-packages\click\exceptions.py:227
+#, python-brace-format
+msgid "Missing parameter: {param_name}"
+msgstr ""
+
+#: .\venv\Lib\site-packages\click\exceptions.py:249
+#: .\venv_python310_backup\Lib\site-packages\click\exceptions.py:249
+msgid "No such option {name!r}."
+msgstr ""
+
+#: .\venv\Lib\site-packages\click\exceptions.py:285
+#: .\venv_python310_backup\Lib\site-packages\click\exceptions.py:285
+msgid "No such command {name!r}."
+msgstr ""
+
+#: .\venv\Lib\site-packages\click\exceptions.py:350
+#: .\venv_python310_backup\Lib\site-packages\click\exceptions.py:350
+msgid "unknown error"
+msgstr ""
+
+#: .\venv\Lib\site-packages\click\exceptions.py:357
+#: .\venv_python310_backup\Lib\site-packages\click\exceptions.py:357
+msgid "Could not open file {filename!r}: {message}"
+msgstr ""
+
+#: .\venv\Lib\site-packages\click\formatting.py:167
+#: .\venv_python310_backup\Lib\site-packages\click\formatting.py:167
+msgid "Usage:"
+msgstr ""
+
+#: .\venv\Lib\site-packages\click\parser.py:145
+#: .\venv_python310_backup\Lib\site-packages\click\parser.py:145
+#, python-brace-format
+msgid "Invalid start character for option ({option})"
+msgstr ""
+
+#: .\venv\Lib\site-packages\click\parser.py:203
+#: .\venv_python310_backup\Lib\site-packages\click\parser.py:203
+msgid "Argument {name!r} takes {nargs} values."
+msgstr ""
+
+#: .\venv\Lib\site-packages\click\parser.py:382
+#: .\venv_python310_backup\Lib\site-packages\click\parser.py:382
+msgid "Option {name!r} does not take a value."
+msgstr ""
+
+#: .\venv\Lib\site-packages\click\parser.py:445
+#: .\venv_python310_backup\Lib\site-packages\click\parser.py:445
+msgid "Option {name!r} requires an argument."
+msgid_plural "Option {name!r} requires {nargs} arguments."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
+msgstr[5] ""
+
+#: .\venv\Lib\site-packages\click\shell_completion.py:417
+#: .\venv_python310_backup\Lib\site-packages\click\shell_completion.py:417
+msgid "Shell completion is not supported for Bash versions older than 4.4."
+msgstr ""
+
+#: .\venv\Lib\site-packages\click\shell_completion.py:424
+#: .\venv_python310_backup\Lib\site-packages\click\shell_completion.py:424
+msgid "Couldn't detect Bash version, shell completion is not supported."
+msgstr ""
+
+#: .\venv\Lib\site-packages\click\termui.py:256
+#: .\venv_python310_backup\Lib\site-packages\click\termui.py:256
+msgid "Repeat for confirmation"
+msgstr ""
+
+#: .\venv\Lib\site-packages\click\termui.py:286
+#: .\venv_python310_backup\Lib\site-packages\click\termui.py:286
+msgid "Error: The two entered values do not match."
+msgstr ""
+
+#: .\venv\Lib\site-packages\click\termui.py:340
+#: .\venv_python310_backup\Lib\site-packages\click\termui.py:340
+msgid "Error: invalid input"
+msgstr ""
+
+#: .\venv\Lib\site-packages\click\termui.py:638
+#: .\venv_python310_backup\Lib\site-packages\click\termui.py:638
+msgid "Unknown color {colour!r}"
+msgstr ""
+
+#: .\venv\Lib\site-packages\click\termui.py:1003
+#: .\venv_python310_backup\Lib\site-packages\click\termui.py:1003
+msgid "Press any key to continue..."
+msgstr ""
+
+#: .\venv\Lib\site-packages\click\types.py:439
+#: .\venv_python310_backup\Lib\site-packages\click\types.py:439
+#, python-brace-format
+msgid ""
+"Choose from:\n"
+"\t{choices}"
+msgstr ""
+
+#: .\venv\Lib\site-packages\click\types.py:476
+#: .\venv_python310_backup\Lib\site-packages\click\types.py:476
+msgid "{value!r} is not {choice}."
+msgid_plural "{value!r} is not one of {choices}."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
+msgstr[5] ""
+
+#: .\venv\Lib\site-packages\click\types.py:482
+#: .\venv_python310_backup\Lib\site-packages\click\types.py:482
+#, python-brace-format
+msgid "Choice({choices})"
+msgstr ""
+
+#: .\venv\Lib\site-packages\click\types.py:570
+#: .\venv_python310_backup\Lib\site-packages\click\types.py:570
+msgid "{value!r} does not match the format {format}."
+msgid_plural "{value!r} does not match the formats {formats}."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
+msgstr[5] ""
+
+#: .\venv\Lib\site-packages\click\types.py:594
+#: .\venv_python310_backup\Lib\site-packages\click\types.py:594
+msgid "{value!r} is not a valid {number_type}."
+msgstr ""
+
+#: .\venv\Lib\site-packages\click\types.py:679
+#: .\venv_python310_backup\Lib\site-packages\click\types.py:679
+#, python-brace-format
+msgid "{value} is not in the range {range}."
+msgstr ""
+
+#: .\venv\Lib\site-packages\click\types.py:866
+#: .\venv_python310_backup\Lib\site-packages\click\types.py:866
+msgid "{value!r} is not a valid boolean. Recognized values: {states}"
+msgstr ""
+
+#: .\venv\Lib\site-packages\click\types.py:892
+#: .\venv_python310_backup\Lib\site-packages\click\types.py:892
+msgid "{value!r} is not a valid UUID."
+msgstr ""
+
+#: .\venv\Lib\site-packages\click\types.py:1116
+#: .\venv_python310_backup\Lib\site-packages\click\types.py:1116
+#, fuzzy
+#| msgid "PDF file"
+msgid "file"
+msgstr "ملف PDF"
+
+#: .\venv\Lib\site-packages\click\types.py:1118
+#: .\venv_python310_backup\Lib\site-packages\click\types.py:1118
+#, fuzzy
+#| msgid "instructor"
+msgid "directory"
+msgstr "المدرّس"
+
+#: .\venv\Lib\site-packages\click\types.py:1120
+#: .\venv_python310_backup\Lib\site-packages\click\types.py:1120
+msgid "path"
+msgstr ""
+
+#: .\venv\Lib\site-packages\click\types.py:1167
+#: .\venv_python310_backup\Lib\site-packages\click\types.py:1167
+msgid "{name} {filename!r} does not exist."
+msgstr ""
+
+#: .\venv\Lib\site-packages\click\types.py:1176
+#: .\venv_python310_backup\Lib\site-packages\click\types.py:1176
+msgid "{name} {filename!r} is a file."
+msgstr ""
+
+#: .\venv\Lib\site-packages\click\types.py:1184
+#: .\venv_python310_backup\Lib\site-packages\click\types.py:1184
+msgid "{name} {filename!r} is a directory."
+msgstr ""
+
+#: .\venv\Lib\site-packages\click\types.py:1193
+#: .\venv_python310_backup\Lib\site-packages\click\types.py:1193
+msgid "{name} {filename!r} is not readable."
+msgstr ""
+
+#: .\venv\Lib\site-packages\click\types.py:1202
+#: .\venv_python310_backup\Lib\site-packages\click\types.py:1202
+msgid "{name} {filename!r} is not writable."
+msgstr ""
+
+#: .\venv\Lib\site-packages\click\types.py:1211
+#: .\venv_python310_backup\Lib\site-packages\click\types.py:1211
+msgid "{name} {filename!r} is not executable."
+msgstr ""
+
+#: .\venv\Lib\site-packages\click\types.py:1283
+#: .\venv_python310_backup\Lib\site-packages\click\types.py:1283
+#, python-brace-format
+msgid "{len_type} values are required, but {len_value} was given."
+msgid_plural "{len_type} values are required, but {len_value} were given."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
+msgstr[5] ""
+
+#: .\venv\Lib\site-packages\click\utils.py:362
+#: .\venv\Lib\site-packages\click\utils.py:389
+#: .\venv_python310_backup\Lib\site-packages\click\utils.py:362
+#: .\venv_python310_backup\Lib\site-packages\click\utils.py:389
+#, python-brace-format
+msgid "Unknown standard stream '{name}'"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\contrib\messages\apps.py:16
+#: .\venv_python310_backup\Lib\site-packages\django\contrib\messages\apps.py:16
+msgid "Messages"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\contrib\sitemaps\apps.py:8
+#: .\venv_python310_backup\Lib\site-packages\django\contrib\sitemaps\apps.py:8
+msgid "Site Maps"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\contrib\staticfiles\apps.py:9
+#: .\venv_python310_backup\Lib\site-packages\django\contrib\staticfiles\apps.py:9
+msgid "Static Files"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\contrib\syndication\apps.py:7
+#: .\venv_python310_backup\Lib\site-packages\django\contrib\syndication\apps.py:7
+#, fuzzy
+#| msgid "convictions"
+msgid "Syndication"
+msgstr "قناعاتك"
+
+#. Translators: String used to replace omitted page numbers in elided page
+#. range generated by paginators, e.g. [1, 2, '…', 5, 6, 7, '…', 9, 10].
+#: .\venv\Lib\site-packages\django\core\paginator.py:30
+#: .\venv_python310_backup\Lib\site-packages\django\core\paginator.py:30
+msgid "…"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\paginator.py:32
+#: .\venv_python310_backup\Lib\site-packages\django\core\paginator.py:32
+msgid "That page number is not an integer"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\paginator.py:33
+#: .\venv_python310_backup\Lib\site-packages\django\core\paginator.py:33
+msgid "That page number is less than 1"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\paginator.py:34
+#: .\venv_python310_backup\Lib\site-packages\django\core\paginator.py:34
+msgid "That page contains no results"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:22
+#: .\venv_python310_backup\Lib\site-packages\django\core\validators.py:22
+msgid "Enter a valid value."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:70
+#: .\venv_python310_backup\Lib\site-packages\django\core\validators.py:70
+msgid "Enter a valid domain name."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:153
+#: .\venv\Lib\site-packages\django\forms\fields.py:774
+#: .\venv_python310_backup\Lib\site-packages\django\core\validators.py:153
+#: .\venv_python310_backup\Lib\site-packages\django\forms\fields.py:774
+msgid "Enter a valid URL."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:200
+#: .\venv_python310_backup\Lib\site-packages\django\core\validators.py:200
+msgid "Enter a valid integer."
+msgstr ""
+
+# ===== MODEL FIELDS =====
+#: .\venv\Lib\site-packages\django\core\validators.py:211
+#: .\venv_python310_backup\Lib\site-packages\django\core\validators.py:211
+#, fuzzy
+#| msgid "email address"
+msgid "Enter a valid email address."
+msgstr "عنوان البريد الإلكتروني"
+
+#. Translators: "letters" means latin letters: a-z and A-Z.
+#: .\venv\Lib\site-packages\django\core\validators.py:289
+#: .\venv_python310_backup\Lib\site-packages\django\core\validators.py:289
+msgid ""
+"Enter a valid “slug” consisting of letters, numbers, underscores or hyphens."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:297
+#: .\venv_python310_backup\Lib\site-packages\django\core\validators.py:297
+msgid ""
+"Enter a valid “slug” consisting of Unicode letters, numbers, underscores, or "
+"hyphens."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:309
+#: .\venv\Lib\site-packages\django\core\validators.py:318
+#: .\venv\Lib\site-packages\django\core\validators.py:332
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2220
+#: .\venv_python310_backup\Lib\site-packages\django\core\validators.py:309
+#: .\venv_python310_backup\Lib\site-packages\django\core\validators.py:318
+#: .\venv_python310_backup\Lib\site-packages\django\core\validators.py:332
+#: .\venv_python310_backup\Lib\site-packages\django\db\models\fields\__init__.py:2220
+#, python-format
+msgid "Enter a valid %(protocol)s address."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:311
+#: .\venv_python310_backup\Lib\site-packages\django\core\validators.py:311
+msgid "IPv4"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:320
+#: .\venv\Lib\site-packages\django\utils\ipv6.py:43
+#: .\venv_python310_backup\Lib\site-packages\django\core\validators.py:320
+#: .\venv_python310_backup\Lib\site-packages\django\utils\ipv6.py:43
+msgid "IPv6"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:334
+#: .\venv_python310_backup\Lib\site-packages\django\core\validators.py:334
+msgid "IPv4 or IPv6"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:375
+#: .\venv_python310_backup\Lib\site-packages\django\core\validators.py:375
+msgid "Enter only digits separated by commas."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:381
+#: .\venv_python310_backup\Lib\site-packages\django\core\validators.py:381
+#, python-format
+msgid "Ensure this value is %(limit_value)s (it is %(show_value)s)."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:416
+#: .\venv_python310_backup\Lib\site-packages\django\core\validators.py:416
+#, python-format
+msgid "Ensure this value is less than or equal to %(limit_value)s."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:425
+#: .\venv_python310_backup\Lib\site-packages\django\core\validators.py:425
+#, python-format
+msgid "Ensure this value is greater than or equal to %(limit_value)s."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:434
+#: .\venv_python310_backup\Lib\site-packages\django\core\validators.py:434
+#, python-format
+msgid "Ensure this value is a multiple of step size %(limit_value)s."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:441
+#: .\venv_python310_backup\Lib\site-packages\django\core\validators.py:441
+#, python-format
+msgid ""
+"Ensure this value is a multiple of step size %(limit_value)s, starting from "
+"%(offset)s, e.g. %(offset)s, %(valid_value1)s, %(valid_value2)s, and so on."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:473
+#: .\venv_python310_backup\Lib\site-packages\django\core\validators.py:473
+#, python-format
+msgid ""
+"Ensure this value has at least %(limit_value)d character (it has "
+"%(show_value)d)."
+msgid_plural ""
+"Ensure this value has at least %(limit_value)d characters (it has "
+"%(show_value)d)."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
+msgstr[5] ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:491
+#: .\venv_python310_backup\Lib\site-packages\django\core\validators.py:491
+#, python-format
+msgid ""
+"Ensure this value has at most %(limit_value)d character (it has "
+"%(show_value)d)."
+msgid_plural ""
+"Ensure this value has at most %(limit_value)d characters (it has "
+"%(show_value)d)."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
+msgstr[5] ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:514
+#: .\venv\Lib\site-packages\django\forms\fields.py:365
+#: .\venv\Lib\site-packages\django\forms\fields.py:404
+#: .\venv_python310_backup\Lib\site-packages\django\core\validators.py:514
+#: .\venv_python310_backup\Lib\site-packages\django\forms\fields.py:365
+#: .\venv_python310_backup\Lib\site-packages\django\forms\fields.py:404
+msgid "Enter a number."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:516
+#: .\venv_python310_backup\Lib\site-packages\django\core\validators.py:516
+#, python-format
+msgid "Ensure that there are no more than %(max)s digit in total."
+msgid_plural "Ensure that there are no more than %(max)s digits in total."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
+msgstr[5] ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:521
+#: .\venv_python310_backup\Lib\site-packages\django\core\validators.py:521
+#, python-format
+msgid "Ensure that there are no more than %(max)s decimal place."
+msgid_plural "Ensure that there are no more than %(max)s decimal places."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
+msgstr[5] ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:526
+#: .\venv_python310_backup\Lib\site-packages\django\core\validators.py:526
+#, python-format
+msgid ""
+"Ensure that there are no more than %(max)s digit before the decimal point."
+msgid_plural ""
+"Ensure that there are no more than %(max)s digits before the decimal point."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
+msgstr[5] ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:597
+#: .\venv_python310_backup\Lib\site-packages\django\core\validators.py:597
+#, python-format
+msgid ""
+"File extension “%(extension)s” is not allowed. Allowed extensions are: "
+"%(allowed_extensions)s."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:659
+#: .\venv_python310_backup\Lib\site-packages\django\core\validators.py:659
+msgid "Null characters are not allowed."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\base.py:1600
+#: .\venv\Lib\site-packages\django\forms\models.py:908
+#: .\venv_python310_backup\Lib\site-packages\django\db\models\base.py:1600
+#: .\venv_python310_backup\Lib\site-packages\django\forms\models.py:908
+msgid "and"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\base.py:1602
+#: .\venv_python310_backup\Lib\site-packages\django\db\models\base.py:1602
+#, python-format
+msgid "%(model_name)s with this %(field_labels)s already exists."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\constraints.py:22
+#: .\venv_python310_backup\Lib\site-packages\django\db\models\constraints.py:22
+#, python-format
+msgid "Constraint “%(name)s” is violated."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:134
+#: .\venv_python310_backup\Lib\site-packages\django\db\models\fields\__init__.py:134
+#, python-format
+msgid "Value %(value)r is not a valid choice."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:135
+#: .\venv_python310_backup\Lib\site-packages\django\db\models\fields\__init__.py:135
+msgid "This field cannot be null."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:136
+#: .\venv_python310_backup\Lib\site-packages\django\db\models\fields\__init__.py:136
+msgid "This field cannot be blank."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:137
+#: .\venv_python310_backup\Lib\site-packages\django\db\models\fields\__init__.py:137
+#, python-format
+msgid "%(model_name)s with this %(field_label)s already exists."
+msgstr ""
+
+#. Translators: The 'lookup_type' is one of 'date', 'year' or
+#. 'month'. Eg: "Title must be unique for pub_date year"
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:141
+#: .\venv_python310_backup\Lib\site-packages\django\db\models\fields\__init__.py:141
+#, python-format
+msgid ""
+"%(field_label)s must be unique for %(date_field_label)s %(lookup_type)s."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:180
+#: .\venv_python310_backup\Lib\site-packages\django\db\models\fields\__init__.py:180
+#, python-format
+msgid "Field of type: %(field_type)s"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1162
+#: .\venv_python310_backup\Lib\site-packages\django\db\models\fields\__init__.py:1162
+#, python-format
+msgid "“%(value)s” value must be either True or False."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1163
+#: .\venv_python310_backup\Lib\site-packages\django\db\models\fields\__init__.py:1163
+#, python-format
+msgid "“%(value)s” value must be either True, False, or None."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1165
+#: .\venv_python310_backup\Lib\site-packages\django\db\models\fields\__init__.py:1165
+msgid "Boolean (Either True or False)"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1215
+#: .\venv_python310_backup\Lib\site-packages\django\db\models\fields\__init__.py:1215
+#, python-format
+msgid "String (up to %(max_length)s)"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1217
+#: .\venv_python310_backup\Lib\site-packages\django\db\models\fields\__init__.py:1217
+msgid "String (unlimited)"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1326
+#: .\venv_python310_backup\Lib\site-packages\django\db\models\fields\__init__.py:1326
+msgid "Comma-separated integers"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1427
+#: .\venv_python310_backup\Lib\site-packages\django\db\models\fields\__init__.py:1427
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid date format. It must be in YYYY-MM-DD "
+"format."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1431
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1566
+#: .\venv_python310_backup\Lib\site-packages\django\db\models\fields\__init__.py:1431
+#: .\venv_python310_backup\Lib\site-packages\django\db\models\fields\__init__.py:1566
+#, python-format
+msgid ""
+"“%(value)s” value has the correct format (YYYY-MM-DD) but it is an invalid "
+"date."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1435
+#: .\venv_python310_backup\Lib\site-packages\django\db\models\fields\__init__.py:1435
+msgid "Date (without time)"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1562
+#: .\venv_python310_backup\Lib\site-packages\django\db\models\fields\__init__.py:1562
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid format. It must be in YYYY-MM-DD HH:MM[:ss[."
+"uuuuuu]][TZ] format."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1570
+#: .\venv_python310_backup\Lib\site-packages\django\db\models\fields\__init__.py:1570
+#, python-format
+msgid ""
+"“%(value)s” value has the correct format (YYYY-MM-DD HH:MM[:ss[.uuuuuu]]"
+"[TZ]) but it is an invalid date/time."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1575
+#: .\venv_python310_backup\Lib\site-packages\django\db\models\fields\__init__.py:1575
+msgid "Date (with time)"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1702
+#: .\venv_python310_backup\Lib\site-packages\django\db\models\fields\__init__.py:1702
+#, python-format
+msgid "“%(value)s” value must be a decimal number."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1704
+#: .\venv_python310_backup\Lib\site-packages\django\db\models\fields\__init__.py:1704
+msgid "Decimal number"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1864
+#: .\venv_python310_backup\Lib\site-packages\django\db\models\fields\__init__.py:1864
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid format. It must be in [DD] [[HH:]MM:]ss[."
+"uuuuuu] format."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1868
+#: .\venv_python310_backup\Lib\site-packages\django\db\models\fields\__init__.py:1868
+#, fuzzy
+#| msgid "duration"
+msgid "Duration"
+msgstr "المدة"
+
+# ===== MODEL FIELDS =====
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1920
+#: .\venv_python310_backup\Lib\site-packages\django\db\models\fields\__init__.py:1920
+#, fuzzy
+#| msgid "email address"
+msgid "Email address"
+msgstr "عنوان البريد الإلكتروني"
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1945
+#: .\venv_python310_backup\Lib\site-packages\django\db\models\fields\__init__.py:1945
+msgid "File path"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2023
+#: .\venv_python310_backup\Lib\site-packages\django\db\models\fields\__init__.py:2023
+#, python-format
+msgid "“%(value)s” value must be a float."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2025
+#: .\venv_python310_backup\Lib\site-packages\django\db\models\fields\__init__.py:2025
+msgid "Floating point number"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2065
+#: .\venv_python310_backup\Lib\site-packages\django\db\models\fields\__init__.py:2065
+#, python-format
+msgid "“%(value)s” value must be an integer."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2067
+#: .\venv_python310_backup\Lib\site-packages\django\db\models\fields\__init__.py:2067
+msgid "Integer"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2163
+#: .\venv_python310_backup\Lib\site-packages\django\db\models\fields\__init__.py:2163
+msgid "Big (8 byte) integer"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2180
+#: .\venv_python310_backup\Lib\site-packages\django\db\models\fields\__init__.py:2180
+msgid "Small integer"
+msgstr ""
+
+# ===== MODEL FIELDS =====
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2188
+#: .\venv_python310_backup\Lib\site-packages\django\db\models\fields\__init__.py:2188
+#, fuzzy
+#| msgid "email address"
+msgid "IPv4 address"
+msgstr "عنوان البريد الإلكتروني"
+
+# ===== MODEL FIELDS =====
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2219
+#: .\venv_python310_backup\Lib\site-packages\django\db\models\fields\__init__.py:2219
+#, fuzzy
+#| msgid "email address"
+msgid "IP address"
+msgstr "عنوان البريد الإلكتروني"
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2310
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2311
+#: .\venv_python310_backup\Lib\site-packages\django\db\models\fields\__init__.py:2310
+#: .\venv_python310_backup\Lib\site-packages\django\db\models\fields\__init__.py:2311
+#, python-format
+msgid "“%(value)s” value must be either None, True or False."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2313
+#: .\venv_python310_backup\Lib\site-packages\django\db\models\fields\__init__.py:2313
+msgid "Boolean (Either True, False or None)"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2364
+#: .\venv_python310_backup\Lib\site-packages\django\db\models\fields\__init__.py:2364
+msgid "Positive big integer"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2379
+#: .\venv_python310_backup\Lib\site-packages\django\db\models\fields\__init__.py:2379
+#, fuzzy
+#| msgid "Site internet"
+msgid "Positive integer"
+msgstr "الموقع الإلكتروني"
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2394
+#: .\venv_python310_backup\Lib\site-packages\django\db\models\fields\__init__.py:2394
+msgid "Positive small integer"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2410
+#: .\venv_python310_backup\Lib\site-packages\django\db\models\fields\__init__.py:2410
+#, python-format
+msgid "Slug (up to %(max_length)s)"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2446
+#: .\venv_python310_backup\Lib\site-packages\django\db\models\fields\__init__.py:2446
+msgid "Text"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2526
+#: .\venv_python310_backup\Lib\site-packages\django\db\models\fields\__init__.py:2526
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid format. It must be in HH:MM[:ss[.uuuuuu]] "
+"format."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2530
+#: .\venv_python310_backup\Lib\site-packages\django\db\models\fields\__init__.py:2530
+#, python-format
+msgid ""
+"“%(value)s” value has the correct format (HH:MM[:ss[.uuuuuu]]) but it is an "
+"invalid time."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2534
+#: .\venv_python310_backup\Lib\site-packages\django\db\models\fields\__init__.py:2534
+msgid "Time"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2642
+#: .\venv_python310_backup\Lib\site-packages\django\db\models\fields\__init__.py:2642
+msgid "URL"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2666
+#: .\venv_python310_backup\Lib\site-packages\django\db\models\fields\__init__.py:2666
+msgid "Raw binary data"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2731
+#: .\venv_python310_backup\Lib\site-packages\django\db\models\fields\__init__.py:2731
+#, python-format
+msgid "“%(value)s” is not a valid UUID."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2733
+#: .\venv_python310_backup\Lib\site-packages\django\db\models\fields\__init__.py:2733
+msgid "Universally unique identifier"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\files.py:244
+#: .\venv_python310_backup\Lib\site-packages\django\db\models\fields\files.py:244
+msgid "File"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\files.py:420
+#: .\venv_python310_backup\Lib\site-packages\django\db\models\fields\files.py:420
+msgid "Image"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\json.py:24
+#: .\venv_python310_backup\Lib\site-packages\django\db\models\fields\json.py:24
+msgid "A JSON object"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\json.py:26
+#: .\venv_python310_backup\Lib\site-packages\django\db\models\fields\json.py:26
+msgid "Value must be valid JSON."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\related.py:979
+#: .\venv_python310_backup\Lib\site-packages\django\db\models\fields\related.py:979
+#, python-format
+msgid "%(model)s instance with %(field)s %(value)r is not a valid choice."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\related.py:982
+#: .\venv_python310_backup\Lib\site-packages\django\db\models\fields\related.py:982
+msgid "Foreign Key (type determined by related field)"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\related.py:1276
+#: .\venv_python310_backup\Lib\site-packages\django\db\models\fields\related.py:1276
+msgid "One-to-one relationship"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\related.py:1333
+#: .\venv_python310_backup\Lib\site-packages\django\db\models\fields\related.py:1333
+#, python-format
+msgid "%(from)s-%(to)s relationship"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\related.py:1335
+#: .\venv_python310_backup\Lib\site-packages\django\db\models\fields\related.py:1335
+#, python-format
+msgid "%(from)s-%(to)s relationships"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\related.py:1383
+#: .\venv_python310_backup\Lib\site-packages\django\db\models\fields\related.py:1383
+msgid "Many-to-many relationship"
+msgstr ""
+
+#. Translators: If found as last label character, these punctuation
+#. characters will prevent the default label_suffix to be appended to the label
+#: .\venv\Lib\site-packages\django\forms\boundfield.py:185
+#: .\venv_python310_backup\Lib\site-packages\django\forms\boundfield.py:185
+msgid ":?.!"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\fields.py:94
+#: .\venv_python310_backup\Lib\site-packages\django\forms\fields.py:94
+msgid "This field is required."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\fields.py:314
+#: .\venv_python310_backup\Lib\site-packages\django\forms\fields.py:314
+msgid "Enter a whole number."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\fields.py:485
+#: .\venv\Lib\site-packages\django\forms\fields.py:1257
+#: .\venv_python310_backup\Lib\site-packages\django\forms\fields.py:485
+#: .\venv_python310_backup\Lib\site-packages\django\forms\fields.py:1257
+msgid "Enter a valid date."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\fields.py:508
+#: .\venv\Lib\site-packages\django\forms\fields.py:1258
+#: .\venv_python310_backup\Lib\site-packages\django\forms\fields.py:508
+#: .\venv_python310_backup\Lib\site-packages\django\forms\fields.py:1258
+msgid "Enter a valid time."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\fields.py:535
+#: .\venv_python310_backup\Lib\site-packages\django\forms\fields.py:535
+msgid "Enter a valid date/time."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\fields.py:569
+#: .\venv_python310_backup\Lib\site-packages\django\forms\fields.py:569
+msgid "Enter a valid duration."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\fields.py:570
+#: .\venv_python310_backup\Lib\site-packages\django\forms\fields.py:570
+#, python-brace-format
+msgid "The number of days must be between {min_days} and {max_days}."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\fields.py:639
+#: .\venv_python310_backup\Lib\site-packages\django\forms\fields.py:639
+msgid "No file was submitted. Check the encoding type on the form."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\fields.py:640
+#: .\venv_python310_backup\Lib\site-packages\django\forms\fields.py:640
+msgid "No file was submitted."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\fields.py:641
+#: .\venv_python310_backup\Lib\site-packages\django\forms\fields.py:641
+msgid "The submitted file is empty."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\fields.py:643
+#: .\venv_python310_backup\Lib\site-packages\django\forms\fields.py:643
+#, python-format
+msgid "Ensure this filename has at most %(max)d character (it has %(length)d)."
+msgid_plural ""
+"Ensure this filename has at most %(max)d characters (it has %(length)d)."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
+msgstr[5] ""
+
+#: .\venv\Lib\site-packages\django\forms\fields.py:648
+#: .\venv_python310_backup\Lib\site-packages\django\forms\fields.py:648
+msgid "Please either submit a file or check the clear checkbox, not both."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\fields.py:716
+#: .\venv_python310_backup\Lib\site-packages\django\forms\fields.py:716
+msgid ""
+"Upload a valid image. The file you uploaded was either not an image or a "
+"corrupted image."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\fields.py:879
+#: .\venv\Lib\site-packages\django\forms\fields.py:965
+#: .\venv\Lib\site-packages\django\forms\models.py:1592
+#: .\venv_python310_backup\Lib\site-packages\django\forms\fields.py:879
+#: .\venv_python310_backup\Lib\site-packages\django\forms\fields.py:965
+#: .\venv_python310_backup\Lib\site-packages\django\forms\models.py:1592
+#, python-format
+msgid "Select a valid choice. %(value)s is not one of the available choices."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\fields.py:967
+#: .\venv\Lib\site-packages\django\forms\fields.py:1086
+#: .\venv\Lib\site-packages\django\forms\models.py:1590
+#: .\venv_python310_backup\Lib\site-packages\django\forms\fields.py:967
+#: .\venv_python310_backup\Lib\site-packages\django\forms\fields.py:1086
+#: .\venv_python310_backup\Lib\site-packages\django\forms\models.py:1590
+msgid "Enter a list of values."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\fields.py:1087
+#: .\venv_python310_backup\Lib\site-packages\django\forms\fields.py:1087
+msgid "Enter a complete value."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\fields.py:1329
+#: .\venv_python310_backup\Lib\site-packages\django\forms\fields.py:1329
+msgid "Enter a valid UUID."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\fields.py:1359
+#: .\venv_python310_backup\Lib\site-packages\django\forms\fields.py:1359
+msgid "Enter a valid JSON."
+msgstr ""
+
+#. Translators: This is the default suffix added to form field labels
+#: .\venv\Lib\site-packages\django\forms\forms.py:97
+#: .\venv_python310_backup\Lib\site-packages\django\forms\forms.py:97
+msgid ":"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\forms.py:239
+#: .\venv_python310_backup\Lib\site-packages\django\forms\forms.py:239
+#, python-format
+msgid "(Hidden field %(name)s) %(error)s"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\formsets.py:61
+#: .\venv_python310_backup\Lib\site-packages\django\forms\formsets.py:61
+#, python-format
+msgid ""
+"ManagementForm data is missing or has been tampered with. Missing fields: "
+"%(field_names)s. You may need to file a bug report if the issue persists."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\formsets.py:65
+#: .\venv_python310_backup\Lib\site-packages\django\forms\formsets.py:65
+#, python-format
+msgid "Please submit at most %(num)d form."
+msgid_plural "Please submit at most %(num)d forms."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
+msgstr[5] ""
+
+#: .\venv\Lib\site-packages\django\forms\formsets.py:70
+#: .\venv_python310_backup\Lib\site-packages\django\forms\formsets.py:70
+#, python-format
+msgid "Please submit at least %(num)d form."
+msgid_plural "Please submit at least %(num)d forms."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
+msgstr[5] ""
+
+#: .\venv\Lib\site-packages\django\forms\formsets.py:484
+#: .\venv\Lib\site-packages\django\forms\formsets.py:491
+#: .\venv_python310_backup\Lib\site-packages\django\forms\formsets.py:484
+#: .\venv_python310_backup\Lib\site-packages\django\forms\formsets.py:491
+#, fuzzy
+#| msgid "order"
+msgid "Order"
+msgstr "الترتيب"
+
+#: .\venv\Lib\site-packages\django\forms\formsets.py:499
+#: .\venv_python310_backup\Lib\site-packages\django\forms\formsets.py:499
+msgid "Delete"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\models.py:901
+#: .\venv_python310_backup\Lib\site-packages\django\forms\models.py:901
+#, python-format
+msgid "Please correct the duplicate data for %(field)s."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\models.py:906
+#: .\venv_python310_backup\Lib\site-packages\django\forms\models.py:906
+#, python-format
+msgid "Please correct the duplicate data for %(field)s, which must be unique."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\models.py:913
+#: .\venv_python310_backup\Lib\site-packages\django\forms\models.py:913
+#, python-format
+msgid ""
+"Please correct the duplicate data for %(field_name)s which must be unique "
+"for the %(lookup)s in %(date_field)s."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\models.py:922
+#: .\venv_python310_backup\Lib\site-packages\django\forms\models.py:922
+msgid "Please correct the duplicate values below."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\models.py:1359
+#: .\venv_python310_backup\Lib\site-packages\django\forms\models.py:1359
+msgid "The inline value did not match the parent instance."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\models.py:1450
+#: .\venv_python310_backup\Lib\site-packages\django\forms\models.py:1450
+msgid "Select a valid choice. That choice is not one of the available choices."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\models.py:1594
+#: .\venv_python310_backup\Lib\site-packages\django\forms\models.py:1594
+#, python-format
+msgid "“%(pk)s” is not a valid value."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\utils.py:229
+#: .\venv_python310_backup\Lib\site-packages\django\forms\utils.py:229
+#, python-format
+msgid ""
+"%(datetime)s couldn’t be interpreted in time zone %(current_timezone)s; it "
+"may be ambiguous or it may not exist."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\widgets.py:527
+#: .\venv_python310_backup\Lib\site-packages\django\forms\widgets.py:527
+msgid "Clear"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\widgets.py:528
+#: .\venv_python310_backup\Lib\site-packages\django\forms\widgets.py:528
+msgid "Currently"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\widgets.py:529
+#: .\venv_python310_backup\Lib\site-packages\django\forms\widgets.py:529
+msgid "Change"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\widgets.py:866
+#: .\venv_python310_backup\Lib\site-packages\django\forms\widgets.py:866
+msgid "Unknown"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\widgets.py:867
+#: .\venv_python310_backup\Lib\site-packages\django\forms\widgets.py:867
+msgid "Yes"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\widgets.py:868
+#: .\venv_python310_backup\Lib\site-packages\django\forms\widgets.py:868
+msgid "No"
+msgstr ""
+
+#. Translators: Please do not add spaces around commas.
+#: .\venv\Lib\site-packages\django\template\defaultfilters.py:873
+#: .\venv_python310_backup\Lib\site-packages\django\template\defaultfilters.py:873
+msgid "yes,no,maybe"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\template\defaultfilters.py:903
+#: .\venv\Lib\site-packages\django\template\defaultfilters.py:920
+#: .\venv_python310_backup\Lib\site-packages\django\template\defaultfilters.py:903
+#: .\venv_python310_backup\Lib\site-packages\django\template\defaultfilters.py:920
+#, python-format
+msgid "%(size)d byte"
+msgid_plural "%(size)d bytes"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
+msgstr[5] ""
+
+#: .\venv\Lib\site-packages\django\template\defaultfilters.py:922
+#: .\venv_python310_backup\Lib\site-packages\django\template\defaultfilters.py:922
+#, python-format
+msgid "%s KB"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\template\defaultfilters.py:924
+#: .\venv_python310_backup\Lib\site-packages\django\template\defaultfilters.py:924
+#, python-format
+msgid "%s MB"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\template\defaultfilters.py:926
+#: .\venv_python310_backup\Lib\site-packages\django\template\defaultfilters.py:926
+#, python-format
+msgid "%s GB"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\template\defaultfilters.py:928
+#: .\venv_python310_backup\Lib\site-packages\django\template\defaultfilters.py:928
+#, python-format
+msgid "%s TB"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\template\defaultfilters.py:930
+#: .\venv_python310_backup\Lib\site-packages\django\template\defaultfilters.py:930
+#, python-format
+msgid "%s PB"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dateformat.py:74
+#: .\venv_python310_backup\Lib\site-packages\django\utils\dateformat.py:74
+msgid "p.m."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dateformat.py:75
+#: .\venv_python310_backup\Lib\site-packages\django\utils\dateformat.py:75
+msgid "a.m."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dateformat.py:80
+#: .\venv_python310_backup\Lib\site-packages\django\utils\dateformat.py:80
+msgid "PM"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dateformat.py:81
+#: .\venv_python310_backup\Lib\site-packages\django\utils\dateformat.py:81
+msgid "AM"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dateformat.py:153
+#: .\venv_python310_backup\Lib\site-packages\django\utils\dateformat.py:153
+msgid "midnight"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dateformat.py:155
+#: .\venv_python310_backup\Lib\site-packages\django\utils\dateformat.py:155
+msgid "noon"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:7
+#: .\venv_python310_backup\Lib\site-packages\django\utils\dates.py:7
+msgid "Monday"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:8
+#: .\venv_python310_backup\Lib\site-packages\django\utils\dates.py:8
+msgid "Tuesday"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:9
+#: .\venv_python310_backup\Lib\site-packages\django\utils\dates.py:9
+msgid "Wednesday"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:10
+#: .\venv_python310_backup\Lib\site-packages\django\utils\dates.py:10
+msgid "Thursday"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:11
+#: .\venv_python310_backup\Lib\site-packages\django\utils\dates.py:11
+msgid "Friday"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:12
+#: .\venv_python310_backup\Lib\site-packages\django\utils\dates.py:12
+#, fuzzy
+#| msgid "featured"
+msgid "Saturday"
+msgstr "مميز"
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:13
+#: .\venv_python310_backup\Lib\site-packages\django\utils\dates.py:13
+msgid "Sunday"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:16
+#: .\venv_python310_backup\Lib\site-packages\django\utils\dates.py:16
+msgid "Mon"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:17
+#: .\venv_python310_backup\Lib\site-packages\django\utils\dates.py:17
+msgid "Tue"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:18
+#: .\venv_python310_backup\Lib\site-packages\django\utils\dates.py:18
+msgid "Wed"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:19
+#: .\venv_python310_backup\Lib\site-packages\django\utils\dates.py:19
+msgid "Thu"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:20
+#: .\venv_python310_backup\Lib\site-packages\django\utils\dates.py:20
+msgid "Fri"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:21
+#: .\venv_python310_backup\Lib\site-packages\django\utils\dates.py:21
+msgid "Sat"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:22
+#: .\venv_python310_backup\Lib\site-packages\django\utils\dates.py:22
+msgid "Sun"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:25
+#: .\venv_python310_backup\Lib\site-packages\django\utils\dates.py:25
+msgid "January"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:26
+#: .\venv_python310_backup\Lib\site-packages\django\utils\dates.py:26
+msgid "February"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:27
+#: .\venv_python310_backup\Lib\site-packages\django\utils\dates.py:27
+msgid "March"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:28
+#: .\venv_python310_backup\Lib\site-packages\django\utils\dates.py:28
+msgid "April"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:29
+#: .\venv_python310_backup\Lib\site-packages\django\utils\dates.py:29
+msgid "May"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:30
+#: .\venv_python310_backup\Lib\site-packages\django\utils\dates.py:30
+msgid "June"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:31
+#: .\venv_python310_backup\Lib\site-packages\django\utils\dates.py:31
+msgid "July"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:32
+#: .\venv_python310_backup\Lib\site-packages\django\utils\dates.py:32
+msgid "August"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:33
+#: .\venv_python310_backup\Lib\site-packages\django\utils\dates.py:33
+msgid "September"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:34
+#: .\venv_python310_backup\Lib\site-packages\django\utils\dates.py:34
+msgid "October"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:35
+#: .\venv_python310_backup\Lib\site-packages\django\utils\dates.py:35
+msgid "November"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:36
+#: .\venv_python310_backup\Lib\site-packages\django\utils\dates.py:36
+msgid "December"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:39
+#: .\venv_python310_backup\Lib\site-packages\django\utils\dates.py:39
+msgid "jan"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:40
+#: .\venv_python310_backup\Lib\site-packages\django\utils\dates.py:40
+msgid "feb"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:41
+#: .\venv_python310_backup\Lib\site-packages\django\utils\dates.py:41
+#, fuzzy
+#| msgid "Par"
+msgid "mar"
+msgstr "بقلم"
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:42
+#: .\venv_python310_backup\Lib\site-packages\django\utils\dates.py:42
+#, fuzzy
+#| msgid "Par"
+msgid "apr"
+msgstr "بقلم"
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:43
+#: .\venv_python310_backup\Lib\site-packages\django\utils\dates.py:43
+msgid "may"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:44
+#: .\venv_python310_backup\Lib\site-packages\django\utils\dates.py:44
+msgid "jun"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:45
+#: .\venv_python310_backup\Lib\site-packages\django\utils\dates.py:45
+msgid "jul"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:46
+#: .\venv_python310_backup\Lib\site-packages\django\utils\dates.py:46
+msgid "aug"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:47
+#: .\venv_python310_backup\Lib\site-packages\django\utils\dates.py:47
+msgid "sep"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:48
+#: .\venv_python310_backup\Lib\site-packages\django\utils\dates.py:48
+#, fuzzy
+#| msgid "Contact"
+msgid "oct"
+msgstr "جهة الاتصال"
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:49
+#: .\venv_python310_backup\Lib\site-packages\django\utils\dates.py:49
+msgid "nov"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:50
+#: .\venv_python310_backup\Lib\site-packages\django\utils\dates.py:50
+msgid "dec"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:53
+#: .\venv_python310_backup\Lib\site-packages\django\utils\dates.py:53
+msgctxt "abbrev. month"
+msgid "Jan."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:54
+#: .\venv_python310_backup\Lib\site-packages\django\utils\dates.py:54
+msgctxt "abbrev. month"
+msgid "Feb."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:55
+#: .\venv_python310_backup\Lib\site-packages\django\utils\dates.py:55
+msgctxt "abbrev. month"
+msgid "March"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:56
+#: .\venv_python310_backup\Lib\site-packages\django\utils\dates.py:56
+msgctxt "abbrev. month"
+msgid "April"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:57
+#: .\venv_python310_backup\Lib\site-packages\django\utils\dates.py:57
+msgctxt "abbrev. month"
+msgid "May"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:58
+#: .\venv_python310_backup\Lib\site-packages\django\utils\dates.py:58
+msgctxt "abbrev. month"
+msgid "June"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:59
+#: .\venv_python310_backup\Lib\site-packages\django\utils\dates.py:59
+msgctxt "abbrev. month"
+msgid "July"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:60
+#: .\venv_python310_backup\Lib\site-packages\django\utils\dates.py:60
+msgctxt "abbrev. month"
+msgid "Aug."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:61
+#: .\venv_python310_backup\Lib\site-packages\django\utils\dates.py:61
+msgctxt "abbrev. month"
+msgid "Sept."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:62
+#: .\venv_python310_backup\Lib\site-packages\django\utils\dates.py:62
+msgctxt "abbrev. month"
+msgid "Oct."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:63
+#: .\venv_python310_backup\Lib\site-packages\django\utils\dates.py:63
+msgctxt "abbrev. month"
+msgid "Nov."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:64
+#: .\venv_python310_backup\Lib\site-packages\django\utils\dates.py:64
+msgctxt "abbrev. month"
+msgid "Dec."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:67
+#: .\venv_python310_backup\Lib\site-packages\django\utils\dates.py:67
+msgctxt "alt. month"
+msgid "January"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:68
+#: .\venv_python310_backup\Lib\site-packages\django\utils\dates.py:68
+msgctxt "alt. month"
+msgid "February"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:69
+#: .\venv_python310_backup\Lib\site-packages\django\utils\dates.py:69
+msgctxt "alt. month"
+msgid "March"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:70
+#: .\venv_python310_backup\Lib\site-packages\django\utils\dates.py:70
+msgctxt "alt. month"
+msgid "April"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:71
+#: .\venv_python310_backup\Lib\site-packages\django\utils\dates.py:71
+msgctxt "alt. month"
+msgid "May"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:72
+#: .\venv_python310_backup\Lib\site-packages\django\utils\dates.py:72
+msgctxt "alt. month"
+msgid "June"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:73
+#: .\venv_python310_backup\Lib\site-packages\django\utils\dates.py:73
+msgctxt "alt. month"
+msgid "July"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:74
+#: .\venv_python310_backup\Lib\site-packages\django\utils\dates.py:74
+msgctxt "alt. month"
+msgid "August"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:75
+#: .\venv_python310_backup\Lib\site-packages\django\utils\dates.py:75
+msgctxt "alt. month"
+msgid "September"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:76
+#: .\venv_python310_backup\Lib\site-packages\django\utils\dates.py:76
+msgctxt "alt. month"
+msgid "October"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:77
+#: .\venv_python310_backup\Lib\site-packages\django\utils\dates.py:77
+msgctxt "alt. month"
+msgid "November"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:78
+#: .\venv_python310_backup\Lib\site-packages\django\utils\dates.py:78
+msgctxt "alt. month"
+msgid "December"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\ipv6.py:20
+#: .\venv_python310_backup\Lib\site-packages\django\utils\ipv6.py:20
+msgid "This is not a valid IPv6 address."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\text.py:76
+#: .\venv_python310_backup\Lib\site-packages\django\utils\text.py:76
+#, python-format
+msgctxt "String to return when truncating text"
+msgid "%(truncated_text)s…"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\text.py:282
+#: .\venv_python310_backup\Lib\site-packages\django\utils\text.py:282
+msgid "or"
+msgstr ""
+
+#. Translators: This string is used as a separator between list elements
+#: .\venv\Lib\site-packages\django\utils\text.py:301
+#: .\venv\Lib\site-packages\django\utils\timesince.py:135
+#: .\venv_python310_backup\Lib\site-packages\django\utils\text.py:301
+#: .\venv_python310_backup\Lib\site-packages\django\utils\timesince.py:135
+msgid ", "
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\timesince.py:8
+#: .\venv_python310_backup\Lib\site-packages\django\utils\timesince.py:8
+#, python-format
+msgid "%(num)d year"
+msgid_plural "%(num)d years"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
+msgstr[5] ""
+
+#: .\venv\Lib\site-packages\django\utils\timesince.py:9
+#: .\venv_python310_backup\Lib\site-packages\django\utils\timesince.py:9
+#, python-format
+msgid "%(num)d month"
+msgid_plural "%(num)d months"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
+msgstr[5] ""
+
+#: .\venv\Lib\site-packages\django\utils\timesince.py:10
+#: .\venv_python310_backup\Lib\site-packages\django\utils\timesince.py:10
+#, python-format
+msgid "%(num)d week"
+msgid_plural "%(num)d weeks"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
+msgstr[5] ""
+
+#: .\venv\Lib\site-packages\django\utils\timesince.py:11
+#: .\venv_python310_backup\Lib\site-packages\django\utils\timesince.py:11
+#, python-format
+msgid "%(num)d day"
+msgid_plural "%(num)d days"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
+msgstr[5] ""
+
+#: .\venv\Lib\site-packages\django\utils\timesince.py:12
+#: .\venv_python310_backup\Lib\site-packages\django\utils\timesince.py:12
+#, python-format
+msgid "%(num)d hour"
+msgid_plural "%(num)d hours"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
+msgstr[5] ""
+
+#: .\venv\Lib\site-packages\django\utils\timesince.py:13
+#: .\venv_python310_backup\Lib\site-packages\django\utils\timesince.py:13
+#, python-format
+msgid "%(num)d minute"
+msgid_plural "%(num)d minutes"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
+msgstr[5] ""
+
+#: .\venv\Lib\site-packages\django\views\csrf.py:29
+#: .\venv_python310_backup\Lib\site-packages\django\views\csrf.py:29
+msgid "Forbidden"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\csrf.py:30
+#: .\venv_python310_backup\Lib\site-packages\django\views\csrf.py:30
+msgid "CSRF verification failed. Request aborted."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\csrf.py:34
+#: .\venv_python310_backup\Lib\site-packages\django\views\csrf.py:34
+msgid ""
+"You are seeing this message because this HTTPS site requires a “Referer "
+"header” to be sent by your web browser, but none was sent. This header is "
+"required for security reasons, to ensure that your browser is not being "
+"hijacked by third parties."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\csrf.py:40
+#: .\venv_python310_backup\Lib\site-packages\django\views\csrf.py:40
+msgid ""
+"If you have configured your browser to disable “Referer” headers, please re-"
+"enable them, at least for this site, or for HTTPS connections, or for “same-"
+"origin” requests."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\csrf.py:45
+#: .\venv_python310_backup\Lib\site-packages\django\views\csrf.py:45
+msgid ""
+"If you are using the <meta name=\"referrer\" content=\"no-referrer\"> tag or "
+"including the “Referrer-Policy: no-referrer” header, please remove them. The "
+"CSRF protection requires the “Referer” header to do strict referer checking. "
+"If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+"\" …> for links to third-party sites."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\csrf.py:54
+#: .\venv_python310_backup\Lib\site-packages\django\views\csrf.py:54
+msgid ""
+"You are seeing this message because this site requires a CSRF cookie when "
+"submitting forms. This cookie is required for security reasons, to ensure "
+"that your browser is not being hijacked by third parties."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\csrf.py:60
+#: .\venv_python310_backup\Lib\site-packages\django\views\csrf.py:60
+msgid ""
+"If you have configured your browser to disable cookies, please re-enable "
+"them, at least for this site, or for “same-origin” requests."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\csrf.py:66
+#: .\venv_python310_backup\Lib\site-packages\django\views\csrf.py:66
+msgid "More information is available with DEBUG=True."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\generic\dates.py:44
+#: .\venv_python310_backup\Lib\site-packages\django\views\generic\dates.py:44
+msgid "No year specified"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\generic\dates.py:64
+#: .\venv\Lib\site-packages\django\views\generic\dates.py:115
+#: .\venv\Lib\site-packages\django\views\generic\dates.py:214
+#: .\venv_python310_backup\Lib\site-packages\django\views\generic\dates.py:64
+#: .\venv_python310_backup\Lib\site-packages\django\views\generic\dates.py:115
+#: .\venv_python310_backup\Lib\site-packages\django\views\generic\dates.py:214
+msgid "Date out of range"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\generic\dates.py:94
+#: .\venv_python310_backup\Lib\site-packages\django\views\generic\dates.py:94
+msgid "No month specified"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\generic\dates.py:147
+#: .\venv_python310_backup\Lib\site-packages\django\views\generic\dates.py:147
+msgid "No day specified"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\generic\dates.py:194
+#: .\venv_python310_backup\Lib\site-packages\django\views\generic\dates.py:194
+msgid "No week specified"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\generic\dates.py:353
+#: .\venv\Lib\site-packages\django\views\generic\dates.py:384
+#: .\venv_python310_backup\Lib\site-packages\django\views\generic\dates.py:353
+#: .\venv_python310_backup\Lib\site-packages\django\views\generic\dates.py:384
+#, python-format
+msgid "No %(verbose_name_plural)s available"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\generic\dates.py:680
+#: .\venv_python310_backup\Lib\site-packages\django\views\generic\dates.py:680
+#, python-format
+msgid ""
+"Future %(verbose_name_plural)s not available because %(class_name)s."
+"allow_future is False."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\generic\dates.py:720
+#: .\venv_python310_backup\Lib\site-packages\django\views\generic\dates.py:720
+#, python-format
+msgid "Invalid date string “%(datestr)s” given format “%(format)s”"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\generic\detail.py:56
+#: .\venv_python310_backup\Lib\site-packages\django\views\generic\detail.py:56
+#, python-format
+msgid "No %(verbose_name)s found matching the query"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\generic\list.py:70
+#: .\venv_python310_backup\Lib\site-packages\django\views\generic\list.py:70
+msgid "Page is not “last”, nor can it be converted to an int."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\generic\list.py:77
+#: .\venv_python310_backup\Lib\site-packages\django\views\generic\list.py:77
+#, python-format
+msgid "Invalid page (%(page_number)s): %(message)s"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\generic\list.py:173
+#: .\venv_python310_backup\Lib\site-packages\django\views\generic\list.py:173
+#, python-format
+msgid "Empty list and “%(class_name)s.allow_empty” is False."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\static.py:49
+#: .\venv_python310_backup\Lib\site-packages\django\views\static.py:49
+msgid "Directory indexes are not allowed here."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\static.py:51
+#: .\venv_python310_backup\Lib\site-packages\django\views\static.py:51
+#, python-format
+msgid "“%(path)s” does not exist"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\static.py:68
+#: .\venv\Lib\site-packages\django\views\templates\directory_index.html:8
+#: .\venv\Lib\site-packages\django\views\templates\directory_index.html:11
+#: .\venv_python310_backup\Lib\site-packages\django\views\static.py:68
+#: .\venv_python310_backup\Lib\site-packages\django\views\templates\directory_index.html:8
+#: .\venv_python310_backup\Lib\site-packages\django\views\templates\directory_index.html:11
+#, python-format
+msgid "Index of %(directory)s"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:7
+#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:204
+#: .\venv_python310_backup\Lib\site-packages\django\views\templates\default_urlconf.html:7
+#: .\venv_python310_backup\Lib\site-packages\django\views\templates\default_urlconf.html:204
+msgid "The install worked successfully! Congratulations!"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:206
+#: .\venv_python310_backup\Lib\site-packages\django\views\templates\default_urlconf.html:206
+#, python-format
+msgid ""
+"View <a href=\"https://docs.djangoproject.com/en/%(version)s/releases/\" "
+"target=\"_blank\" rel=\"noopener\">release notes</a> for Django %(version)s"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:208
+#: .\venv_python310_backup\Lib\site-packages\django\views\templates\default_urlconf.html:208
+#, python-format
+msgid ""
+"You are seeing this page because <a href=\"https://docs.djangoproject.com/en/"
+"%(version)s/ref/settings/#debug\" target=\"_blank\" rel=\"noopener"
+"\">DEBUG=True</a> is in your settings file and you have not configured any "
+"URLs."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:217
+#: .\venv_python310_backup\Lib\site-packages\django\views\templates\default_urlconf.html:217
+msgid "Django Documentation"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:218
+#: .\venv_python310_backup\Lib\site-packages\django\views\templates\default_urlconf.html:218
+msgid "Topics, references, &amp; how-to’s"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:226
+#: .\venv_python310_backup\Lib\site-packages\django\views\templates\default_urlconf.html:226
+msgid "Tutorial: A Polling App"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:227
+#: .\venv_python310_backup\Lib\site-packages\django\views\templates\default_urlconf.html:227
+msgid "Get started with Django"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:235
+#: .\venv_python310_backup\Lib\site-packages\django\views\templates\default_urlconf.html:235
+msgid "Django Community"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:236
+#: .\venv_python310_backup\Lib\site-packages\django\views\templates\default_urlconf.html:236
+msgid "Connect, get help, or contribute"
+msgstr ""
+
+#: .\venv\Lib\site-packages\kombu\transport\qpid.py:1311
+#: .\venv_python310_backup\Lib\site-packages\kombu\transport\qpid.py:1311
+#, python-format
+msgid "Attempting to connect to qpid with SASL mechanism %s"
+msgstr ""
+
+#: .\venv\Lib\site-packages\kombu\transport\qpid.py:1316
+#: .\venv_python310_backup\Lib\site-packages\kombu\transport\qpid.py:1316
+#, python-format
+msgid "Connected to qpid with SASL mechanism %s"
+msgstr ""
+
+#: .\venv\Lib\site-packages\kombu\transport\qpid.py:1334
+#: .\venv_python310_backup\Lib\site-packages\kombu\transport\qpid.py:1334
+#, python-format
+msgid "Unable to connect to qpid with SASL mechanism %s"
+msgstr ""
+
+#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:18
+#: .\venv_python310_backup\Lib\site-packages\modeltranslation\tests\models.py:18
+msgid "password"
+msgstr ""
+
+#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:287
+#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:306
+#: .\venv_python310_backup\Lib\site-packages\modeltranslation\tests\models.py:287
+#: .\venv_python310_backup\Lib\site-packages\modeltranslation\tests\models.py:306
+#, fuzzy
+#| msgid "title"
+msgid "title a"
+msgstr "العنوان"
+
+#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:291
+#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:317
+#: .\venv_python310_backup\Lib\site-packages\modeltranslation\tests\models.py:291
+#: .\venv_python310_backup\Lib\site-packages\modeltranslation\tests\models.py:317
+#, fuzzy
+#| msgid "title"
+msgid "title b"
+msgstr "العنوان"
+
+#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:295
+#: .\venv_python310_backup\Lib\site-packages\modeltranslation\tests\models.py:295
+#, fuzzy
+#| msgid "title"
+msgid "title c"
+msgstr "العنوان"
+
+#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:299
+#: .\venv_python310_backup\Lib\site-packages\modeltranslation\tests\models.py:299
+#, fuzzy
+#| msgid "title"
+msgid "title d"
+msgstr "العنوان"
+
+#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:422
+#: .\venv_python310_backup\Lib\site-packages\modeltranslation\tests\models.py:422
+msgid "visits"
+msgstr ""
+
+#: .\venv\Lib\site-packages\modeltranslation\tests\translation.py:74
+#: .\venv_python310_backup\Lib\site-packages\modeltranslation\tests\translation.py:74
+msgid "Sorry, translation is not available."
+msgstr ""
+
+#: .\venv\Lib\site-packages\modeltranslation\widgets.py:32
+#: .\venv_python310_backup\Lib\site-packages\modeltranslation\widgets.py:32
+msgid "None"
+msgstr ""
+
+# ===== CONTENT =====
+#~ msgid "Lire la suite"
+#~ msgstr "اقرأ المزيد"
+
+#~ msgid "Aucun contenu disponible dans cette rubrique."
+#~ msgstr "لا يوجد محتوى متاح في هذا القسم."
+
+# ===== LEGAL PAGES =====
+#~ msgid "À propos"
+#~ msgstr "حول"
+
+#~ msgid ""
+#~ "Rissala est une plateforme numérique dédiée à l'étude et à la "
+#~ "transmission du savoir islamique. Notre objectif est de rendre accessible "
+#~ "un contenu structuré, authentique et adapté aux défis contemporains."
+#~ msgstr ""
+#~ "رسالة منصة رقمية مخصصة لدراسة ونقل العلوم الشرعية. هدفنا هو إتاحة محتوى "
+#~ "منظم وأصيل ومتكيف مع التحديات المعاصرة."
+
+#~ msgid "Notre Mission"
+#~ msgstr "مهمتنا"
+
+#~ msgid ""
+#~ "Étudier. Comprendre. Transmettre. Nous offrons des ressources allant de "
+#~ "l'apprentissage de la langue arabe aux sciences islamiques avancées, avec "
+#~ "un souci constant de rigueur méthodologique."
+#~ msgstr ""
+#~ "ادرس. افهم. بلّغ. نقدم موارد تمتد من تعلم اللغة العربية إلى العلوم الشرعية "
+#~ "المتقدمة، مع حرص دائم على الصرامة المنهجية."
+
+#~ msgid "Nos Engagements"
+#~ msgstr "التزاماتنا"
+
+#~ msgid "Rigueur"
+#~ msgstr "صرامة"
+
+#~ msgid ""
+#~ "Toutes nos ressources sont basées sur des sources fiables et validées."
+#~ msgstr "جميع مواردنا مبنية على مصادر موثوقة ومعتمدة."
+
+#~ msgid "Clarté"
+#~ msgstr "وضوح"
+
+#~ msgid "Une approche pédagogique moderne pour faciliter l'apprentissage."
+#~ msgstr "منهج تعليمي حديث لتسهيل التعلّم."
+
+#~ msgid "Ouverture"
+#~ msgstr "انفتاح"
+
+#~ msgid "Un contenu accessible à tous, quel que soit votre niveau initial."
+#~ msgstr "محتوى متاح للجميع، بغض النظر عن مستواك الأولي."
+
+#~ msgid ""
+#~ "Les présentes mentions légales règlent l'utilisation de la plateforme "
+#~ "Rissala."
+#~ msgstr "تنظّم هذه الإشعارات القانونية استخدام منصة رسالة."
+
+#~ msgid ""
+#~ "Le site Rissala est édité par l'association [Nom], dont le siège social "
+#~ "est situé à [Adresse]."
+#~ msgstr "موقع رسالة تديره جمعية [الاسم]، ومقرها في [العنوان]."
+
+#~ msgid "Hébergement"
+#~ msgstr "الاستضافة"
+
+#~ msgid ""
+#~ "Le site est hébergé par [Nom de l'hébergeur], situé à [Adresse de "
+#~ "l'hébergeur]."
+#~ msgstr "يُستضاف الموقع لدى [اسم المستضيف]، الكائن في [عنوان المستضيف]."
+
+#~ msgid ""
+#~ "L'ensemble de ce site relève de la législation sur le droit d'auteur et "
+#~ "la propriété intellectuelle. Tous les droits de reproduction sont "
+#~ "réservés."
+#~ msgstr ""
+#~ "يخضع هذا الموقع بالكامل لقوانين حقوق المؤلف والملكية الفكرية. جميع حقوق "
+#~ "النسخ محفوظة."
+
+#~ msgid ""
+#~ "Chez Rissala, nous accordons une importance primordiale à la protection "
+#~ "de vos données personnelles."
+#~ msgstr "في رسالة، نولي أهمية قصوى لحماية بياناتك الشخصية."
+
+#~ msgid ""
+#~ "Nous collectons uniquement les données nécessaires à votre utilisation de "
+#~ "nos services (adresse email, nom d'utilisateur)."
+#~ msgstr ""
+#~ "نجمع فقط البيانات الضرورية لاستخدامك لخدماتنا (البريد الإلكتروني، اسم "
+#~ "المستخدم)."
+
+#~ msgid "Utilisation des données"
+#~ msgstr "استخدام البيانات"
+
+#~ msgid ""
+#~ "Vos données ne sont ni vendues ni cédées à des tiers. Elles servent "
+#~ "exclusivement à la gestion de votre compte et à l'amélioration de nos "
+#~ "services."
+#~ msgstr ""
+#~ "لا تُباع بياناتك ولا تُنقل إلى أطراف ثالثة. تُستخدم حصريًا لإدارة حسابك "
+#~ "وتحسين خدماتنا."
+
+#~ msgid ""
+#~ "Vous disposez d'un droit d'accès, de modification et de suppression de "
+#~ "vos données personnelles."
+#~ msgstr "لديك الحق في الوصول إلى بياناتك الشخصية وتعديلها وحذفها."
+
+#~ msgid "Conditions générales d'utilisation"
+#~ msgstr "الشروط العامة للاستخدام"
+
+#~ msgid ""
+#~ "L'utilisation de la plateforme Rissala implique l'acceptation pleine et "
+#~ "entière des conditions générales d'utilisation décrites ci-après."
+#~ msgstr ""
+#~ "يعني استخدام منصة رسالة القبول الكامل والتام للشروط العامة للاستخدام "
+#~ "المذكورة أدناه."
+
+#~ msgid "Accès aux services"
+#~ msgstr "الوصول إلى الخدمات"
+
+#~ msgid ""
+#~ "L'accès à certains contenus nécessite la création d'un compte "
+#~ "utilisateur. L'utilisateur s'engage à fournir des informations exactes "
+#~ "lors de son inscription."
+#~ msgstr ""
+#~ "يتطلب الوصول إلى بعض المحتويات إنشاء حساب مستخدم. يلتزم المستخدم بتقديم "
+#~ "معلومات دقيقة عند التسجيل."
+
+#~ msgid "Comportement"
+#~ msgstr "السلوك"
+
+#~ msgid ""
+#~ "Tout utilisateur s'engage à respecter les règles de bienséance et "
+#~ "d'éthique sur l'ensemble de la plateforme, notamment dans les espaces "
+#~ "d'échange s'ils existent."
+#~ msgstr ""
+#~ "يلتزم كل مستخدم باحترام قواعد الأدب والأخلاق في جميع أنحاء المنصة، لا "
+#~ "سيما في فضاءات النقاش إن وجدت."
+
+#~ msgid ""
+#~ "Rissala se réserve le droit de modifier les présentes conditions à tout "
+#~ "moment."
+#~ msgstr "تحتفظ رسالة بالحق في تعديل هذه الشروط في أي وقت."
+
+msgid "Finance islamique"
+msgstr "المالية الإسلامية"
+
+msgid "Finance Islamique"
+msgstr "المالية الإسلامية"
+
+msgid "Sciences islamiques"
+msgstr "العلوم الإسلامية"
+
+msgid "Sciences Islamiques"
+msgstr "العلوم الإسلامية"
+
+msgid "Actualités et articles"
+msgstr "الأخبار والمقالات"
+
+msgid "Découvrez nos articles consacrés aux différentes actualités et événements de Rissala."
+msgstr "اكتشف مقالاتنا المخصصة لمختلف أخبار وفعاليات رسالة."
+
+msgid "Aucune actualité"
+msgstr "لا توجد أخبار"
+
+msgid "Il n'y a pas encore d'actualités publiées."
+msgstr "لم يتم نشر أي أخبار بعد."
+
+msgid "Toutes les actualités"
+msgstr "جميع الأخبار"
+
+msgid "À lire aussi"
+msgstr "اقرأ أيضاً"
+
+msgid "Plus d'actualités"
+msgstr "المزيد من الأخبار"
+
+msgid "Lire l'article"
+msgstr "اقرأ المقال"
+

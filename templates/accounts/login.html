@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block content %}
+<div class="flex-1 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 bg-background">
+    <div class="max-w-md w-full space-y-8 bg-background-alt p-8 sm:p-10 rounded-2xl border border-white/10 shadow-xl">
+        <div>
+            <h2 class="mt-2 text-center text-3xl font-bold font-heading tracking-tight text-foreground">
+                {% trans "Connexion" %}
+            </h2>
+            <p class="mt-2 text-center text-sm text-muted">
+                {% trans "Accédez à votre espace" %}
+            </p>
+        </div>
+        <form class="mt-8 space-y-6" method="POST">
+            {% csrf_token %}
+            <div class="space-y-4 rounded-md shadow-sm">
+                <div>
+                    <label for="id_username" class="sr-only">{% trans "Email" %}</label>
+                    <input id="id_username" name="username" type="email" autocomplete="email" required class="relative block w-full appearance-none rounded-xl border border-white/20 bg-background px-3 py-3 text-foreground placeholder-muted focus:z-10 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary sm:text-sm transition-all" placeholder="{% trans 'Adresse email' %}">
+                </div>
+                <div>
+                    <label for="id_password" class="sr-only">{% trans "Mot de passe" %}</label>
+                    <input id="id_password" name="password" type="password" autocomplete="current-password" required class="relative block w-full appearance-none rounded-xl border border-white/20 bg-background px-3 py-3 text-foreground placeholder-muted focus:z-10 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary sm:text-sm transition-all" placeholder="{% trans 'Mot de passe' %}">
+                </div>
+            </div>
+
+            <div class="flex items-center justify-between">
+                <div class="text-sm">
+                    <a href="#" class="font-medium text-primary hover:text-primary-light transition-colors">
+                        {% trans "Mot de passe oublié ?" %}
+                    </a>
+                </div>
+            </div>
+
+            <div>
+                <button type="submit" class="group relative flex w-full justify-center rounded-xl border border-transparent bg-primary px-4 py-3 text-sm font-medium text-background hover:bg-primary-light focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 transition-all">
+                    {% trans "Se connecter" %}
+                </button>
+            </div>
+            
+            <div class="text-center mt-4">
+                <p class="text-sm text-muted">
+                    {% trans "Pas encore de compte ?" %} 
+                    <a href="{% url 'accounts:register' %}" class="font-medium text-primary hover:text-primary-light transition-colors">
+                        {% trans "Créer un compte" %}
+                    </a>
+                </p>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

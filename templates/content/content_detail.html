@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block title %}{{ content_obj.title }} | Rissala{% endblock %}
+
+{% block content %}
+<div class="bg-background pt-12 pb-24">
+    <div class="container mx-auto px-4 lg:px-8 max-w-4xl">
+        
+        <!-- Header -->
+        <header class="mb-10 text-center">
+            <div class="flex items-center justify-center gap-3 mb-6 text-sm font-semibold uppercase tracking-wider text-primary">
+                <span>{{ content_obj.get_content_type_display }}</span>
+                <span class="w-1 h-1 rounded-full bg-white/20"></span>
+                <span>{{ content_obj.get_language_display }}</span>
+            </div>
+            
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold font-heading text-foreground mb-6 leading-tight">{{ content_obj.title }}</h1>
+            
+            <div class="flex flex-wrap items-center justify-center gap-4 text-sm text-muted">
+                {% if content_obj.author %}
+                <span class="flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                    {{ content_obj.author }}
+                </span>
+                {% endif %}
+                <span class="flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                    {{ content_obj.published_at|date:"d F Y" }}
+                </span>
+            </div>
+        </header>
+        
+        <!-- Cover -->
+        {% if content_obj.cover_image %}
+        <div class="w-full aspect-[21/9] sm:aspect-[2/1] relative rounded-2xl overflow-hidden mb-12 border border-white/10 shadow-2xl">
+            <img src="{{ content_obj.cover_image.url }}" alt="{{ content_obj.title }}" class="absolute inset-0 w-full h-full object-cover">
+        </div>
+        {% endif %}
+        
+        <!-- Content Body -->
+        <article class="prose prose-invert prose-lg max-w-none prose-p:text-muted prose-headings:text-foreground prose-headings:font-heading prose-a:text-primary hover:prose-a:text-primary-light prose-img:rounded-xl">
+            {{ content_obj.content|safe }}
+        </article>
+        
+    </div>
+</div>
+{% endblock %}

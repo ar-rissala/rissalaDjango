@@ -1,0 +1,206 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block title %}{% trans "Politique de confidentialité" %} - Rissala{% endblock %}
+
+{% block content %}
+<section class="py-16 sm:py-20 lg:py-24 bg-background">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+
+        <header class="mb-12 reveal-up">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold font-heading mb-4">{% trans "Politique de confidentialité" %}</h1>
+            <p class="text-muted text-base sm:text-lg leading-relaxed max-w-3xl">
+                {% trans "Votre vie privée est notre priorité. Découvrez comment Rissala protège et utilise vos données personnelles." %}
+            </p>
+        </header>
+
+        <div class="space-y-12">
+
+            <!-- 1. Responsable du traitement -->
+            <article class="reveal-up">
+                <h2 class="text-xl sm:text-2xl font-bold font-heading mb-4 flex items-center gap-3">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-primary/10 text-primary text-sm font-bold shrink-0">1</span>
+                    {% trans "Responsable du traitement" %}
+                </h2>
+                <div class="rounded-xl border border-white/10 bg-background-alt p-6 sm:p-8 space-y-3 text-muted text-sm sm:text-base leading-relaxed">
+                    <p>{% trans "Le responsable du traitement des données collectées sur le site Rissala est l'éditeur du site." %}</p>
+                    <p>{% trans "Pour toute question relative à vos données personnelles :" %}</p>
+                    <div class="ps-4 border-s-2 border-primary/30">
+                        <p><span class="text-foreground/70 font-medium">Email :</span> <a href="mailto:rissala@tutamail.com" class="text-primary hover:text-primary-light transition-colors">rissala@tutamail.com</a></p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 2. Données collectées -->
+            <article class="reveal-up">
+                <h2 class="text-xl sm:text-2xl font-bold font-heading mb-4 flex items-center gap-3">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-primary/10 text-primary text-sm font-bold shrink-0">2</span>
+                    {% trans "Données collectées" %}
+                </h2>
+                <div class="rounded-xl border border-white/10 bg-background-alt p-6 sm:p-8 space-y-4 text-muted text-sm sm:text-base leading-relaxed">
+                    <p>{% trans "Rissala limite la collecte au strict nécessaire." %}</p>
+
+                    <div class="space-y-3">
+                        <p class="text-foreground font-medium">{% trans "Données d'identification" %}</p>
+                        <p class="text-xs text-muted">{% trans "(collectées lors de la création de compte, de l'inscription à la newsletter, du téléchargement d'un contenu gratuit ou de l'utilisation de certaines fonctionnalités)" %}</p>
+                        <ul class="space-y-1.5 ps-4">
+                            <li class="flex items-start gap-2"><span class="text-primary mt-1.5">•</span><span>{% trans "Nom et prénom" %}</span></li>
+                            <li class="flex items-start gap-2"><span class="text-primary mt-1.5">•</span><span>{% trans "Pseudonyme" %}</span></li>
+                            <li class="flex items-start gap-2"><span class="text-primary mt-1.5">•</span><span>{% trans "Adresse électronique" %}</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="space-y-3">
+                        <p class="text-foreground font-medium">{% trans "Données techniques" %}</p>
+                        <p class="text-xs text-muted">{% trans "(enregistrées automatiquement pour la sécurité et le bon fonctionnement du site)" %}</p>
+                        <ul class="space-y-1.5 ps-4">
+                            <li class="flex items-start gap-2"><span class="text-primary mt-1.5">•</span><span>{% trans "Adresse IP" %}</span></li>
+                            <li class="flex items-start gap-2"><span class="text-primary mt-1.5">•</span><span>{% trans "Date et heure de connexion" %}</span></li>
+                            <li class="flex items-start gap-2"><span class="text-primary mt-1.5">•</span><span>{% trans "Journaux techniques de sécurité" %}</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-4 p-4 rounded-lg bg-primary/5 border border-primary/20">
+                        <p class="text-foreground/80 text-sm font-medium">{% trans "Aucune donnée bancaire ni aucun numéro de téléphone n'est collecté." %}</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 3. Finalités du traitement -->
+            <article class="reveal-up">
+                <h2 class="text-xl sm:text-2xl font-bold font-heading mb-4 flex items-center gap-3">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-primary/10 text-primary text-sm font-bold shrink-0">3</span>
+                    {% trans "Finalités du traitement" %}
+                </h2>
+                <div class="rounded-xl border border-white/10 bg-background-alt p-6 sm:p-8 space-y-4 text-muted text-sm sm:text-base leading-relaxed">
+                    <p>{% trans "Les données sont utilisées uniquement pour :" %}</p>
+                    <ul class="space-y-2 ps-4">
+                        <li class="flex items-start gap-2"><span class="text-primary mt-1.5">•</span><span>{% trans "Créer et gérer votre compte utilisateur" %}</span></li>
+                        <li class="flex items-start gap-2"><span class="text-primary mt-1.5">•</span><span>{% trans "Vous donner accès aux services de la plateforme" %}</span></li>
+                        <li class="flex items-start gap-2"><span class="text-primary mt-1.5">•</span><span>{% trans "Envoyer des newsletters et contenus gratuits (sous réserve de votre consentement)" %}</span></li>
+                        <li class="flex items-start gap-2"><span class="text-primary mt-1.5">•</span><span>{% trans "Permettre le téléchargement de ressources gratuites (lead magnets)" %}</span></li>
+                        <li class="flex items-start gap-2"><span class="text-primary mt-1.5">•</span><span>{% trans "Assurer la sécurité et améliorer le fonctionnement du site" %}</span></li>
+                        <li class="flex items-start gap-2"><span class="text-primary mt-1.5">•</span><span>{% trans "Mesurer l'audience et réaliser des analyses statistiques" %}</span></li>
+                        <li class="flex items-start gap-2"><span class="text-primary mt-1.5">•</span><span>{% trans "Respecter les obligations légales" %}</span></li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- 4. Bases juridiques -->
+            <article class="reveal-up">
+                <h2 class="text-xl sm:text-2xl font-bold font-heading mb-4 flex items-center gap-3">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-primary/10 text-primary text-sm font-bold shrink-0">4</span>
+                    {% trans "Bases juridiques" %}
+                </h2>
+                <div class="rounded-xl border border-white/10 bg-background-alt p-6 sm:p-8 space-y-4 text-muted text-sm sm:text-base leading-relaxed">
+                    <p>{% trans "Les traitements reposent sur :" %}</p>
+                    <ul class="space-y-2 ps-4">
+                        <li class="flex items-start gap-2"><span class="text-primary mt-1.5">•</span><span>{% trans "Votre consentement" %}</span></li>
+                        <li class="flex items-start gap-2"><span class="text-primary mt-1.5">•</span><span>{% trans "L'exécution d'un contrat" %}</span></li>
+                        <li class="flex items-start gap-2"><span class="text-primary mt-1.5">•</span><span>{% trans "Le respect d'obligations légales" %}</span></li>
+                        <li class="flex items-start gap-2"><span class="text-primary mt-1.5">•</span><span>{% trans "L'intérêt légitime de Rissala (sécurité et amélioration des services)" %}</span></li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- 5. Cookies -->
+            <article class="reveal-up">
+                <h2 class="text-xl sm:text-2xl font-bold font-heading mb-4 flex items-center gap-3">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-primary/10 text-primary text-sm font-bold shrink-0">5</span>
+                    {% trans "Cookies et mesure d'audience" %}
+                </h2>
+                <div class="rounded-xl border border-white/10 bg-background-alt p-6 sm:p-8 space-y-4 text-muted text-sm sm:text-base leading-relaxed">
+                    <p>{% trans "Rissala utilise des cookies pour :" %}</p>
+                    <ul class="space-y-2 ps-4">
+                        <li class="flex items-start gap-2"><span class="text-primary mt-1.5">•</span><span>{% trans "Assurer le bon fonctionnement du site" %}</span></li>
+                        <li class="flex items-start gap-2"><span class="text-primary mt-1.5">•</span><span>{% trans "Mesurer l'audience" %}</span></li>
+                        <li class="flex items-start gap-2"><span class="text-primary mt-1.5">•</span><span>{% trans "Améliorer l'expérience utilisateur" %}</span></li>
+                    </ul>
+                    <p>{% trans "Le site utilise notamment Google Analytics afin d'obtenir des statistiques anonymes (nombre de visiteurs, pages consultées, durée des visites, appareils et navigateurs utilisés)." %}</p>
+                    <p>{% trans "Ces cookies analytiques ne sont déposés qu'après votre consentement explicite. Lors de votre première visite, un bandeau vous permet d'accepter, de refuser ou de personnaliser les cookies. Vous pouvez modifier votre choix à tout moment." %}</p>
+                </div>
+            </article>
+
+            <!-- 6. Durée de conservation -->
+            <article class="reveal-up">
+                <h2 class="text-xl sm:text-2xl font-bold font-heading mb-4 flex items-center gap-3">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-primary/10 text-primary text-sm font-bold shrink-0">6</span>
+                    {% trans "Durée de conservation" %}
+                </h2>
+                <div class="rounded-xl border border-white/10 bg-background-alt p-6 sm:p-8 space-y-4 text-muted text-sm sm:text-base leading-relaxed">
+                    <p>{% trans "Les données sont conservées uniquement le temps nécessaire aux finalités pour lesquelles elles ont été collectées :" %}</p>
+                    <ul class="space-y-2 ps-4">
+                        <li class="flex items-start gap-2"><span class="text-primary mt-1.5">•</span><span><strong class="text-foreground/80">{% trans "Données de compte" %} :</strong> {% trans "pendant toute la durée de votre inscription" %}</span></li>
+                        <li class="flex items-start gap-2"><span class="text-primary mt-1.5">•</span><span><strong class="text-foreground/80">{% trans "Données liées aux newsletters et lead magnets" %} :</strong> {% trans "maximum 3 ans après votre dernière interaction avec Rissala" %}</span></li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- 7. Partage des données -->
+            <article class="reveal-up">
+                <h2 class="text-xl sm:text-2xl font-bold font-heading mb-4 flex items-center gap-3">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-primary/10 text-primary text-sm font-bold shrink-0">7</span>
+                    {% trans "Partage des données" %}
+                </h2>
+                <div class="rounded-xl border border-white/10 bg-background-alt p-6 sm:p-8 space-y-4 text-muted text-sm sm:text-base leading-relaxed">
+                    <p>{% trans "Les données personnelles ne sont ni vendues ni cédées à des tiers à des fins commerciales." %}</p>
+                    <p>{% trans "Elles peuvent uniquement être transmises aux prestataires techniques indispensables au fonctionnement du site ou aux autorités compétentes lorsque la loi l'exige." %}</p>
+                </div>
+            </article>
+
+            <!-- 8. Vos droits -->
+            <article class="reveal-up">
+                <h2 class="text-xl sm:text-2xl font-bold font-heading mb-4 flex items-center gap-3">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-primary/10 text-primary text-sm font-bold shrink-0">8</span>
+                    {% trans "Vos droits" %}
+                </h2>
+                <div class="rounded-xl border border-white/10 bg-background-alt p-6 sm:p-8 space-y-4 text-muted text-sm sm:text-base leading-relaxed">
+                    <p>{% trans "Conformément au RGPD, vous disposez des droits suivants :" %}</p>
+                    <ul class="space-y-2 ps-4">
+                        <li class="flex items-start gap-2"><span class="text-primary mt-1.5">•</span><span>{% trans "Droit d'accès" %}</span></li>
+                        <li class="flex items-start gap-2"><span class="text-primary mt-1.5">•</span><span>{% trans "Droit de rectification" %}</span></li>
+                        <li class="flex items-start gap-2"><span class="text-primary mt-1.5">•</span><span>{% trans "Droit à l'effacement" %}</span></li>
+                        <li class="flex items-start gap-2"><span class="text-primary mt-1.5">•</span><span>{% trans "Droit d'opposition" %}</span></li>
+                        <li class="flex items-start gap-2"><span class="text-primary mt-1.5">•</span><span>{% trans "Droit à la limitation du traitement" %}</span></li>
+                        <li class="flex items-start gap-2"><span class="text-primary mt-1.5">•</span><span>{% trans "Droit à la portabilité" %}</span></li>
+                        <li class="flex items-start gap-2"><span class="text-primary mt-1.5">•</span><span>{% trans "Droit de retirer votre consentement à tout moment" %}</span></li>
+                    </ul>
+                    <p>{% trans "Pour exercer ces droits :" %} <a href="mailto:rissala@tutamail.com" class="text-primary hover:text-primary-light transition-colors">rissala@tutamail.com</a></p>
+                    <p>{% trans "Vous disposez également du droit d'introduire une réclamation auprès de l'autorité compétente en matière de protection des données (CNIL en France)." %}</p>
+                </div>
+            </article>
+
+            <!-- 9. Sécurité des données -->
+            <article class="reveal-up">
+                <h2 class="text-xl sm:text-2xl font-bold font-heading mb-4 flex items-center gap-3">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-primary/10 text-primary text-sm font-bold shrink-0">9</span>
+                    {% trans "Sécurité des données" %}
+                </h2>
+                <div class="rounded-xl border border-white/10 bg-background-alt p-6 sm:p-8 space-y-4 text-muted text-sm sm:text-base leading-relaxed">
+                    <p>{% trans "Rissala met en œuvre les mesures techniques et organisationnelles appropriées pour protéger vos données contre tout accès non autorisé, perte, modification ou divulgation." %}</p>
+                </div>
+            </article>
+
+            <!-- 10. Modification -->
+            <article class="reveal-up">
+                <h2 class="text-xl sm:text-2xl font-bold font-heading mb-4 flex items-center gap-3">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-primary/10 text-primary text-sm font-bold shrink-0">10</span>
+                    {% trans "Modification de la politique" %}
+                </h2>
+                <div class="rounded-xl border border-white/10 bg-background-alt p-6 sm:p-8 space-y-4 text-muted text-sm sm:text-base leading-relaxed">
+                    <p>{% trans "Cette politique peut être modifiée à tout moment pour tenir compte des évolutions légales, réglementaires ou techniques. Nous vous invitons à la consulter régulièrement." %}</p>
+                    <p>{% trans "Pour plus d'informations, veuillez consulter les mentions légales du site." %} <a href="{% url 'core:legal' %}" class="text-primary hover:text-primary-light transition-colors underline underline-offset-4">{% trans "Mentions légales" %}</a></p>
+                </div>
+            </article>
+
+        </div>
+
+        <!-- Footer info -->
+        <div class="mt-16 pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-muted">
+            <p>{% trans "Dernière mise à jour" %} : 05/09/2026</p>
+            <a href="{% url 'core:legal' %}" class="text-primary hover:text-primary-light transition-colors">{% trans "Mentions légales" %} →</a>
+        </div>
+
+    </div>
+</section>
+{% endblock %}

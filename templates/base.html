@@ -1,0 +1,55 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="{{ request.LANGUAGE_CODE|default:'fr' }}" dir="{% if request.LANGUAGE_CODE == 'ar' %}rtl{% else %}ltr{% endif %}" class="h-full antialiased dark">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover">
+    
+    <title>{% block title %}Rissala | Fondements & Arabe{% endblock %}</title>
+    
+    <!-- SEO & Metadata -->
+    {% include 'includes/seo.html' %}
+    {% include 'includes/structured_data.html' %}
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="{{ request.build_absolute_uri }}" />
+    
+    <!-- SEO Multilingue (hreflang) -->
+    {% load i18n_urls %}
+    {% get_available_languages as LANGUAGES %}
+    {% for lang_code, lang_name in LANGUAGES %}
+        <link rel="alternate" hreflang="{{ lang_code }}" href="{{ request.scheme }}://{{ request.get_host }}{% translated_url lang_code %}" />
+    {% endfor %}
+    <link rel="alternate" hreflang="x-default" href="{{ request.scheme }}://{{ request.get_host }}{% translated_url 'fr' %}" />
+
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}?v={% now 'U' %}">
+    
+    <!-- Arabic Fonts -->
+    {% if request.LANGUAGE_CODE == 'ar' %}
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;700;900&display=swap" rel="stylesheet">
+    {% endif %}
+    
+    <!-- Native Animations -->
+    <script src="{% static 'js/animations.js' %}" defer></script>
+    
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    {% block extra_head %}{% endblock %}
+</head>
+<body class="min-h-full flex flex-col bg-background text-foreground transition-colors duration-300 {% if request.LANGUAGE_CODE == 'ar' %}font-arabic{% else %}font-sans{% endif %}">
+    
+    {% include 'components/navbar.html' %}
+    
+    <main class="flex-1 flex flex-col">
+        {% block content %}{% endblock %}
+    </main>
+
+    {% include 'components/footer.html' %}
+    
+    {% block extra_scripts %}{% endblock %}
+    
+</body>
+</html>

@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load i18n static %}
+
+{% block title %}Actualités | Rissala{% endblock %}
+{% block meta_description %}Suivez les dernières actualités et articles de la plateforme.{% endblock %}
+
+{% block content %}
+<div class="min-h-screen bg-background pt-2 pb-24">
+    <div class="container mx-auto px-4 lg:px-8 max-w-7xl">
+        
+        <header class="mb-8 md:mb-10 mt-4 md:mt-6 text-center md:text-left max-w-3xl">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-black font-heading text-white mb-4 tracking-tight">
+                {% trans "Actualités et articles" %}
+            </h1>
+            <p class="text-lg md:text-xl text-muted leading-relaxed font-light">
+                {% trans "Découvrez nos articles consacrés aux différentes actualités et événements de Rissala." %}
+            </p>
+        </header>
+        
+        {% if not page_obj or page_obj.number == 1 %}
+            {% if featured_articles %}
+                {% include 'content/news/partials/_featured.html' %}
+            {% endif %}
+        {% endif %}
+        
+        {% if articles %}
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {% for article in articles %}
+                    {% include 'content/news/partials/_card.html' %}
+                {% endfor %}
+            </div>
+            
+            {% if is_paginated %}
+            <div class="mt-20 flex justify-center">
+                <nav class="flex items-center gap-2 bg-background-alt p-2 rounded-2xl border border-white/5 shadow-lg">
+                    {% if page_obj.has_previous %}
+                        <a href="?page={{ page_obj.previous_page_number }}" 
+                           class="w-12 h-12 flex items-center justify-center rounded-xl hover:bg-white/5 text-muted hover:text-white transition-colors">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                        </a>
+                    {% endif %}
+                    
+                    {% for num in paginator.page_range %}
+                        {% if page_obj.number == num %}
+                            <span class="w-12 h-12 flex items-center justify-center rounded-xl bg-primary text-background font-bold shadow-md">
+                                {{ num }}
+                            </span>
+                        {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+                            <a href="?page={{ num }}" 
+                               class="w-12 h-12 flex items-center justify-center rounded-xl hover:bg-white/5 text-muted hover:text-white font-medium transition-colors">
+                                {{ num }}
+                            </a>
+                        {% endif %}
+                    {% endfor %}
+                    
+                    {% if page_obj.has_next %}
+                        <a href="?page={{ page_obj.next_page_number }}" 
+                           class="w-12 h-12 flex items-center justify-center rounded-xl hover:bg-white/5 text-muted hover:text-white transition-colors">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </a>
+                    {% endif %}
+                </nav>
+            </div>
+            {% endif %}
+        {% else %}
+            <div class="py-24 text-center border-t border-white/5">
+                <div class="w-24 h-24 mx-auto bg-background-alt rounded-full flex items-center justify-center mb-6">
+                    <svg class="w-10 h-10 text-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+                </div>
+                <h3 class="text-2xl font-heading text-white mb-3">{% trans "Aucune actualité" %}</h3>
+                <p class="text-muted">{% trans "Il n'y a pas encore d'actualités publiées." %}</p>
+            </div>
+        {% endif %}
+        
+    </div>
+</div>
+{% endblock %}

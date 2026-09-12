@@ -1,0 +1,50 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_DB=rissala
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - "5432:5432"
+
+  redis:
+    image: redis:alpine
+    ports:
+      - "6379:6379"
+
+  web:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=postgres://postgres:postgres@db:5432/rissala
+      - REDIS_URL=redis://redis:6379/0
+      - DJANGO_SETTINGS_MODULE=config.settings.local
+    depends_on:
+      - db
+      - redis
+
+  celery:
+    build: .
+    command: celery -A config worker -l info
+    volumes:
+      - .:/app
+    environment:
+      - DATABASE_URL=postgres://postgres:postgres@db:5432/rissala
+      - REDIS_URL=redis://redis:6379/0
+      - DJANGO_SETTINGS_MODULE=config.settings.local
+    depends_on:
+      - db
+      - redis
+      - web
+
+volumes:
+  postgres_data:
