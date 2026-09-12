@@ -28,6 +28,10 @@ DEBUG = env('DEBUG', default=True)
 
 ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default=['*'])
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://rissaladjango-production.up.railway.app',
+    'https://rissala-1yv9.onrender.com',
+]
 
 # Application definition
 
