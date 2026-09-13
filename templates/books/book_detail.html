@@ -2,6 +2,13 @@
 {% load i18n %}
 
 {% block title %}{{ book.title }} | Rissala{% endblock %}
+{% block meta_description %}{{ book.short_description|default:book.title|truncatechars:150 }}{% endblock %}
+{% block og_title %}{{ book.title }}{% endblock %}
+{% block og_description %}{{ book.short_description|default:book.title|truncatechars:150 }}{% endblock %}
+{% if book.cover_image %}{% block og_image %}{{ request.scheme }}://{{ request.get_host }}{{ book.cover_image.url }}{% endblock %}{% endif %}
+{% block twitter_title %}{{ book.title }}{% endblock %}
+{% block twitter_description %}{{ book.short_description|default:book.title|truncatechars:150 }}{% endblock %}
+{% if book.cover_image %}{% block twitter_image %}{{ request.scheme }}://{{ request.get_host }}{{ book.cover_image.url }}{% endblock %}{% endif %}
 
 {% block extra_head %}
 <!-- PDF.js -->
@@ -11,6 +18,29 @@
 </script>
 {% endblock %}
 
+{% block structured_data %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Book",
+  "name": "{{ book.title|escapejs }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ book.author|escapejs }}"
+  },
+  {% if book.cover_image %}
+  "image": "{{ request.scheme }}://{{ request.get_host }}{{ book.cover_image.url }}",
+  {% endif %}
+  "description": "{{ book.short_description|escapejs }}",
+  "inLanguage": "{{ book.get_language_display|escapejs }}",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Rissala"
+  }{% if book.publication_date %},
+  "datePublished": "{{ book.publication_date|date:'Y-m-d' }}"{% endif %}
+}
+</script>
+{% endblock %}
 {% block content %}
 <div class="bg-background pt-10 pb-20" x-data="pdfReader('{% if book.pdf_file %}{{ book.pdf_file.url }}{% elif book.external_pdf_url %}{{ book.external_pdf_url }}{% endif %}', '{{ book.language }}')">
     <div class="container mx-auto px-4 lg:px-8 max-w-6xl">

@@ -5,6 +5,7 @@ from django.conf.urls.static import static
 from django.conf.urls.i18n import i18n_patterns
 from django.contrib.sitemaps.views import sitemap
 from apps.core.sitemaps import StaticViewSitemap, BookSitemap, ContentSitemap, CourseSitemap
+import apps.core.views
 
 sitemaps = {
     'static': StaticViewSitemap,
@@ -21,6 +22,7 @@ urlpatterns = [
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
     path('robots.txt', TemplateView.as_view(template_name="robots.txt", content_type="text/plain")),
     path('llms.txt', TemplateView.as_view(template_name="llms.txt", content_type="text/plain")),
+    path('<str:key>.txt', apps.core.views.indexnow_view, name='indexnow'),
 ]
 
 from django.utils.translation import gettext_lazy as _

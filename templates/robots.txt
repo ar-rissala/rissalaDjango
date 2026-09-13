@@ -4,4 +4,35 @@ Disallow: /auth/
 Disallow: /admin/
 Disallow: /accounts/
 
+# Allow major AI and search crawlers explicitly
+User-agent: GPTBot
+Allow: /
+Disallow: /auth/
+Disallow: /admin/
+Disallow: /accounts/
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /auth/
+Disallow: /admin/
+Disallow: /accounts/
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /auth/
+Disallow: /admin/
+Disallow: /accounts/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /auth/
+Disallow: /admin/
+Disallow: /accounts/
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /auth/
+Disallow: /admin/
+Disallow: /accounts/
+
 Sitemap: https://rissala.net/sitemap.xml

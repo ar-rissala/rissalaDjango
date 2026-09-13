@@ -2,6 +2,41 @@
 {% load i18n %}
 
 {% block title %}{{ content_obj.title }} | Rissala{% endblock %}
+{% block meta_description %}{{ content_obj.excerpt|default:content_obj.title|truncatechars:150 }}{% endblock %}
+{% block og_title %}{{ content_obj.title }}{% endblock %}
+{% block og_description %}{{ content_obj.excerpt|default:content_obj.title|truncatechars:150 }}{% endblock %}
+{% if content_obj.cover_image %}{% block og_image %}{{ request.scheme }}://{{ request.get_host }}{{ content_obj.cover_image.url }}{% endblock %}{% endif %}
+{% block twitter_title %}{{ content_obj.title }}{% endblock %}
+{% block twitter_description %}{{ content_obj.excerpt|default:content_obj.title|truncatechars:150 }}{% endblock %}
+{% if content_obj.cover_image %}{% block twitter_image %}{{ request.scheme }}://{{ request.get_host }}{{ content_obj.cover_image.url }}{% endblock %}{% endif %}
+
+{% block structured_data %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{ content_obj.title|escapejs }}",
+  {% if content_obj.cover_image %}
+  "image": "{{ request.scheme }}://{{ request.get_host }}{{ content_obj.cover_image.url }}",
+  {% endif %}
+  "author": {
+    "@type": "Person",
+    "name": "{{ content_obj.author|default:'Rissala'|escapejs }}"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Rissala",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ request.scheme }}://{{ request.get_host }}/static/img/LogoRissala.png"
+    }
+  }{% if content_obj.published_at %},
+  "datePublished": "{{ content_obj.published_at|date:'c' }}",
+  "dateModified": "{{ content_obj.published_at|date:'c' }}"
+  {% endif %}
+}
+</script>
+{% endblock %}
 
 {% block content %}
 <div class="bg-background pt-12 pb-24">

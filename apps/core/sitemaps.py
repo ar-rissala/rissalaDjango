@@ -6,6 +6,7 @@ from apps.courses.models import Course
 
 class StaticViewSitemap(Sitemap):
     i18n = True
+    alternates = True
     priority = 0.9
     changefreq = 'daily'
 
@@ -17,6 +18,7 @@ class StaticViewSitemap(Sitemap):
 
 class BookSitemap(Sitemap):
     i18n = True
+    alternates = True
     changefreq = 'weekly'
     priority = 0.8
 
@@ -28,6 +30,7 @@ class BookSitemap(Sitemap):
 
 class ContentSitemap(Sitemap):
     i18n = True
+    alternates = True
     changefreq = 'weekly'
     priority = 0.7
 
@@ -39,6 +42,7 @@ class ContentSitemap(Sitemap):
 
 class CourseSitemap(Sitemap):
     i18n = True
+    alternates = True
     changefreq = 'weekly'
     priority = 0.8
 

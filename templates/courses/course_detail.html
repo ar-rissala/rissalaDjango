@@ -2,6 +2,37 @@
 {% load i18n %}
 
 {% block title %}{{ course.title }} | Rissala{% endblock %}
+{% block meta_description %}{{ course.description|truncatechars:150 }}{% endblock %}
+{% block og_title %}{{ course.title }}{% endblock %}
+{% block og_description %}{{ course.description|truncatechars:150 }}{% endblock %}
+{% if course.thumbnail %}{% block og_image %}{{ request.scheme }}://{{ request.get_host }}{{ course.thumbnail.url }}{% endblock %}{% endif %}
+{% block twitter_title %}{{ course.title }}{% endblock %}
+{% block twitter_description %}{{ course.description|truncatechars:150 }}{% endblock %}
+{% if course.thumbnail %}{% block twitter_image %}{{ request.scheme }}://{{ request.get_host }}{{ course.thumbnail.url }}{% endblock %}{% endif %}
+
+{% block structured_data %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "{{ course.title|escapejs }}",
+  "description": "{{ course.description|escapejs }}",
+  "provider": {
+    "@type": "Organization",
+    "name": "Rissala",
+    "sameAs": "{{ request.scheme }}://{{ request.get_host }}/"
+  },
+  "courseCode": "{{ course.slug|escapejs }}",
+  {% if course.thumbnail %}
+  "image": "{{ request.scheme }}://{{ request.get_host }}{{ course.thumbnail.url }}",
+  {% endif %}
+  "creator": {
+    "@type": "Person",
+    "name": "{{ course.instructor|escapejs }}"
+  }
+}
+</script>
+{% endblock %}
 
 {% block content %}
 <div class="bg-background pt-10 pb-20">
