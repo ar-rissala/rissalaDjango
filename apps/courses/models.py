@@ -28,6 +28,10 @@ class Course(models.Model):
     def __str__(self):
         return self.title
 
+    def get_absolute_url(self):
+        from django.urls import reverse
+        return reverse('courses:detail', kwargs={'slug': self.slug})
+
 class Module(models.Model):
     course = models.ForeignKey(Course, on_delete=models.CASCADE, related_name='modules')
     title = models.CharField(_('title'), max_length=255)

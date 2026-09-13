@@ -38,6 +38,11 @@
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
     {% block extra_head %}{% endblock %}
+
+    {% if UMAMI_ENABLED and UMAMI_SCRIPT_URL and UMAMI_WEBSITE_ID %}
+    <!-- Umami Analytics -->
+    <script defer src="{{ UMAMI_SCRIPT_URL }}" data-website-id="{{ UMAMI_WEBSITE_ID }}" data-performance="true"></script>
+    {% endif %}
 </head>
 <body class="min-h-full flex flex-col bg-background text-foreground transition-colors duration-300 {% if request.LANGUAGE_CODE == 'ar' %}font-arabic{% else %}font-sans{% endif %}">
     

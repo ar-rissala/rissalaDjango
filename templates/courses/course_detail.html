@@ -35,7 +35,7 @@
                 </div>
                 
                 <div class="flex items-center gap-4">
-                    <button class="h-14 px-8 rounded-xl bg-primary text-background font-bold text-lg flex items-center justify-center hover:bg-primary-light transition-colors shadow-lg">
+                    <button data-umami-event="course_cta" data-umami-event-course-id="{{ course.id }}" class="h-14 px-8 rounded-xl bg-primary text-background font-bold text-lg flex items-center justify-center hover:bg-primary-light transition-colors shadow-lg">
                         {% if course.price == 0 %}
                             {% trans "S'inscrire gratuitement" %}
                         {% else %}
@@ -107,4 +107,18 @@
         
     </div>
 </div>
+{% endblock %}
+
+{% block extra_scripts %}
+{% if UMAMI_ENABLED %}
+<script>
+    if (typeof umami !== 'undefined') {
+        umami.track('course_view', { 
+            course_id: '{{ course.id }}', 
+            course_title: '{{ course.title|escapejs }}', 
+            language: '{{ course.language }}' 
+        });
+    }
+</script>
+{% endif %}
 {% endblock %}
