@@ -1,4 +1,4 @@
-{% load i18n %}
+{% load i18n static %}
 
 <!-- Global Organization JSON-LD -->
 <script type="application/ld+json">
@@ -7,8 +7,8 @@
   "@type": "Organization",
   "name": "Rissala",
   "url": "{{ request.scheme }}://{{ request.get_host }}/",
-  "logo": "{{ request.scheme }}://{{ request.get_host }}/static/img/hero-bg.jpg",
-  "description": "{% trans 'Plateforme d\'étude et de transmission du savoir islamique.' %}"
+  "logo": "{{ request.scheme }}://{{ request.get_host }}{% static 'img/iconRissala.png' %}",
+  "description": "{% trans 'Découvrez Rissala, la plateforme de référence pour l\'apprentissage de la langue arabe et la transmission authentique du savoir islamique.' %}"
 }
 </script>
 
@@ -18,6 +18,7 @@
   "@context": "https://schema.org",
   "@type": "WebSite",
   "name": "Rissala",
+  "alternateName": ["Rissala.net", "Institut Rissala"],
   "url": "{{ request.scheme }}://{{ request.get_host }}/",
   "potentialAction": {
     "@type": "SearchAction",

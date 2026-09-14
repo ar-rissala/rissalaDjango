@@ -1,5 +1,6 @@
 from django.views.generic import ListView, DetailView
 from django.db.models import Q
+from django.utils.translation import get_language
 from .models import Book
 
 class BookListView(ListView):
@@ -8,7 +9,7 @@ class BookListView(ListView):
     context_object_name = 'books'
     
     def get_queryset(self):
-        qs = Book.objects.filter(status='published').order_by('order', '-publication_date')
+        qs = Book.objects.filter(status='published', language=get_language()).order_by('order', '-publication_date')
         q = self.request.GET.get('q')
         if q:
             qs = qs.filter(
@@ -23,4 +24,4 @@ class BookDetailView(DetailView):
     context_object_name = 'book'
     
     def get_queryset(self):
-        return Book.objects.filter(status='published')
+        return Book.objects.filter(status='published', language=get_language())

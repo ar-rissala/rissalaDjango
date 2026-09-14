@@ -1,4 +1,5 @@
 from django.views.generic import ListView, DetailView
+from django.utils.translation import get_language
 from .models import Content
 
 class ContentListView(ListView):
@@ -10,7 +11,7 @@ class ContentListView(ListView):
     page_description = ""
     
     def get_queryset(self):
-        qs = Content.objects.filter(status='published')
+        qs = Content.objects.filter(status='published', language=get_language())
         if self.content_type_filter:
             qs = qs.filter(content_type=self.content_type_filter)
         return qs
@@ -28,7 +29,7 @@ class NewsListView(ListView):
     paginate_by = 10
     
     def get_queryset(self):
-        qs = Content.objects.filter(status='published', content_type='news').order_by('-published_at')
+        qs = Content.objects.filter(status='published', content_type='news', language=get_language()).order_by('-published_at')
         featured_qs = list(qs.filter(is_featured=True)[:2])
         if len(featured_qs) < 2:
             needed = 2 - len(featured_qs)
@@ -40,7 +41,7 @@ class NewsListView(ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        qs = Content.objects.filter(status='published', content_type='news').order_by('-published_at')
+        qs = Content.objects.filter(status='published', content_type='news', language=get_language()).order_by('-published_at')
         featured_qs = list(qs.filter(is_featured=True)[:2])
         if len(featured_qs) < 2:
             needed = 2 - len(featured_qs)
@@ -60,13 +61,14 @@ class ContentDetailView(DetailView):
         return ['content/content_detail.html']
     
     def get_queryset(self):
-        return Content.objects.filter(status='published')
+        return Content.objects.filter(status='published', language=get_language())
         
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         if self.object.content_type == 'news':
             context['similar_articles'] = Content.objects.filter(
                 status='published', 
-                content_type='news'
+                content_type='news',
+                language=get_language()
             ).exclude(id=self.object.id).order_by('-published_at')[:3]
         return context

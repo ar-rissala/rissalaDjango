@@ -1,10 +1,10 @@
 {% extends 'base.html' %}
 {% load i18n %}
 
-{% block title %}{% trans "À propos de Rissala" %} - Rissala{% endblock %}
+{% block title %}{% trans "About Rissala" %} - Rissala{% endblock %}
 
 {% block meta %}
-    <meta name="description" content="{% trans 'Rissala est une plateforme éducative dédiée à l\'étude rigoureuse des sciences islamiques, à l\'apprentissage de la langue arabe et à la compréhension de la finance islamique.' %}">
+    <meta name="description" content="{% trans "Rissala is an educational platform dedicated to the rigorous study of Islamic sciences, learning the Arabic language and understanding Islamic finance." %}">
 {% endblock %}
 
 {% block content %}
@@ -12,10 +12,10 @@
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
 
         <header class="mb-12 reveal-up">
-            <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold font-heading mb-4 text-white">{% trans "À propos de Rissala" %}</h1>
-            <p class="text-primary text-xl font-medium mb-6">{% trans "Rissala : la plateforme de référence en sciences islamiques, langue arabe et finance islamique" %}</p>
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold font-heading mb-4 text-white">{% trans "About Rissala" %}</h1>
+            <p class="text-primary text-xl font-medium mb-6">{% trans "Rissala: the reference platform in Islamic sciences, Arabic language and Islamic finance" %}</p>
             <p class="text-muted text-base sm:text-lg leading-relaxed max-w-3xl">
-                {% trans "Rissala est une plateforme éducative dédiée à l'étude rigoureuse des sciences islamiques, à l'apprentissage de la langue arabe et à la compréhension de la finance islamique. Disponible en anglais et en arabe, elle rend accessibles des connaissances authentiques, vérifiées et structurées, fondées sur le Coran, la Sunna et les avis des savants classiques et contemporains." %}
+                {% trans "Rissala is an educational platform dedicated to the rigorous study of Islamic sciences, learning the Arabic language and understanding Islamic finance.Available in English and Arabic, it makes accessible authentic, verified and structured knowledge, based on the Koran, the Sunnah and the opinions of classical and contemporary scholars." %}
             </p>
         </header>
 
@@ -24,14 +24,14 @@
             <!-- Ce que nous enseignons -->
             <article class="reveal-up">
                 <h2 class="text-2xl font-bold font-heading mb-6 text-white border-b border-white/10 pb-4">
-                    {% trans "Ce que nous enseignons" %}
+                    {% trans "What we teach" %}
                 </h2>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <!-- Fiqh -->
                     <div class="rounded-xl border border-white/10 bg-background-alt p-6 hover:border-primary/50 transition-colors">
                         <h3 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
-                            <span class="text-primary">✦</span> {% trans "Fiqh (jurisprudence islamique)" %}
+                            <span class="text-primary">✦</span> {% trans "Fiqh (Islamic jurisprudence)" %}
                         </h3>
                         <p class="text-muted text-sm leading-relaxed">
                             {% trans "Comparaison des quatre écoles juridiques (madhabs) : hanafite, malikite, chaféite, hanbalite." %}
@@ -41,20 +41,20 @@
                     <!-- Hadith -->
                     <div class="rounded-xl border border-white/10 bg-background-alt p-6 hover:border-primary/50 transition-colors">
                         <h3 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
-                            <span class="text-primary">✦</span> {% trans "Hadith et sciences du hadith" %}
+                            <span class="text-primary">✦</span> {% trans "Hadith and sciences of hadith" %}
                         </h3>
                         <p class="text-muted text-sm leading-relaxed">
-                            {% trans "Authentification, chaînes de transmission (isnad), classification." %}
+                            {% trans "Authentication, transmission chains (isnad), classification." %}
                         </p>
                     </div>
 
                     <!-- Tafsir -->
                     <div class="rounded-xl border border-white/10 bg-background-alt p-6 hover:border-primary/50 transition-colors">
                         <h3 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
-                            <span class="text-primary">✦</span> {% trans "Tafsir (exégèse coranique)" %}
+                            <span class="text-primary">✦</span> {% trans "Tafsir (Quranic exegesis)" %}
                         </h3>
                         <p class="text-muted text-sm leading-relaxed">
-                            {% trans "Interprétation classique et contemporaine du Coran." %}
+                            {% trans "Classic and contemporary interpretation of the Quran." %}
                         </p>
                     </div>
 
@@ -64,7 +64,7 @@
                             <span class="text-primary">✦</span> {% trans "Aqida (croyance islamique)" %}
                         </h3>
                         <p class="text-muted text-sm leading-relaxed">
-                            {% trans "Fondements de la foi selon Ahl al-Sunna." %}
+                            {% trans "Foundations of faith according to Ahl al-Sunnah." %}
                         </p>
                     </div>
 
@@ -74,17 +74,17 @@
                             <span class="text-primary">✦</span> {% trans "Sîra (biographie du Prophète ﷺ)" %}
                         </h3>
                         <p class="text-muted text-sm leading-relaxed">
-                            {% trans "Vie, contexte historique et enseignements." %}
+                            {% trans "Life, historical context and lessons." %}
                         </p>
                     </div>
 
                     <!-- Langue arabe -->
                     <div class="rounded-xl border border-white/10 bg-background-alt p-6 hover:border-primary/50 transition-colors">
                         <h3 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
-                            <span class="text-primary">✦</span> {% trans "Langue arabe" %}
+                            <span class="text-primary">✦</span> {% trans "Arabic language" %}
                         </h3>
                         <p class="text-muted text-sm leading-relaxed">
-                            {% trans "Grammaire (nahw), conjugaison (sarf), vocabulaire coranique, arabe classique et moderne." %}
+                            {% trans "Grammar (nahw), conjugation (sarf), Koranic vocabulary, classical and modern Arabic." %}
                         </p>
                     </div>
 
@@ -94,7 +94,7 @@
                             <span class="text-primary">✦</span> {% trans "Finance islamique" %}
                         </h3>
                         <p class="text-muted text-sm leading-relaxed">
-                            {% trans "Principes de la charia économique, contrats halal, alternatives à la banque conventionnelle, zakat, investissement conforme." %}
+                            {% trans "Principles of economic sharia, halal contracts, alternatives to conventional banking, zakat, compliant investment." %}
                         </p>
                     </div>
                 </div>
@@ -103,21 +103,21 @@
             <!-- Notre approche -->
             <article class="reveal-up">
                 <h2 class="text-2xl font-bold font-heading mb-6 text-white border-b border-white/10 pb-4">
-                    {% trans "Notre approche" %}
+                    {% trans "Our approach" %}
                 </h2>
                 <div class="rounded-xl border border-white/10 bg-background-alt p-6 sm:p-8 space-y-4 text-muted text-sm sm:text-base leading-relaxed">
-                    <p>{% trans "Chaque contenu publié sur Rissala repose sur des sources primaires — Coran, Sunna authentifiée — et sur les positions établies des écoles juridiques reconnues, avec citation systématique des références. Notre méthodologie privilégie la traçabilité des sources à l'opinion non sourcée." %}</p>
+                    <p>{% trans "Each content published on Rissala is based on primary sources — Quran, authenticated Sunnah — and on the established positions of recognized legal schools, with systematic citation of references.Our methodology favors the traceability of sources over unsourced opinion." %}</p>
                 </div>
             </article>
 
             <!-- À qui s'adresse Rissala -->
             <article class="reveal-up">
                 <h2 class="text-2xl font-bold font-heading mb-6 text-white border-b border-white/10 pb-4">
-                    {% trans "À qui s'adresse Rissala" %}
+                    {% trans "Who is Rissala for?" %}
                 </h2>
                 <div class="rounded-xl border border-white/10 bg-background-alt p-6 sm:p-8 space-y-4 text-muted text-sm sm:text-base leading-relaxed border-s-4 border-s-primary">
-                    <p>{% trans "Rissala s'adresse aux nouveaux musulmans, aux étudiants en sciences islamiques, aux personnes en apprentissage de la langue arabe, et à toute personne souhaitant structurer sa compréhension de l'islam ou des principes de la finance islamique — en anglais ou en arabe." %}</p>
-                    <p>{% trans "Rissala est pensée pour une audience internationale : chaque version linguistique offre un accès complet et natif au même niveau d'exigence et de rigueur." %}</p>
+                    <p>{% trans "Rissala is aimed at new Muslims, students of Islamic sciences, people learning the Arabic language, and anyone wishing to structure their understanding of Islam or the principles of Islamic finance — in English or Arabic." %}</p>
+                    <p>{% trans "Rissala is designed for an international audience: each language version offers complete, native access to the same level of requirements and rigor." %}</p>
                 </div>
             </article>
 

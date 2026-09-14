@@ -3,6 +3,7 @@ from django.utils.translation import gettext_lazy as _
 import uuid
 
 class Book(models.Model):
+    language = models.CharField(_('language'), max_length=2, choices=[('en', 'English'), ('ar', 'Arabic')], default='en')
     title = models.CharField(_('title'), max_length=255)
     slug = models.SlugField(max_length=255, unique=True)
     author = models.CharField(_('author'), max_length=255)
@@ -15,7 +16,7 @@ class Book(models.Model):
     subcategory = models.CharField(_('subcategory'), max_length=100, blank=True)
     tags = models.CharField(_('tags'), max_length=255, blank=True)
     publication_date = models.DateField(_('publication date'), blank=True, null=True)
-    status = models.CharField(_('status'), max_length=20, choices=[('draft', 'Brouillon'), ('published', 'Publié')], default='draft')
+    status = models.CharField(_('status'), max_length=20, choices=[('draft', 'Draft'), ('published', 'Published')], default='draft')
     featured = models.BooleanField(_('featured'), default=False)
     order = models.PositiveIntegerField(_('order'), default=0)
     seo_title = models.CharField(_('SEO title'), max_length=255, blank=True)
@@ -35,4 +36,6 @@ class Book(models.Model):
 
     def get_absolute_url(self):
         from django.urls import reverse
-        return reverse('books:detail', kwargs={'slug': self.slug})
+        from django.utils import translation
+        with translation.override(self.language):
+            return reverse('books:detail', kwargs={'slug': self.slug})

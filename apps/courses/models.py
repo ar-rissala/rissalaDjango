@@ -10,7 +10,7 @@ class Course(models.Model):
     thumbnail = models.ImageField(_('thumbnail'), upload_to='courses/thumbnails/', blank=True, null=True)
     instructor = models.CharField(_('instructor'), max_length=255)
     price = models.DecimalField(_('price'), max_digits=10, decimal_places=2, default=0.00)
-    status = models.CharField(_('status'), max_length=20, choices=[('draft', 'Brouillon'), ('published', 'Publié')], default='draft')
+    status = models.CharField(_('status'), max_length=20, choices=[('draft', 'Draft'), ('published', 'Published')], default='draft')
     featured = models.BooleanField(_('featured'), default=False)
     difficulty = models.CharField(_('difficulty'), max_length=50, blank=True)
     estimated_duration = models.CharField(_('estimated duration'), max_length=50, blank=True)
@@ -66,7 +66,7 @@ class Enrollment(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='enrollments')
     course = models.ForeignKey(Course, on_delete=models.CASCADE, related_name='enrollments')
     enrolled_at = models.DateTimeField(auto_now_add=True)
-    status = models.CharField(_('status'), max_length=20, choices=[('active', 'Actif'), ('completed', 'Terminé'), ('cancelled', 'Annulé')], default='active')
+    status = models.CharField(_('status'), max_length=20, choices=[('active', 'Active'), ('completed', 'Completed'), ('cancelled', 'Cancelled')], default='active')
     progress = models.PositiveIntegerField(_('progress'), default=0)
 
     class Meta:

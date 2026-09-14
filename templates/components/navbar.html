@@ -10,19 +10,19 @@
         <!-- Desktop Nav -->
         <div class="hidden xl:flex items-center gap-1 flex-1 justify-center z-10 h-full">
             <a class="relative px-3 py-2 text-sm font-medium transition-all duration-300 text-muted hover:text-primary group" href="{% url 'core:home' %}">
-                {% trans "Accueil" %}
+                {% trans "Home" %}
                 <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-[80%] rounded-full opacity-0 group-hover:opacity-100 shadow-[0_0_8px_var(--color-primary)]"></span>
             </a>
             <a class="relative px-3 py-2 text-sm font-medium transition-all duration-300 text-muted hover:text-primary group" href="{% url 'books:list' %}">
-                {% trans "Livres" %}
+                {% trans "Books" %}
                 <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-[80%] rounded-full opacity-0 group-hover:opacity-100 shadow-[0_0_8px_var(--color-primary)]"></span>
             </a>
             <a class="relative px-3 py-2 text-sm font-medium transition-all duration-300 text-muted hover:text-primary group" href="{% url 'content:science_list' %}">
-                {% trans "Sciences islamiques" %}
+                {% trans "Islamic Sciences" %}
                 <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-[80%] rounded-full opacity-0 group-hover:opacity-100 shadow-[0_0_8px_var(--color-primary)]"></span>
             </a>
             <a class="relative px-3 py-2 text-sm font-medium transition-all duration-300 text-muted hover:text-primary group" href="{% url 'content:arabic_list' %}">
-                {% trans "Langue arabe" %}
+                {% trans "Arabic language" %}
                 <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-[80%] rounded-full opacity-0 group-hover:opacity-100 shadow-[0_0_8px_var(--color-primary)]"></span>
             </a>
             <a class="relative px-3 py-2 text-sm font-medium transition-all duration-300 text-muted hover:text-primary group" href="{% url 'content:finance_list' %}">
@@ -34,7 +34,7 @@
                 <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-[80%] rounded-full opacity-0 group-hover:opacity-100 shadow-[0_0_8px_var(--color-primary)]"></span>
             </a>
             <a class="relative px-3 py-2 text-sm font-medium transition-all duration-300 text-muted hover:text-primary group" href="{% url 'content:news_list' %}">
-                {% trans "Actualités" %}
+                {% trans "News" %}
                 <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-[80%] rounded-full opacity-0 group-hover:opacity-100 shadow-[0_0_8px_var(--color-primary)]"></span>
             </a>
         </div>
@@ -61,7 +61,7 @@
             
             {% if user.is_authenticated %}
                 <a href="{% url 'accounts:dashboard' %}" class="h-9 px-4 rounded-lg bg-background-alt border border-white/10 text-foreground font-medium text-sm flex items-center justify-center hover:bg-white/5 transition-colors">
-                    {% trans "Mon Espace" %}
+                    {% trans "My Space" %}
                 </a>
             {% else %}
                 <a href="{% url 'accounts:login' %}" class="h-9 px-4 rounded-lg bg-primary text-background font-medium text-sm flex items-center justify-center hover:bg-primary-light transition-colors">
@@ -79,17 +79,17 @@
     
     <!-- Mobile Menu -->
     <div x-show="mobileMenuOpen" style="display: none;" class="xl:hidden absolute top-16 left-0 w-full bg-background border-b border-white/10 px-4 py-6 flex flex-col gap-4 shadow-xl">
-        <a class="text-lg font-medium text-foreground py-2 border-b border-white/10 text-center" href="{% url 'core:home' %}">{% trans "Accueil" %}</a>
-        <a class="text-lg font-medium text-foreground py-2 border-b border-white/10 text-center" href="{% url 'books:list' %}">{% trans "Livres" %}</a>
-        <a class="text-lg font-medium text-foreground py-2 border-b border-white/10 text-center" href="{% url 'content:science_list' %}">{% trans "Sciences islamiques" %}</a>
-        <a class="text-lg font-medium text-foreground py-2 border-b border-white/10 text-center" href="{% url 'content:arabic_list' %}">{% trans "Langue arabe" %}</a>
+        <a class="text-lg font-medium text-foreground py-2 border-b border-white/10 text-center" href="{% url 'core:home' %}">{% trans "Home" %}</a>
+        <a class="text-lg font-medium text-foreground py-2 border-b border-white/10 text-center" href="{% url 'books:list' %}">{% trans "Books" %}</a>
+        <a class="text-lg font-medium text-foreground py-2 border-b border-white/10 text-center" href="{% url 'content:science_list' %}">{% trans "Islamic Sciences" %}</a>
+        <a class="text-lg font-medium text-foreground py-2 border-b border-white/10 text-center" href="{% url 'content:arabic_list' %}">{% trans "Arabic language" %}</a>
         <a class="text-lg font-medium text-foreground py-2 border-b border-white/10 text-center" href="{% url 'content:finance_list' %}">{% trans "Finance islamique" %}</a>
         <a class="text-lg font-medium text-foreground py-2 border-b border-white/10 text-center" href="{% url 'courses:list' %}">{% trans "Parcours" %}</a>
-        <a class="text-lg font-medium text-foreground py-2 border-b border-white/10 text-center" href="{% url 'content:news_list' %}">{% trans "Actualités" %}</a>
+        <a class="text-lg font-medium text-foreground py-2 border-b border-white/10 text-center" href="{% url 'content:news_list' %}">{% trans "News" %}</a>
         
         <!-- Mobile Lang Switcher -->
         <div class="py-2 border-b border-white/10">
-            <p class="text-xs font-semibold text-muted uppercase mb-2">{% trans "Langue" %}</p>
+            <p class="text-xs font-semibold text-muted uppercase mb-2">{% trans "Language" %}</p>
             <div class="flex gap-2">
                 {% get_current_language as LANGUAGE_CODE %}
                 {% get_available_languages as LANGUAGES %}
@@ -105,7 +105,7 @@
         <div class="mt-4">
             {% if user.is_authenticated %}
                 <a href="{% url 'accounts:dashboard' %}" class="w-full h-12 rounded-lg bg-background-alt border border-white/10 text-foreground font-medium flex items-center justify-center">
-                    {% trans "Mon Espace" %}
+                    {% trans "My Space" %}
                 </a>
             {% else %}
                 <a href="{% url 'accounts:login' %}" class="w-full h-12 rounded-lg bg-primary text-background font-medium flex items-center justify-center">

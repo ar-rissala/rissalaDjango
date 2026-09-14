@@ -9,30 +9,30 @@
         <div class="w-full md:w-64 shrink-0">
             <div class="bg-background-alt border border-white/10 rounded-xl p-4 flex flex-col gap-2 sticky top-24">
                 <a href="#" class="px-4 py-2 rounded-lg bg-primary/10 text-primary font-medium">{% trans "Tableau de bord" %}</a>
-                <a href="#" class="px-4 py-2 rounded-lg text-muted hover:bg-white/5 hover:text-foreground transition-colors">{% trans "Mes formations" %}</a>
-                <a href="#" class="px-4 py-2 rounded-lg text-muted hover:bg-white/5 hover:text-foreground transition-colors">{% trans "Progression" %}</a>
-                <a href="#" class="px-4 py-2 rounded-lg text-muted hover:bg-white/5 hover:text-foreground transition-colors">{% trans "Paramètres" %}</a>
+                <a href="#" class="px-4 py-2 rounded-lg text-muted hover:bg-white/5 hover:text-foreground transition-colors">{% trans "My training" %}</a>
+                <a href="#" class="px-4 py-2 rounded-lg text-muted hover:bg-white/5 hover:text-foreground transition-colors">{% trans "Progress" %}</a>
+                <a href="#" class="px-4 py-2 rounded-lg text-muted hover:bg-white/5 hover:text-foreground transition-colors">{% trans "Settings" %}</a>
                 
                 <hr class="border-white/10 my-2">
                 
                 <form action="{% url 'accounts:logout' %}" method="post">
                     {% csrf_token %}
-                    <button type="submit" class="w-full text-left px-4 py-2 rounded-lg text-red-400 hover:bg-red-400/10 transition-colors">{% trans "Déconnexion" %}</button>
+                    <button type="submit" class="w-full text-left px-4 py-2 rounded-lg text-red-400 hover:bg-red-400/10 transition-colors">{% trans "Disconnect" %}</button>
                 </form>
             </div>
         </div>
         
         <!-- Main Content -->
         <div class="flex-1">
-            <h1 class="text-3xl font-bold font-heading mb-6">{% trans "Bonjour," %} {{ user.username }}</h1>
+            <h1 class="text-3xl font-bold font-heading mb-6">{% trans "Good morning," %} {{ user.username }}</h1>
             
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
                 <div class="bg-background-alt border border-white/10 rounded-xl p-6">
-                    <h3 class="text-muted text-sm font-medium mb-1">{% trans "Formations actives" %}</h3>
+                    <h3 class="text-muted text-sm font-medium mb-1">{% trans "Active training" %}</h3>
                     <p class="text-3xl font-bold font-heading text-primary">0</p>
                 </div>
                 <div class="bg-background-alt border border-white/10 rounded-xl p-6">
-                    <h3 class="text-muted text-sm font-medium mb-1">{% trans "Leçons terminées" %}</h3>
+                    <h3 class="text-muted text-sm font-medium mb-1">{% trans "Completed Lessons" %}</h3>
                     <p class="text-3xl font-bold font-heading text-primary">0</p>
                 </div>
             </div>
@@ -44,10 +44,10 @@
                 <div class="w-16 h-16 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-4">
                     <span class="text-2xl font-bold">!</span>
                 </div>
-                <h3 class="text-lg font-medium text-foreground mb-2">{% trans "Aucune formation en cours" %}</h3>
-                <p class="text-muted mb-6 max-w-sm">{% trans "Découvrez nos parcours d'apprentissage et commencez à étudier dès aujourd'hui." %}</p>
+                <h3 class="text-lg font-medium text-foreground mb-2">{% trans "No training in progress" %}</h3>
+                <p class="text-muted mb-6 max-w-sm">{% trans "Discover our learning pathways and start studying today." %}</p>
                 <a href="#" class="bg-primary text-background font-medium hover:bg-primary-light transition-all px-6 py-2.5 rounded-lg">
-                    {% trans "Explorer les parcours" %}
+                    {% trans "Explore the routes" %}
                 </a>
             </div>
         </div>

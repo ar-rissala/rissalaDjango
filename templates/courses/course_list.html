@@ -8,8 +8,8 @@
     <div class="container mx-auto px-4 lg:px-8">
         
         <div class="mb-12 text-center max-w-3xl mx-auto">
-            <h1 class="text-4xl md:text-5xl font-bold font-heading mb-4 text-foreground">{% trans "Parcours d'Apprentissage" %}</h1>
-            <p class="text-lg text-muted">{% trans "Des programmes structurés, de l'initiation à l'approfondissement, pour cheminer dans le savoir islamique." %}</p>
+            <h1 class="text-4xl md:text-5xl font-bold font-heading mb-4 text-foreground">{% trans "Learning Path" %}</h1>
+            <p class="text-lg text-muted">{% trans "Structured programs, from initiation to in-depth study, to advance in Islamic knowledge." %}</p>
         </div>
         
         {% if courses %}
@@ -26,7 +26,7 @@
                     {% endif %}
                     {% if course.price == 0 %}
                     <div class="absolute top-4 right-4 bg-primary text-background font-bold text-xs px-3 py-1 rounded-full shadow-lg">
-                        {% trans "GRATUIT" %}
+                        {% trans "FREE" %}
                     </div>
                     {% else %}
                     <div class="absolute top-4 right-4 bg-background/80 backdrop-blur-sm text-foreground font-bold text-xs px-3 py-1 rounded-full shadow-lg border border-white/10">
@@ -56,7 +56,7 @@
                             {{ course.instructor }}
                         </div>
                         <a href="{% url 'courses:detail' course.slug %}" class="text-sm font-medium text-primary hover:text-primary-light transition-colors">
-                            {% trans "Voir le programme" %} &rarr;
+                            {% trans "See the program" %} &rarr;
                         </a>
                     </div>
                 </div>
@@ -65,7 +65,7 @@
         </div>
         {% else %}
         <div class="text-center py-20 bg-background-alt border border-white/10 border-dashed rounded-2xl">
-            <h3 class="text-xl font-medium text-muted">{% trans "Aucune formation n'est disponible pour le moment." %}</h3>
+            <h3 class="text-xl font-medium text-muted">{% trans "No training is available at this time." %}</h3>
         </div>
         {% endif %}
         

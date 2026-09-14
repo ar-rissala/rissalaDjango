@@ -1,11 +1,21 @@
 from django.contrib import admin
-from modeltranslation.admin import TranslationAdmin
 from .models import Content
 
 @admin.register(Content)
-class ContentAdmin(TranslationAdmin):
-    list_display = ('title', 'content_type', 'status', 'is_featured', 'published_at')
-    list_filter = ('content_type', 'status', 'is_featured')
+class ContentAdmin(admin.ModelAdmin):
+    list_display = ('title', 'content_type', 'language', 'status', 'is_featured', 'published_at')
+    list_filter = ('content_type', 'language', 'status', 'is_featured')
     search_fields = ('title', 'author', 'content')
-    prepopulated_fields = {'slug_en': ('title_en',), 'slug_ar': ('title_ar',)}
+    prepopulated_fields = {'slug': ('title',)}
     date_hierarchy = 'published_at'
+    fieldsets = (
+        ('Contenu et Langue (Requis)', {
+            'fields': ('language', 'content_type', 'title', 'slug', 'author')
+        }),
+        ('Détails du Contenu', {
+            'fields': ('excerpt', 'content', 'cover_image', 'tags')
+        }),
+        ('Publication & SEO', {
+            'fields': ('status', 'is_featured', 'published_at', 'seo_title', 'seo_description')
+        }),
+    )

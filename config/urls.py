@@ -29,9 +29,9 @@ from django.utils.translation import gettext_lazy as _
 
 urlpatterns += i18n_patterns(
     path(_('auth/'), include('apps.accounts.urls')),
-    path(_('livres/'), include('apps.books.urls')),
-    path(_('contenus/'), include('apps.content.urls')),
-    path(_('formations/'), include('apps.courses.urls')),
+    path(_('books/'), include('apps.books.urls')),
+    path(_('content/'), include('apps.content.urls')),
+    path(_('courses/'), include('apps.courses.urls')),
     path('', include('apps.core.urls')),
 )
 

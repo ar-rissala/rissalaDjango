@@ -11,14 +11,16 @@ class StaticViewSitemap(Sitemap):
     changefreq = 'daily'
 
     def items(self):
-        return ['core:home', 'accounts:login', 'accounts:register']
+        return [
+            'core:home', 'core:about', 'core:legal', 'core:privacy', 'core:terms',
+            'accounts:login', 'accounts:register',
+            'books:list', 'courses:list', 'content:news_list'
+        ]
 
     def location(self, item):
         return reverse(item)
 
 class BookSitemap(Sitemap):
-    i18n = True
-    alternates = True
     changefreq = 'weekly'
     priority = 0.8
 
@@ -29,8 +31,6 @@ class BookSitemap(Sitemap):
         return obj.publication_date
 
 class ContentSitemap(Sitemap):
-    i18n = True
-    alternates = True
     changefreq = 'weekly'
     priority = 0.7
 

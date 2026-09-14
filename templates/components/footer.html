@@ -7,16 +7,16 @@
                 RISSALA
             </a>
             <p class="text-sm text-muted leading-relaxed">
-                {% trans "Une plateforme dédiée à l'étude et à la transmission du savoir islamique." %}<br>
-                <span class="block mt-2 font-medium text-foreground">{% trans "Étudier. Comprendre. Transmettre." %}</span>
+                {% trans "A platform dedicated to the study and transmission of Islamic knowledge." %}<br>
+                <span class="block mt-2 font-medium text-foreground">{% trans "To study.To understand.To transmit." %}</span>
             </p>
         </div>
         
         <div>
-            <h4 class="text-sm font-semibold mb-6 text-foreground">{% trans "Apprendre" %}</h4>
+            <h4 class="text-sm font-semibold mb-6 text-foreground">{% trans "Learn" %}</h4>
             <ul class="space-y-3 text-sm text-muted">
-                <li><a class="hover:text-primary transition-colors" href="{% url 'content:arabic_list' %}">{% trans "Langue arabe" %}</a></li>
-                <li><a class="hover:text-primary transition-colors" href="{% url 'content:science_list' %}">{% trans "Sciences islamiques" %}</a></li>
+                <li><a class="hover:text-primary transition-colors" href="{% url 'content:arabic_list' %}">{% trans "Arabic language" %}</a></li>
+                <li><a class="hover:text-primary transition-colors" href="{% url 'content:science_list' %}">{% trans "Islamic Sciences" %}</a></li>
                 <li><a class="hover:text-primary transition-colors" href="{% url 'content:finance_list' %}">{% trans "Finance islamique" %}</a></li>
             </ul>
         </div>
@@ -24,22 +24,22 @@
         <div>
             <h4 class="text-sm font-semibold mb-6 text-foreground">{% trans "Ressources" %}</h4>
             <ul class="space-y-3 text-sm text-muted">
-                <li><a class="hover:text-primary transition-colors" href="{% url 'content:news_list' %}">{% trans "Actualités & Articles" %}</a></li>
-                <li><a class="hover:text-primary transition-colors" href="{% url 'core:about' %}">{% trans "À propos de Rissala" %}</a></li>
+                <li><a class="hover:text-primary transition-colors" href="{% url 'content:news_list' %}">{% trans "News and Articles" %}</a></li>
+                <li><a class="hover:text-primary transition-colors" href="{% url 'core:about' %}">{% trans "About Rissala" %}</a></li>
             </ul>
         </div>
         
         <div>
-            <h4 class="text-sm font-semibold mb-6 text-foreground">{% trans "Légal" %}</h4>
+            <h4 class="text-sm font-semibold mb-6 text-foreground">{% trans "Legal" %}</h4>
             <ul class="space-y-3 text-sm text-muted">
                 <li><a class="hover:text-primary transition-colors" href="{% url 'core:legal' %}">{% trans "Mentions légales" %}</a></li>
-                <li><a class="hover:text-primary transition-colors" href="{% url 'core:privacy' %}">{% trans "Politique de confidentialité" %}</a></li>
+                <li><a class="hover:text-primary transition-colors" href="{% url 'core:privacy' %}">{% trans "Privacy Policy" %}</a></li>
                 <li><a class="hover:text-primary transition-colors" href="{% url 'core:terms' %}">{% trans "Conditions générales" %}</a></li>
             </ul>
         </div>
     </div>
     
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 mt-10 pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center text-xs text-muted">
-        <p>&copy; {% now "Y" %} Rissala. {% trans "Tous droits réservés." %}</p>
+        <p>&copy; {% now "Y" %} Rissala. {% trans "All rights reserved." %}</p>
     </div>
 </footer>
