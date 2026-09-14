@@ -15,21 +15,22 @@
 {% endblock %}
 
 <!-- Meta Tags -->
-<meta name="description" content="{% block meta_description %}{% trans 'Découvrez Rissala, la plateforme de référence pour l\'apprentissage de la langue arabe et la transmission authentique du savoir islamique.' %}{% endblock %}">
+<meta name="description" content="{% block meta_description %}{% trans 'Discover Rissala, the reference platform for learning the Arabic language and the authentic transmission of Islamic knowledge.' %}{% endblock %}">
 <meta name="robots" content="{% block robots %}index, follow, max-image-preview:large{% endblock %}">
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="{% block og_type %}website{% endblock %}">
 <meta property="og:url" content="{{ request.build_absolute_uri }}">
-<meta property="og:title" content="{% block og_title %}{{ self.title|default:'Rissala - Apprentissage et Savoir' }}{% endblock %}">
-<meta property="og:description" content="{% block og_description %}{% trans 'Découvrez Rissala, la plateforme de référence pour l\'apprentissage de la langue arabe et la transmission authentique du savoir islamique.' %}{% endblock %}">
+<meta property="og:title" content="{% block og_title %}{{ self.title|default:'Rissala - Islamic Knowledge and Arabic Language' }}{% endblock %}">
+<meta property="og:description" content="{% block og_description %}{% trans 'Discover Rissala, the reference platform for learning the Arabic language and the authentic transmission of Islamic knowledge.' %}{% endblock %}">
 <meta property="og:image" content="{% block og_image %}{{ request.scheme }}://{{ request.get_host }}{% static 'img/hero-bg.jpg' %}{% endblock %}">
+<meta property="og:image:alt" content="Rissala">
 <meta property="og:site_name" content="Rissala">
 <meta property="og:locale" content="{{ request.LANGUAGE_CODE }}">
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="{{ request.build_absolute_uri }}">
-<meta name="twitter:title" content="{% block twitter_title %}{{ self.title|default:'Rissala' }}{% endblock %}">
-<meta name="twitter:description" content="{% block twitter_description %}{% trans "Discover Rissala, the reference platform for learning the Arabic language." %}{% endblock %}">
+<meta name="twitter:title" content="{% block twitter_title %}{{ self.title|default:'Rissala - Islamic Knowledge and Arabic Language' }}{% endblock %}">
+<meta name="twitter:description" content="{% block twitter_description %}{% trans 'Discover Rissala, the reference platform for learning the Arabic language and the authentic transmission of Islamic knowledge.' %}{% endblock %}">
 <meta name="twitter:image" content="{% block twitter_image %}{{ request.scheme }}://{{ request.get_host }}{% static 'img/hero-bg.jpg' %}{% endblock %}">

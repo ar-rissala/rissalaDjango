@@ -8,7 +8,7 @@
   "name": "Rissala",
   "url": "{{ request.scheme }}://{{ request.get_host }}/",
   "logo": "{{ request.scheme }}://{{ request.get_host }}{% static 'img/iconRissala.png' %}",
-  "description": "{% trans 'Découvrez Rissala, la plateforme de référence pour l\'apprentissage de la langue arabe et la transmission authentique du savoir islamique.' %}"
+  "description": "{% trans 'Discover Rissala, the reference platform for learning the Arabic language and the authentic transmission of Islamic knowledge.' %}"
 }
 </script>
 
@@ -22,7 +22,7 @@
   "url": "{{ request.scheme }}://{{ request.get_host }}/",
   "potentialAction": {
     "@type": "SearchAction",
-    "target": "{{ request.scheme }}://{{ request.get_host }}/recherche/?q={search_term_string}",
+    "target": "{{ request.scheme }}://{{ request.get_host }}/search/?q={search_term_string}",
     "query-input": "required name=search_term_string"
   }
 }
