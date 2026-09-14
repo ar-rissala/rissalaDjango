@@ -1,7 +1,7 @@
 {% load static %}
 {% load i18n %}
 <!DOCTYPE html>
-<html lang="{{ request.LANGUAGE_CODE|default:'fr' }}" dir="{% if request.LANGUAGE_CODE == 'ar' %}rtl{% else %}ltr{% endif %}" class="h-full antialiased dark">
+<html lang="{{ request.LANGUAGE_CODE|default:'en' }}" dir="{% if request.LANGUAGE_CODE == 'ar' %}rtl{% else %}ltr{% endif %}" class="h-full antialiased dark">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover">
@@ -21,7 +21,7 @@
     {% for lang_code, lang_name in LANGUAGES %}
         <link rel="alternate" hreflang="{{ lang_code }}" href="{{ request.scheme }}://{{ request.get_host }}{% translated_url lang_code %}" />
     {% endfor %}
-    <link rel="alternate" hreflang="x-default" href="{{ request.scheme }}://{{ request.get_host }}{% translated_url 'fr' %}" />
+    <link rel="alternate" hreflang="x-default" href="{{ request.scheme }}://{{ request.get_host }}{% translated_url 'en' %}" />
 
     <!-- Tailwind CSS -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}?v={% now 'U' %}">

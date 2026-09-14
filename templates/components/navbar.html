@@ -44,7 +44,7 @@
             <!-- Lang Switcher -->
             <div class="relative" x-data="{ langOpen: false }" @click.away="langOpen = false">
                 <button @click="langOpen = !langOpen" class="flex items-center gap-1 text-xs font-semibold uppercase tracking-wider text-primary border border-white/20 hover:border-primary/50 transition-colors rounded-lg px-3 h-9">
-                    {{ request.LANGUAGE_CODE|default:'fr' }}
+                    {{ request.LANGUAGE_CODE|default:'en' }}
                     <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                 </button>
                 <div x-show="langOpen" style="display: none;" x-transition class="absolute right-0 mt-2 w-32 rounded-lg bg-background-alt border border-white/10 shadow-xl overflow-hidden py-1 z-50">

@@ -15,7 +15,7 @@ class CourseAdmin(TranslationAdmin):
     list_display = ('title', 'instructor', 'status', 'price', 'featured')
     list_filter = ('status', 'featured')
     search_fields = ('title', 'instructor', 'description')
-    prepopulated_fields = {'slug_fr': ('title_fr',), 'slug_en': ('title_en',), 'slug_ar': ('title_ar',)}
+    prepopulated_fields = {'slug_en': ('title_en',), 'slug_ar': ('title_ar',)}
     inlines = [ModuleInline]
 
 @admin.register(Module)
