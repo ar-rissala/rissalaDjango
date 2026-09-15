@@ -28,10 +28,20 @@ DEBUG = env('DEBUG', default=True)
 
 ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default=['*'])
 
-CSRF_TRUSTED_ORIGINS = [
-    'https://rissaladjango-production.up.railway.app',
-    'https://rissala-1yv9.onrender.com',
-]
+CSRF_TRUSTED_ORIGINS = env.list(
+    "CSRF_TRUSTED_ORIGINS",
+    default=[
+        "https://rissala.net",
+        "https://www.rissala.net",
+        "https://rissaladjango-production.up.railway.app",
+        "https://rissala-1yv9.onrender.com",
+    ],
+)
+
+# HTTPS / Proxy settings for Railway
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+CSRF_COOKIE_SECURE = env.bool("CSRF_COOKIE_SECURE", default=not DEBUG)
+SESSION_COOKIE_SECURE = env.bool("SESSION_COOKIE_SECURE", default=not DEBUG)
 
 # Application definition
 
